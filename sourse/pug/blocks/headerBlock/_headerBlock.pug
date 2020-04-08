@@ -1,0 +1,28 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.SECTION.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			.row
+				.col-lg-6
+					h1 Вазоны из&nbsp;мытого бетона #[span и&nbsp;крошки натуральных камней]
+					+e.subtitle Для ландшафтного дизайна улиц и&nbsp;парков, школ и&nbsp;детских садов, торговых и&nbsp;бизнес-центров, жилых комплексов и&nbsp;загородных домов
+				.col-lg
+					+e.imgWrap
+						img.lazy(src="#" data-src="img/@2x/banner.png", alt="#")
+			+e.advantages.d-none.d-lg-flex
+				+e.item
+					+icon('verificado')
+					.h6 Антивандальные:
+					p изделие массой 100-500&nbsp;кг не&nbsp;унесут&nbsp;и&nbsp;не&nbsp;перевернут
+				+e.item
+					+icon('verificado')
+					.h6 Срок службы более 10 лет:
+					p мороз, жара, солнце и&nbsp;вода камень&nbsp;не&nbsp;разрушат
+				+e.item
+					+icon('verificado')
+					.h6 Фактура и&nbsp;форма под заказ:
+					p помогут реализовать оптимальное решение для любого дизайн-проекта
+			+e.btnWrap
+				img(src="img/@2x/catalog.png", alt="#")
+				+e.BUTTON.btn.btn Получить каталог с ценами
+	// end headerBlock

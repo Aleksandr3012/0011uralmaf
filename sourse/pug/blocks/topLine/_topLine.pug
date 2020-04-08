@@ -1,0 +1,32 @@
+mixin topLine()
+	// start topLine
+	+b.topLine#topLine&attributes(attributes)
+		.container
+			.row.justify-content-between
+				.col-auto
+					+e.A.logo(href="#")
+						+icon('logo')
+						+e.DIV.brand Урал Маф
+						+e.DIV.descr.d-none.d-lg-block Малые архитектурные формы: производим в&nbsp;Магнитогорске, реализуем по&nbsp;России и&nbsp;СНГ
+				.col.order-lg-last.text-right
+					+e.telephone
+						+e.messengers.d-none.d-lg-flex
+							+e.A.whatsapp(href="https://wa.me/73519454515")
+								+icon('whatsapp')
+							+e.A.viber(href="viber://add?number=73519454515")
+								+icon('viber')
+						+e.A.tel(href="tel:7(3519)45-45-15") 7 (3519) 45-45-15
+					+e.A.call.link-modal(href="#") Заказать #[span.d-none.d-lg-inline звонок] менеджера
+				.col-lg-auto.d-flex
+					img.res-i.lazy(src="#" data-src="img/@2x/semiprecious-stones.png", alt="#")
+					+e.text
+						+e.A.concrete(href="#") Что за&nbsp;бетон с&nbsp;полудрагоценными камнями?
+				+e.col.col-auto.order-lg-3
+					+e.about
+						a(href="#") О компании
+					+e.delivery
+						a(href="#") Доставка
+
+
+
+	// end topLine

@@ -1,0 +1,86 @@
+mixin itemProd(a, i, t, vz, height, width)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img.swiper-lazy(src="#" data-src=`img/@2x/flowerpot-${i}.png`, alt="#")
+		.h4= t
+			if vz
+				span= vz
+			else
+				span вазон бетонный
+		table
+			tr
+				td Высота: 
+				if height
+					td= height
+				else
+					td 300 мм.
+			tr
+				td Длина: 
+				if width
+					td= width
+				else
+					td 400 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 45 кг.
+		+e.materials
+			img.swiper-lazy.res-i(src="#" data-src="img/@2x/material-1.png", alt="#")
+			img.swiper-lazy.res-i(src="#" data-src="img/@2x/material-2.png", alt="#")
+			img.swiper-lazy.res-i(src="#" data-src="img/@2x/material-3.png", alt="#")
+			img.swiper-lazy.res-i(src="#" data-src="img/@2x/material-4.png", alt="#")
+		.h5.text-center 1800 руб.*
+		+e.A.btn.btn(href="#") Заказать
+
+
+
+mixin sCatalog()
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			block
+			+b.tabs
+				+e.caption
+					+e.btn.active Вазоны бетонные цветочные
+					+e.btn Парапет
+					+e.btn Ограничитель парковки
+					+e.btn Скамейки
+					+e.btn Урны
+				+e.wrap
+					+e.content.vazons.active
+						+e.vazons
+							+icon('info')
+							p Во&nbsp;всех вазонах делаем дренажные отверстия для воды
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									+itemProd('a','1','«Афина»')
+								.swiper-slide
+									+itemProd('','2','«Болено»')
+								.swiper-slide
+									+itemProd('','3','«Венза»')
+							.swiper-button-next
+							.swiper-button-prev
+							.swiper-pagination
+						+e.A.allProd.btn(href="#") Смотреть все вазоны
+						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
+					+e.content
+						h2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid laborum explicabo vel deserunt repudiandae quos quae, obcaecati nihil reprehenderit aspernatur dolore exercitationem, consectetur ipsam provident quia illo dignissimos magnam soluta?
+					+e.content
+						h2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid laborum explicabo vel deserunt repudiandae quos quae, obcaecati nihil reprehenderit aspernatur dolore exercitationem, consectetur ipsam provident quia illo dignissimos magnam soluta?
+					+e.content
+						h2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid laborum explicabo vel deserunt repudiandae quos quae, obcaecati nihil reprehenderit aspernatur dolore exercitationem, consectetur ipsam provident quia illo dignissimos magnam soluta?
+					+e.content
+						h2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid laborum explicabo vel deserunt repudiandae quos quae, obcaecati nihil reprehenderit aspernatur dolore exercitationem, consectetur ipsam provident quia illo dignissimos magnam soluta?
+
+
+
+
+
+	// end sCatalog

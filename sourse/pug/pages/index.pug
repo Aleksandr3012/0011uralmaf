@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sDelivery/_sDelivery.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Урал Маф'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+pic('header-bg.png', 'bg', 'lazy')(class="picture-bg")
+		+topLine()
+		+headerBlock()
+		//- +top-nav()
+	+sAdvantages()(class="d-flex d-lg-none")
+	+sCatalog()
+		+b.section-title.text-center
+			h2 Благодаря собственному производству реализуем в&nbsp;камне #[strong любые фактуры, формы и&nbsp;цвета]
+			h4 Все изделия покрываем лаком для дополнительной защиты, который придает насыщенный цвет изделию
+	+sForm()
+	+sDelivery()
+	+footer()

@@ -1,0 +1,44 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			.row
+				.col-md-4
+					+e.A.logo(href="#")
+						+icon('logo')
+						+e.DIV.brand Урал Маф
+						+e.DIV.descr.d-none.d-lg-block Малые архитектурные формы: производим в&nbsp;Магнитогорске, реализуем по&nbsp;России и&nbsp;СНГ
+				.col-md-2
+					+e.UL.map
+						li: a(href="#") О компании
+						li: a(href="#") Доставка
+						li: a.borderBottom(href="#") Получить каталог
+
+				.col-md-3
+					+e.workTime Звоните
+					p пн-пт: с 7:00 до 19:00 по МСК, выходной:&nbsp;сб-вс
+
+				.col-md-3
+					+e.telephone
+						+e.messengers.d-none.d-lg-flex
+							+e.A.whatsapp(href="https://wa.me/73519454515")
+								+icon('whatsapp')
+							+e.A.viber(href="viber://add?number=73519454515")
+								+icon('viber')
+						+e.A.tel(href="tel:7(3519)45-45-15") 7 (3519) 45-45-15
+					+e.A.call.link-modal(href="#") Заказать #[span.d-none.d-lg-inline звонок] менеджера
+				.col-md-3
+					+e.adres Юридический адерс и реквизиты
+					p 455026, Челябинская область, г. Магнитогорск, ул. Клары Цеткин, д.12/1 ИНН&nbsp;XXXXXXXXXX ОГРН&nbsp;XXXXXXXXXXXXXX
+				.col-md-3
+				.col-md-3
+					+e.UL.polite 
+						li: a(href="") Политика конфиденциальности
+						li: a(href="") Пользовательское соглашение
+						li: a(href="") Карта сайта
+				.col-md-3
+					+e.develop Разработка и продвижение сайта: #[a(href="#") Веб-студия «Барс»]
+					+b.develop-link(href="#" target="_blank")
+						+e.panel
+							img.img-1(src="img/svg/hand.svg", alt="")
+							img.img-2(src="img/svg/logo-text.svg", alt="")
+

@@ -1,0 +1,23 @@
+mixin sForm()
+	// start sForm
+	+b.sForm#sForm&attributes(attributes)
+		+pic('formBg.png', 'bg', 'lazy')(class="picture-bg")
+		.container
+			.h2 Если вы&nbsp;не&nbsp;нашли&nbsp;то, что нужно, мы&nbsp;изготовим формы и&nbsp;#[span сделаем изделия специально для вас]
+			.h4 Расскажите о&nbsp;задаче&nbsp;&mdash; рассчитаем стоимость изготовления изделий и&nbsp;подготовим коммерческое предложение
+			.row
+				.col-lg-6
+					+e.imgWrap
+						+e.founder.IMG.lazy(src="#" data-src="img/@2x/founder.png", alt="#")
+						+e.label
+							+e.name Михаил Геннадьевич
+							+e.position Сооснователь компании ООО «УралМаф»
+				.col
+					+e.head-text 
+						+form-wrap("Получить каталог и прайс")
+							+inputName()
+							+form-tabs()
+							+e.btn.btn(type="submit") обсудить задачу
+							+polite
+			.row
+	// end sForm

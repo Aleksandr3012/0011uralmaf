@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Medium.woff2') format('woff2'),
+        url('TTNorms-Medium.woff') format('woff'),
+        url('TTNorms-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-LightItalic.woff2') format('woff2'),
+        url('TTNorms-LightItalic.woff') format('woff'),
+        url('TTNorms-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-BlackItalic.woff2') format('woff2'),
+        url('TTNorms-BlackItalic.woff') format('woff'),
+        url('TTNorms-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Black.woff2') format('woff2'),
+        url('TTNorms-Black.woff') format('woff'),
+        url('TTNorms-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Bold.woff2') format('woff2'),
+        url('TTNorms-Bold.woff') format('woff'),
+        url('TTNorms-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-BoldItalic.woff2') format('woff2'),
+        url('TTNorms-BoldItalic.woff') format('woff'),
+        url('TTNorms-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Light.woff2') format('woff2'),
+        url('TTNorms-Light.woff') format('woff'),
+        url('TTNorms-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
