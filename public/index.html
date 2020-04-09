@@ -19,7 +19,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
-		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
@@ -59,7 +59,9 @@
 										</div><a class="topLine__tel" href="tel:7(3519)45-45-15">7 (3519) 45-45-15</a>
 									</div><a class="topLine__call link-modal" href="#">Заказать <span class="d-none d-lg-inline">звонок</span> менеджера</a>
 								</div>
-								<div class="col-lg-auto d-flex"><img class="res-i lazy" src="#" data-src="img/@2x/semiprecious-stones.png" alt="#"/>
+								<div class="col-lg d-flex">
+									<div class="topLine__imgWrap d-none d-lg-block"><img class="res-i lazy" src="#" data-src="img/@2x/semiprecious-stones.png" alt="#"/>
+									</div>
 									<div class="topLine__text"><a class="topLine__concrete" href="#">Что за&nbsp;бетон с&nbsp;полудрагоценными камнями?</a>
 									</div>
 								</div>
@@ -175,13 +177,13 @@
 									</svg>
 									<p>Во&nbsp;всех вазонах делаем дренажные отверстия для воды</p>
 								</div>
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
+								<div class="slider-wrap">
+									<div class="slider--js">
+										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img class="swiper-lazy" src="#" data-src="img/@2x/flowerpot-1.png" alt="#"/>
+												<div class="itemProd__imgWrap"><img class="lazy" src="#" data-src="img/@2x/flowerpot-1.png" alt="#"/>
 												</div>
 												<div class="h4">«Афина»<span>вазон бетонный</span>
 												</div>
@@ -199,16 +201,16 @@
 														<td>45 кг.</td>
 													</tr>
 												</table>
-												<div class="itemProd__materials"><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-1.png" alt="#"/><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-2.png" alt="#"/><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-3.png" alt="#"/><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-4.png" alt="#"/>
+												<div class="itemProd__materials"><img class="lazy res-i" src="#" data-src="img/@2x/material-1.png" alt="#"/><img class="lazy res-i" src="#" data-src="img/@2x/material-2.png" alt="#"/><img class="lazy res-i" src="#" data-src="img/@2x/material-3.png" alt="#"/><img class="lazy res-i" src="#" data-src="img/@2x/material-4.png" alt="#"/>
 												</div>
 												<div class="h5 text-center">1800 руб.*</div><a class="itemProd__btn btn" href="#">Заказать</a>
 											</div>
 										</div>
-										<div class="swiper-slide">
+										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability itemProd__availability--empty">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img class="swiper-lazy" src="#" data-src="img/@2x/flowerpot-2.png" alt="#"/>
+												<div class="itemProd__imgWrap"><img class="lazy" src="#" data-src="img/@2x/flowerpot-2.png" alt="#"/>
 												</div>
 												<div class="h4">«Болено»<span>вазон бетонный</span>
 												</div>
@@ -226,16 +228,16 @@
 														<td>45 кг.</td>
 													</tr>
 												</table>
-												<div class="itemProd__materials"><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-1.png" alt="#"/><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-2.png" alt="#"/><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-3.png" alt="#"/><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-4.png" alt="#"/>
+												<div class="itemProd__materials"><img class="lazy res-i" src="#" data-src="img/@2x/material-1.png" alt="#"/><img class="lazy res-i" src="#" data-src="img/@2x/material-2.png" alt="#"/><img class="lazy res-i" src="#" data-src="img/@2x/material-3.png" alt="#"/><img class="lazy res-i" src="#" data-src="img/@2x/material-4.png" alt="#"/>
 												</div>
 												<div class="h5 text-center">1800 руб.*</div><a class="itemProd__btn btn" href="#">Заказать</a>
 											</div>
 										</div>
-										<div class="swiper-slide">
+										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability itemProd__availability--empty">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img class="swiper-lazy" src="#" data-src="img/@2x/flowerpot-3.png" alt="#"/>
+												<div class="itemProd__imgWrap"><img class="lazy" src="#" data-src="img/@2x/flowerpot-3.png" alt="#"/>
 												</div>
 												<div class="h4">«Венза»<span>вазон бетонный</span>
 												</div>
@@ -253,15 +255,13 @@
 														<td>45 кг.</td>
 													</tr>
 												</table>
-												<div class="itemProd__materials"><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-1.png" alt="#"/><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-2.png" alt="#"/><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-3.png" alt="#"/><img class="swiper-lazy res-i" src="#" data-src="img/@2x/material-4.png" alt="#"/>
+												<div class="itemProd__materials"><img class="lazy res-i" src="#" data-src="img/@2x/material-1.png" alt="#"/><img class="lazy res-i" src="#" data-src="img/@2x/material-2.png" alt="#"/><img class="lazy res-i" src="#" data-src="img/@2x/material-3.png" alt="#"/><img class="lazy res-i" src="#" data-src="img/@2x/material-4.png" alt="#"/>
 												</div>
 												<div class="h5 text-center">1800 руб.*</div><a class="itemProd__btn btn" href="#">Заказать</a>
 											</div>
 										</div>
 									</div>
-									<div class="swiper-button-next"></div>
-									<div class="swiper-button-prev"></div>
-									<div class="swiper-pagination"></div>
+									<div class="control-wrap"></div>
 								</div><a class="tabs__allProd btn" href="#">Смотреть все вазоны</a>
 								<div class="h6">*Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.</div>
 							</div>
@@ -483,7 +483,7 @@
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
-		<script src="libs/swiper/js/swiper.min.js"></script>
+		<script src="libs/slick-carousel/slick/slick.min.js"></script>
 		<!-- /slider libs-->
 		<!-- for svg libs-->
 		<script src="libs/svg4everybody/svg4everybody.min.js"></script>

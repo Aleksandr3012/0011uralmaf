@@ -84,7 +84,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1240px,
+  xl: 1300px,
   // xxl: 1400px
 ) !default; 
 
@@ -97,7 +97,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1200px,
+  xl: 1260px,
   // xxl: 1340px
 ) !default; 
 // Grid columns
@@ -126,7 +126,7 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
 // title 
-$h1-font-size:                rem(56px) !default;
+$h1-font-size:                rem(50px) !default;
 $h2-font-size:                rem(45px) !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                rem(22px) !default;

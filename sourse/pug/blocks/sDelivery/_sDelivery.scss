@@ -1,6 +1,10 @@
 // start .sDelivery
 .sDelivery {
-	padding-top: rem(100);
+	padding-top: rem(130);
+	margin-top: rem(-50);
+	position: relative;
+	z-index: -1;
+	background-color: #fff;
 	padding-bottom: rem(90);
 	border-bottom: solid 1px #e8e8e8;
 	

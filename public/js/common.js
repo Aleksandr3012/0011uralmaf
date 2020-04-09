@@ -1,5 +1,9 @@
 "use strict";
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var $ = jQuery;
@@ -100,8 +104,6 @@ var JSCCommon = {
 };
 
 function eventHandler() {
-	var _Swiper;
-
 	// полифил для object-fit
 	objectFitImages(); // Picture element HTML5 shiv
 
@@ -114,7 +116,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/01.png);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -165,17 +167,26 @@ function eventHandler() {
 	,.slider-for2 ').on('lazyLoaded', function (event, slick, image, imageSource) {
 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 	}); // slider
-
-	var swiper4 = new Swiper('.color-slider', (_Swiper = {
-		// slidesPerView: 5,
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 0,
-		freeMode: true
-	}, _defineProperty(_Swiper, "watchOverflow", true), _defineProperty(_Swiper, "slidesPerGroup", 3), _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "loopFillGroupWithBlank", true), _defineProperty(_Swiper, "touchRatio", 0.2), _defineProperty(_Swiper, "slideToClickedSlide", true), _defineProperty(_Swiper, "freeModeMomentum", true), _defineProperty(_Swiper, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _Swiper)); // modal window
+	// const swiper4 = new Swiper('.color-slider', {
+	// 	// slidesPerView: 5,
+	// 	slidesPerView: 'auto',
+	// 	watchOverflow: true,
+	// 	spaceBetween: 0,
+	// 	freeMode: true,
+	// 	watchOverflow: true,
+	// 	slidesPerGroup: 3,
+	// 	// centeredSlides: true,
+	// 	loop: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// });
+	// modal window
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
@@ -183,26 +194,37 @@ function eventHandler() {
 		$("body").prepend("<p   class=\"browsehappy container\">\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0432\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0435 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0438\u0439 \u0431\u0440\u0430\u0443\u0437\u0435\u0440. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, <a href=\"http://browsehappy.com/\" target=\"_blank\">\u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0432\u0430\u0448 \u0431\u0440\u0430\u0443\u0437\u0435\u0440</a>, \u0447\u0442\u043E\u0431\u044B \u0443\u043B\u0443\u0447\u0448\u0438\u0442\u044C \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C, \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u043E \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0430\u0435\u043C\u043E\u0433\u043E \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u0430 \u0438 \u043F\u043E\u0432\u044B\u0441\u0438\u0442\u044C \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u044C.</p>");
 	}
 
-	var event = new Swiper('.swiper-container', {
-		spaceBetween: 30,
-		loop: true,
-		slidesPerView: 1,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		},
-		pagination: {
-			el: '.swiper-pagination'
-		},
-		breakpoints: {
-			992: {
-				slidesPerView: 3
+	var icon = '<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="791.966px" height="791.967px" viewBox="0 0 791.966 791.967" style="enable-background:new 0 0 791.966 791.967;" xml:space="preserve"><path d="M245.454,396.017L617.077,56.579c12.973-12.94,12.973-33.934,0-46.874c-12.973-12.94-34.033-12.94-47.006,0L174.615,370.896c-6.932,6.899-9.87,16.076-9.408,25.087c-0.462,9.045,2.476,18.188,9.408,25.088l395.456,361.19c12.973,12.94,34.033,12.94,47.006,0c12.973-12.939,12.973-33.934,0-46.873L245.454,396.017z"/></svg>';
+	var arrl2 = ' <div class="r">' + icon,
+			arrr2 = ' <div class="l">' + icon;
+	var defaultSlide = {
+		speed: 450,
+		infinite: true,
+		arrows: true,
+		mobileFirst: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		// autoplay: true,
+		autoplaySpeed: 6000,
+		lazyLoad: 'progressive'
+	};
+	$('.slider--js').slick(_objectSpread({}, defaultSlide, {
+		slidesToShow: 1,
+		dots: true,
+		appendArrows: '.control-wrap',
+		appendDots: '.control-wrap',
+		responsive: [{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 3
 			}
-		},
-		lazy: {
-			loadPrevNext: true
-		}
-	}); // $('.main-wrapper').click(function(){
+		}, {
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2
+			}
+		}]
+	})); // $('.main-wrapper').click(function(){
 	// 	$(this).addClass('d-none');
 	// });
 }

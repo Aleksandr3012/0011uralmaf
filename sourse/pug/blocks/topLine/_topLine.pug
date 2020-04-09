@@ -17,8 +17,9 @@ mixin topLine()
 								+icon('viber')
 						+e.A.tel(href="tel:7(3519)45-45-15") 7 (3519) 45-45-15
 					+e.A.call.link-modal(href="#") Заказать #[span.d-none.d-lg-inline звонок] менеджера
-				.col-lg-auto.d-flex
-					img.res-i.lazy(src="#" data-src="img/@2x/semiprecious-stones.png", alt="#")
+				.col-lg.d-flex
+					+e.imgWrap.d-none.d-lg-block
+						img.res-i.lazy(src="#" data-src="img/@2x/semiprecious-stones.png", alt="#")
 					+e.text
 						+e.A.concrete(href="#") Что за&nbsp;бетон с&nbsp;полудрагоценными камнями?
 				+e.col.col-auto.order-lg-3

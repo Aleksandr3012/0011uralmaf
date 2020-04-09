@@ -3,6 +3,8 @@
 	padding: rem(83) rem(73) rem(70) rem(78);
 	background-color: #fff;
 	box-shadow: 0 0 24px -10px rgba(19, 19, 19, 0.13);
+	border-radius: rem(15) rem(15) rem(15) 0;
+
 	// box-shadow: ;
 
 	&::before {
@@ -10,12 +12,15 @@
 		position: absolute;
 		width: 100%;
 		left: 0;
-		bottom: rem(-68);
-		height: rem(68);
-		// background-color: #fff;
-		// box-shadow: 0 38px 24px 12px rgba(19, 19, 19, 0.13);
-		border-top: 60px solid #fff; 
-		border-right: 570px solid transparent;	
+		// z-index: -1;
+		bottom: rem(-50);
+		height: rem(80);
+		transform: skew(0, -5deg);
+		background-color: #fff;
+		box-shadow: 0 38px 24px 12px rgba(19, 19, 19, 0.13);
+		border-radius: 0 rem(15) rem(15) rem(15);
+		// border-top: 60px solid #fff; 
+		// border-right: 570px solid transparent;	
 
 	}
 
