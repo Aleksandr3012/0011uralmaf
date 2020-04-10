@@ -1,8 +1,12 @@
 .itemProd {
-	margin: rem(20) rem(14) rem(70);
+	@include media-breakpoint-up(md) {
+		margin: rem(20) rem(14) rem(20);
+		padding: rem(12) rem(7) rem(35);
+	}
+	margin: rem(0) rem(0) rem(36);
+	padding: rem(12) rem(7) rem(42);
 	overflow: hidden;
 	border: 1px solid #e9ecf5;
-	padding: rem(20) rem(7) rem(42);
 	height: 100%;
 	position: relative;
 	@include mt;
@@ -28,7 +32,6 @@
 			width: rem(10);
 			height: rem(10);
 			border-radius: 50%;
-
 		}
 		&--empty {
 			opacity: 0;
@@ -36,9 +39,19 @@
 	}
 
 	.h4 {
-		padding-left: rem(16);
+		padding-left: rem(11);
+		line-height: rem(20px);
+		margin-bottom: rem(9);
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(14);
+			padding-left: rem(16);
+			line-height: rem(30px);
+		}
+		@include media-breakpoint-down(md) {
+			font-size: rem(17);
+		}
 		font-weight: 700;
-		line-height: rem(30px);
 		span {
 			font-weight: 400;
 			display: block;
@@ -46,13 +59,22 @@
 	}
 
 	table {
-		width: 60%;
-		margin-left: rem(16);
-		line-height: rem(28px);
-		margin-bottom: rem(30);
+		width: 100%;
+		margin-left: rem(10);
+		margin-bottom: rem(34);
+
+		@include media-breakpoint-up(md) {
+			margin-left: rem(16);
+			line-height: rem(25px);
+			margin-bottom: rem(30);
+		}
 
 		td {
 			&:first-child {
+				width: 45%;
+				@include media-breakpoint-up(md) {
+					width: 32.5%;
+				}
 				color: $light;
 			}
 			&:last-child {
@@ -63,32 +85,68 @@
 
 	&__imgWrap {
 		position: relative;
-		width: rem(360);
-		height: rem(309);
+		width: 100%;
+		height: auto;
+		min-height: rem(250);
+		margin-bottom: rem(24);
+
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(13);
+			min-height: rem(309);
+		}
+
 		img {
+			max-height: rem(260);
+			@include media-breakpoint-up(sm) {
+				max-height: rem(309);
+			}
+			max-width: 100%;
+			height: auto;
 			@include a-cent;
 		}
 	}
 
 	.h5 {
 		font-weight: 700;
-		margin-bottom: rem(32);
+		margin-bottom: rem(30);
 	}
 
 	&__materials {
-		padding-left: rem(16);
-		padding-bottom: rem(30);
-		img {
+		display: flex;
+		// justify-content: flex-start;
+		padding-left: rem(3);
+		@include media-breakpoint-up(md) {
+			padding-left: rem(16);
+		}
+		margin-bottom: rem(30);
+	}
+
+	&__materialsWrap {
+		// display: inline-block;
+		// flex-shrink: 3;
+		&:not(:last-child) {
 			margin-right: rem(6);
+		}
+		position: relative;
+		max-width: 100%;
+		height: auto;
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			// @include a-cent;
 		}
 	}
 
 	&__btn {
 		width: calc(100% - 7px);
-		padding: rem(33);
+		margin-left: rem(5);
+		padding: rem(20);
+		@include media-breakpoint-up(md){
+			padding: rem(31);
+		}
 		&::before {
-			height: rem(80);
+			height: rem(28);
 		}
 	}
-
 }

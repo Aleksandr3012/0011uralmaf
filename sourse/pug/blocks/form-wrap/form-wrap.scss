@@ -1,38 +1,51 @@
 .form-wrap {
 	position: relative;
-	padding: rem(83) rem(73) rem(70) rem(78);
+	padding: rem(51) rem(13) rem(42) rem(12);
+	@include media-breakpoint-up(lg) {
+		padding: rem(80) rem(60) rem(70);
+	}
+	@include media-breakpoint-only(xl){
+		padding: rem(80) rem(73) rem(70) rem(78);
+	}
 	background-color: #fff;
 	box-shadow: 0 0 24px -10px rgba(19, 19, 19, 0.13);
-	border-radius: rem(15) rem(15) rem(15) 0;
+	border-radius: rem(10) rem(10) rem(10) 0;
 
 	// box-shadow: ;
 
 	&::before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		left: 0;
-		// z-index: -1;
-		bottom: rem(-50);
-		height: rem(80);
-		transform: skew(0, -5deg);
-		background-color: #fff;
-		box-shadow: 0 38px 24px 12px rgba(19, 19, 19, 0.13);
-		border-radius: 0 rem(15) rem(15) rem(15);
-		// border-top: 60px solid #fff; 
-		// border-right: 570px solid transparent;	
-
+		@include media-breakpoint-up(md) {
+			content: '';
+			position: absolute;
+			width: 100%;
+			left: 0;
+			// z-index: -1;
+			bottom: rem(-35);
+			height: rem(80);
+			transform: skew(0, -6deg);
+			background-color: #fff;
+			box-shadow: 0 38px 24px 12px rgba(19, 19, 19, 0.13);
+			border-radius: 0 rem(10) rem(10) rem(10);
+			// border-top: 60px solid #fff;
+			// border-right: 570px solid transparent;
+		}
 	}
 
 	&__input-wrap {
 		// @extend .form-group;
-		margin-bottom: rem(40);
+		margin-bottom: rem(37);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(45);
+		}
 	}
 
 	&__input {
 		border: 1px solid #f3f3f3;
 		background-color: #fafaff;
-		padding: rem(35) rem(40);
+		padding: rem(26) rem(22) rem(25);
+		@include media-breakpoint-up(lg) {
+			padding: rem(36) rem(40);
+		}
 		resize: none;
 		margin-top: rem(20);
 	}
@@ -40,7 +53,14 @@
 	&__btn {
 		// cursor: pointer;
 		width: 100%;
-		height: rem(107);
+		border-radius: rem(7);
+		margin-top: rem(13);
+		height: rem(60);
+		@include media-breakpoint-up(md) {
+			height: rem(107);
+			margin-top: rem(8);
+			border-radius: rem(3px) rem(3px) rem(7px) rem(7px);
+		}
 	}
 
 	label {
@@ -49,42 +69,115 @@
 	}
 
 	&__group-title {
-		padding-bottom: rem(20);
-		@extend .h5;
-		padding-left: rem(40);
+		// @extend .h5;
+		font-weight: 400;
+		padding-left: rem(20);
+		padding-bottom: rem(28);
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(13);
+			padding-left: rem(40);
+			font-size: rem(20);
+		}
+
+		@include media-breakpoint-down(xs) {
+			max-width: rem(180);
+			line-height: rem(20px);
+		}
 	}
 
 	.tabs {
 		&__caption {
-			flex-wrap: nowrap;
-			padding-bottom: rem(58);
+			flex-wrap: wrap;
+			padding-bottom: rem(30);
+			@include media-breakpoint-up(md) {
+				flex-wrap: nowrap;
+				padding-bottom: rem(52);
+			}
 		}
 
 		&__btn {
-			width: 100%;
+			width: rem(132);
+			@include media-breakpoint-up(md) {
+				width: 100%;
+			}
+			&:nth-child(1) {
+				border-radius: 6px 0 0 6px;
+			}
+
+			@include media-breakpoint-down(md) {
+				min-height: rem(62);
+				margin-bottom: rem(10);
+				&:nth-child(2) {
+					margin-left: 0;
+					border-radius: 0 6px 6px 0;
+				}
+			}
+			// background-color: #fff;
+			background-color: #fafaff;
 		}
 	}
 
 	&__title {
-		@extend .h5;
-		padding-left: rem(40);
-	}
-
-	&__polite {
-		padding-top: rem(30);
-		text-align: center;
-		max-width: rem(370);
-		a {
-			display: inline-block;
+		font-weight: 400;
+		padding-bottom: rem(17);
+		padding-left: rem(20);
+		@include media-breakpoint-up(md) {
+			font-size: rem(20);
+			padding-left: rem(40);
+			margin-bottom: rem(18);
 		}
 	}
 
-	.custom-input {
-		display: inline;
+	&__polite {
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: rem(25);
+		line-height: rem(16px);
+		@include media-breakpoint-up(md) {
+			padding-top: rem(30);
+			line-height: rem(23px);
+		}
 
-		&__lab {
-			background-color: #7cccd0 !important;
-			border-radius: 50%;
+		@include media-breakpoint-down(md) {
+			font-size: rem(11);
+		}
+		text-align: center;
+		font-weight: 300;
+		max-width: rem(380);
+		position: relative;
+		a {
+			display: inline-block;
+			color: #5ec1c5;
+		}
+
+		.custom-input {
+			position: absolute;
+			left: rem(19);
+			top: rem(27);
+			@include media-breakpoint-up(lg) {
+				top: rem(34);
+				left: rem(15);
+			}
+			@include media-breakpoint-up(xl) {
+				left: rem(29);
+				top: rem(34);
+			}
+			&__lab {
+				background-color: #fff !important;
+				border: solid 1px #7cccd0;
+				// border: solid 1px;
+				border-radius: 50%;
+				width: rem(11);
+				height: rem(11);
+
+				&::after {
+					content: '';
+					background-color: #7cccd0;
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+				}
+			}
 		}
 	}
 }

@@ -3,15 +3,21 @@ mixin sForm()
 	+b.sForm#sForm&attributes(attributes)
 		+pic('formBg.png', 'bg', 'lazy')(class="picture-bg")
 		.container
-			.h2 Если вы&nbsp;не&nbsp;нашли&nbsp;то, что нужно, мы&nbsp;изготовим формы и&nbsp;#[span сделаем изделия специально для вас]
-			.h4 Расскажите о&nbsp;задаче&nbsp;&mdash; рассчитаем стоимость изготовления изделий и&nbsp;подготовим коммерческое предложение
+			.h2 Если вы&nbsp;не&nbsp;нашли&nbsp;то, что нужно, мы&nbsp;изготовим формы и&nbsp;#[span сделаем изделия специально&nbsp;для&nbsp;вас]
+			.h4 Расскажите о&nbsp;задаче&nbsp;&mdash; рассчитаем стоимость&nbsp;изготовления изделий&nbsp;и&nbsp;подготовим коммерческое&nbsp;предложение
 			.row
 				.col-lg-6
-					+e.imgWrap
+					+e.imgWrap.d-none.d-lg-block
 						+e.founder(src="img/@2x/founder.png", alt="#")
 						+e.label
 							+e.name Михаил Геннадьевич
 							+e.position Сооснователь компании ООО «УралМаф»
+					+e.founderSm.d-lg-none
+						+e.founderImg(src="img/@2x/founder-sm.png", alt="#")
+						+e.nameWrap
+							+e.nameSm Михаил Геннадьевич
+							+e.positionSm Сооснователь компании ООО&nbsp;«УралМаф»
+
 				.col
 					+e.head-text 
 						+form-wrap("Получить каталог и прайс")

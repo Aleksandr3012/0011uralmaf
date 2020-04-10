@@ -10,19 +10,19 @@ mixin topLine()
 						+e.DIV.descr.d-none.d-lg-block Малые архитектурные формы: производим в&nbsp;Магнитогорске, реализуем по&nbsp;России и&nbsp;СНГ
 				.col.order-lg-last.text-right
 					+e.telephone
-						+e.messengers.d-none.d-lg-flex
+						+e.messengers.d-none.d-sm-flex
 							+e.A.whatsapp(href="https://wa.me/73519454515")
 								+icon('whatsapp')
 							+e.A.viber(href="viber://add?number=73519454515")
 								+icon('viber')
 						+e.A.tel(href="tel:7(3519)45-45-15") 7 (3519) 45-45-15
-					+e.A.call.link-modal(href="#") Заказать #[span.d-none.d-lg-inline звонок] менеджера
+					+e.A.call.link-modal(href="#") Заказать  звонок #[span.d-none.d-lg-inline менеджера]
 				.col-lg.d-flex
 					+e.imgWrap.d-none.d-lg-block
 						img.res-i.lazy(src="#" data-src="img/@2x/semiprecious-stones.png", alt="")
 					+e.text
 						+e.A.concrete(href="#") Что за&nbsp;бетон с&nbsp;полудрагоценными камнями?
-				+e.col.col-auto.order-lg-3
+				+e.col.col-lg-auto.order-lg-3
 					+e.about
 						a(href="#") О компании
 					+e.delivery

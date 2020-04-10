@@ -31,10 +31,14 @@ mixin itemProd(a, i, t, vz, height, width)
 				else
 					td 45 кг.
 		+e.materials
-			img.lazy.res-i(src="#" data-src="img/@2x/material-1.png", alt="#")
-			img.lazy.res-i(src="#" data-src="img/@2x/material-2.png", alt="#")
-			img.lazy.res-i(src="#" data-src="img/@2x/material-3.png", alt="#")
-			img.lazy.res-i(src="#" data-src="img/@2x/material-4.png", alt="#")
+			+e.materialsWrap
+				img.lazy.res-i(src="#" data-src="img/@2x/material-1.png", alt="#")
+			+e.materialsWrap
+				img.lazy.res-i(src="#" data-src="img/@2x/material-2.png", alt="#")
+			+e.materialsWrap
+				img.lazy.res-i(src="#" data-src="img/@2x/material-3.png", alt="#")
+			+e.materialsWrap
+				img.lazy.res-i(src="#" data-src="img/@2x/material-4.png", alt="#")
 		.h5.text-center 1800 руб.*
 		+e.A.btn.btn(href="#") Заказать
 
@@ -44,7 +48,9 @@ mixin sCatalog()
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
-			block
+			+b.section-title.text-center
+				h2 Благодаря собственному производству реализуем&nbsp;в&nbsp;камне #[strong любые фактуры, формы и&nbsp;цвета]
+				h4 Все изделия покрываем лаком для дополнительной защиты, который&nbsp;придает насыщенный цвет изделию
 			+b.tabs
 				+e.caption
 					+e.btn.active Вазоны бетонные цветочные
@@ -56,7 +62,7 @@ mixin sCatalog()
 					+e.content.vazons.active
 						+e.vazons
 							+icon('info')
-							p Во&nbsp;всех вазонах делаем дренажные отверстия для воды
+							p Во&nbsp;всех вазонах делаем дренажные отверстия для&nbsp;воды
 						.slider-wrap
 							.slider--js
 								.slide

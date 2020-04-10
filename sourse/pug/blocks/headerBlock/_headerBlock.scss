@@ -1,41 +1,78 @@
 // start .headerBlock
 .headerBlock {
 	position: relative;
-	padding-top: rem(90);
-	padding-bottom: rem(80);
+	padding-top: rem(20);
+	padding-bottom: rem(65);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(90);
+		padding-bottom: rem(110);
+	}
+
+
 	h1 {
+		@include media-breakpoint-down(md) {
+			font-size: rem(25);
+			@include roww(8);
+			text-align: center;
+		}
+
 		font-weight: bold;
 		text-transform: uppercase;
-		margin-bottom: rem(20);
 		color: $info;
-		line-height: rem(53px);
-		
+		line-height: rem(30px);
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(20);
+			line-height: rem(53px);
+		}
+
 		span {
 			text-transform: none;
-			letter-spacing: rem(0.7px);
 			font-weight: 300;
-			font-size: rem(55);
+			font-size: rem(27);
+			letter-spacing: rem(0.4px);
+			@include media-breakpoint-up(lg) {
+				letter-spacing: rem(0.7px);
+				font-size: rem(55);
+			}
 			color: #000;
 		}
 	}
 
 	&__subtitle {
-		font-size: rem(21);
 		max-width: rem(470);
-		margin-left: rem(34);
-		margin-bottom: rem(75);
+		// margin-left: rem(10);
+		@include media-breakpoint-up(md) {
+			font-size: rem(21);
+			margin-left: rem(34);
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(75);
+
+		}
+		@include media-breakpoint-down(md) {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
 	}
 
 	.h6 {
+		font-size: rem(16);
 		font-weight: bold;
 		text-transform: uppercase;
 		font-style: italic;
+		margin-bottom: rem(8);
 	}
 
 	p {
-		max-width: rem(320);
+		font-size: rem(17);
+		letter-spacing: rem(0.4px);
 		font-weight: 500;
 		font-style: italic;
+		@include media-breakpoint-only(lg){
+			font-size: rem(15);
+		}
 	}
 
 	.icon {
@@ -49,7 +86,16 @@
 		letter-spacing: rem(0.64px);
 		position: relative;
 		padding-top: rem(5);
-		width: rem(440);
+		width: 100%;
+		height: 100%;
+		padding-bottom: rem(20);
+
+		&:not(:last-child) {
+			@include media-breakpoint-up(xl){
+			margin-right: rem(30);
+		}
+		}
+
 		&::before {
 			content: '';
 			// @include a-cent;
@@ -57,7 +103,7 @@
 			width: rem(330px);
 			transform: skew(-5deg, 0);
 			@include media-breakpoint-up(xl) {
-				left: rem(-55);
+				left: rem(-60);
 				width: rem(437px);
 				transform: skew(-7deg, 0);
 			}
@@ -65,7 +111,8 @@
 			border-radius: rem(15);
 			z-index: -1;
 			position: absolute;
-			height: rem(179px);
+			height: 100%;
+			min-height: rem(179px);
 			box-shadow: 0 0 24px 12px rgba(19, 19, 19, 0.06);
 			background-color: #fff;
 		}
@@ -74,9 +121,9 @@
 	&__advantages {
 		padding-left: rem(30);
 		@include media-breakpoint-up(xl) {
-			padding-left: rem(70);
+			padding-left: rem(50);
 		}
-		padding-bottom: rem(65);
+		padding-bottom: rem(70);
 	}
 
 	&__btnWrap {
@@ -87,32 +134,61 @@
 	}
 
 	&__btn {
-		padding: rem(47) rem(115) rem(44) rem(49);
+		width: 100%;
+		padding: rem(16) rem(35) rem(14);
+		@include media-breakpoint-up(sm){
+			padding: rem(40);
+		}
+		@include media-breakpoint-up(lg){
+			width: auto;
+			padding: rem(45) rem(115) rem(42) rem(49);
+		}
+		&::before {
+			@include media-breakpoint-only(sm) {
+				top: rem(35);
+			}
+			@include media-breakpoint-only(xs) {
+			height: rem(42);
+			top: rem(16);
+		}
+		}
 	}
 
 	&__imgWrap {
+
 		@include media-breakpoint-up(lg) {
 			width: rem(930);
 			position: absolute;
 			z-index: -1;
 			left: -25%;
 			top: -30%;
+		}
+
+		img {
+			height: auto;
+			width: 100%;
+		}
+
+		@include media-breakpoint-down(md){
+			text-align: center;
+			margin-bottom: rem(50);
 			img {
-				height: auto;
-				width: 100%;
+				max-width: rem(300);
 			}
 		}
 	}
 
 	&__btnWrap {
 		position: relative;
+		font-size: rem(19);
+
 		img {
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(md) {
 				display: none;
 			}
 			position: absolute;
 			@include a-cent(y);
-			left: rem(250);
+			left: rem(300);
 			z-index: 2;
 		}
 	}
