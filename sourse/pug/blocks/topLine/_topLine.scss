@@ -61,7 +61,7 @@
 		&:hover {
 			border-color: transparent;
 		}
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			font-size: rem(15);
 		}
 	}
@@ -106,7 +106,7 @@
 			font-style: italic;
 			line-height: rem(34px);
 			padding-bottom: rem(2);
-			@include media-breakpoint-up(sm){
+			@include media-breakpoint-up(sm) {
 				padding-bottom: rem(7);
 			}
 			display: inline;
@@ -247,3 +247,26 @@
 	@include media-breakpoint-down(xs) {
 	}
 } // end.topLine
+
+.innerPage {
+	.topLine {
+		padding-bottom: rem(23);
+		@include media-breakpoint-up(md){
+			padding-bottom: rem(39);
+	}
+		@include media-breakpoint-down(md) {
+
+			&__text {
+				display: none;
+			}
+
+			&__delivery {
+				display: none;
+			}
+
+			&__about {
+				display: none;
+			}
+		}
+	}
+}

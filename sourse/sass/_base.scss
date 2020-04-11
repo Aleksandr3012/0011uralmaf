@@ -12,7 +12,8 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center -117px;
+	// background-position: center -117px;
+	background-position: center 0px;
 	opacity: 0;
 	opacity: 0.7;
 }
@@ -554,5 +555,19 @@ a {
 			top: 0;
 			// opacity: 0;
 		}
+	}
+}
+
+.backToMain {
+	display: block;
+	text-decoration: underline;
+	margin-top: rem(20);
+	@include media-breakpoint-up(md){
+		margin-top: rem(60);
+		margin-left: rem(14);
+	}
+
+	@include media-breakpoint-down(md){
+		font-size: rem(12);
 	}
 }

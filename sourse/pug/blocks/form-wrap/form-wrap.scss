@@ -154,6 +154,10 @@
 			position: absolute;
 			left: rem(19);
 			top: rem(27);
+			@include media-breakpoint-up(md){
+				top: rem(34);
+				left: rem(50);
+			}
 			@include media-breakpoint-up(lg) {
 				top: rem(34);
 				left: rem(15);

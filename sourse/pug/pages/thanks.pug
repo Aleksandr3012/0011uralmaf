@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sDelivery/_sDelivery.pug 
+include ../blocks/sThanks/_sThanks.pug 
+
+block variables
+	- let  mainPage= 'innerPage'
+block title
+	- let  title= 'Урал Маф'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+pic('header-bg.png', 'bg', 'lazy')(class="picture-bg")
+		+topLine()
+		//- +headerBlock()
+		//- +top-nav()
+	.container
+		a.backToMain(href="#") Вернуться на сайт
+	+sThanks()
+	+sThanks2()
+	//- +sAdvantages()(class="d-flex d-lg-none")
+	//- +sCatalog()
+	//- +sForm()
+	//- +sDelivery()
+	+footer()
