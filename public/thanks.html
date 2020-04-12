@@ -57,7 +57,7 @@
 												<use xlink:href="img/svg/sprite.svg#viber"></use>
 											</svg></a>
 										</div><a class="topLine__tel" href="tel:73519454515">7 (3519) 45-45-15</a>
-									</div><a class="topLine__call link-modal" href="#">Заказать  звонок <span class="d-none d-lg-inline">менеджера</span></a>
+									</div><a class="topLine__call link-modal" href="#modal-call">Заказать  звонок <span class="d-none d-lg-inline">менеджера</span></a>
 								</div>
 								<div class="col-lg d-flex">
 									<div class="topLine__imgWrap d-none d-lg-block"><img class="res-i lazy" src="#" data-src="img/@2x/semiprecious-stones.png" alt=""/>
@@ -176,16 +176,16 @@
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
+						<div class="form-wrap__title h2 ttu">Укажите контактные данные для звонка
 						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+						<div class="h5">Менеджер компании позвонит вам в&nbsp;течение рабочего дня: мы&nbsp;работаем: пн-пт с&nbsp;7:00 до&nbsp;19:00 (Мск)</div>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Как к вам обращаться?" name="text" required="required"/> 
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Введите телефон" name="tel" required="required"/>
 					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
+					<!-- +e.input-wrap--><input class="form-wrap__btn btn" type="submit" value="Заказать звонок"/>
 					<div class="form-wrap__polite">
 						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text"></span>
 						</label>
@@ -324,14 +324,15 @@
 						<h2>В&nbsp;составе наших изделий более&nbsp;80%&nbsp;крошки натуральных камней</h2>
 						<h4>Это обеспечивает долговечность, прочность и&nbsp;красивый внешний вид</h4>
 						<div class="row">
-							<div class="col-lg-6"><img class="res-i lazy" src="#" data-src="img/@2x/cement.png" alt=""/></div>
-							<div class="col-lg-6 align-self-center">
+							<div class="col-lg-6"><img class="modalDelivery__cement res-i lazy" src="#" data-src="img/@2x/cement.png" alt="" role="presentation"/>
+							</div>
+							<div class="modalDelivery__pt col-lg-6">
 								<div class="h5"><strong>При круглогодичной эксплуатации срок службы изделий 5, 10&nbsp;и&nbsp;даже 20&nbsp;лет</strong></div>
 								<div class="h5">Используем цемент B42,5 (М500) и&nbsp;выше&nbsp;&mdash; оптимальную марку, благодаря которой изделиям нипочем снег, дождь, мороз и&nbsp;палящие лучи. Для дополнительной защиты все изделия покрываем лаком.</div>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-6 align-self-center">
+							<div class="modalDelivery__pt col-lg-6">
 								<div class="h5"><strong>Можно мыть водой и&nbsp;при необходимости очищать моющими и&nbsp;дезинфицирующими средствами</strong></div>
 								<div class="h5">А&nbsp;также проводить легкую очистку некоторыми растворителями. Так как изделия предназначены для эксплуатации вне помещений, их&nbsp;можно чистить системами типа &laquo;Karcher&raquo;</div>
 							</div>
@@ -339,15 +340,16 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-6"><img class="res-i lazy" src="#" data-src="img/@2x/banner.png" alt=""/></div>
-							<div class="col-lg-6 align-self-center">
+							<div class="col-lg-6"><img class="modalDelivery__vazons img res-i lazy" src="#" data-src="img/@2x/banner.png" alt="" role="presentation"/>
+							</div>
+							<div class="modalDelivery__pt col-lg-6">
 								<div class="h5"><strong>Поверхность из&nbsp;натурального камня любой фактуры</strong></div>
 								<div class="h5">Изготавливаем материал по&nbsp;технологии &laquo;мытый бетон&raquo; &mdash; в&nbsp;результате наполнитель из&nbsp;камней выступает на&nbsp;поверхность и&nbsp;создает особую фактуру изделию.</div>
 							</div>
 						</div>
-						<div class="modalDelivery__type h5">Можете выбрать <strong>любой вариант</strong> поверхности
+						<div class="modalDelivery__type">Можете выбрать <strong>любой вариант</strong> поверхности
 						</div>
-						<div class="row text-center">
+						<div class="modalDelivery__materials row text-center">
 							<div class="col-6 col-lg-3"><img class="res-i lazy" src="#" data-src="img/@2x/mix.png" alt=""/>
 								<div class="h5">Микс</div>
 							</div>

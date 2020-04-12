@@ -34,13 +34,13 @@ mixin modal()
 	.d-none
 		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
 			.text-center
-				+e.title.h3.ttu Обратный звонок
-				p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
-			+input("Ваше Имя")(required) 
-			+input("Ваш телефон","tel")(required)
+				+e.title.h2.ttu Укажите контактные данные для звонка
+				.h5 Менеджер компании позвонит вам в&nbsp;течение рабочего дня: мы&nbsp;работаем: пн-пт с&nbsp;7:00 до&nbsp;19:00 (Мск)
+			+input("Как к вам обращаться?")(required) 
+			+input("Введите телефон","tel")(required)
 			//- +input("email","Ваше email")(required)
 			//- +text( "Комментарий")
-			+e.INPUT.btn(type="submit" value="Рассчитать") 
+			+e.INPUT.btn.btn(type="submit" value="Заказать звонок") 
 			+polite()
 
 		+b.modalAbout(id="modalAbout")
@@ -125,24 +125,24 @@ mixin modal()
 					h4 Это обеспечивает долговечность, прочность и&nbsp;красивый внешний вид
 					.row
 						.col-lg-6
-							img.res-i.lazy(src="#" data-src="img/@2x/cement.png" alt="")
-						.col-lg-6.align-self-center
+							+e.cement.res-i.lazy(src="#" data-src="img/@2x/cement.png" alt="")
+						+e.pt.col-lg-6
 							.h5 #[strong При круглогодичной эксплуатации срок службы изделий 5, 10&nbsp;и&nbsp;даже 20&nbsp;лет]
 							.h5 Используем цемент B42,5 (М500) и&nbsp;выше&nbsp;&mdash; оптимальную марку, благодаря которой изделиям нипочем снег, дождь, мороз и&nbsp;палящие лучи. Для дополнительной защиты все изделия покрываем лаком.
 					.row
-						.col-lg-6.align-self-center
+						+e.pt.col-lg-6
 							.h5 #[strong Можно мыть водой и&nbsp;при необходимости очищать моющими и&nbsp;дезинфицирующими средствами]
 							.h5 А&nbsp;также проводить легкую очистку некоторыми растворителями. Так как изделия предназначены для эксплуатации вне помещений, их&nbsp;можно чистить системами типа &laquo;Karcher&raquo;
 						.col-lg-6
 							+e.karcher.res-i.lazy(src="#" data-src="img/@2x/karcher.png" alt="")
 					.row
 						.col-lg-6
-							img.res-i.lazy(src="#" data-src="img/@2x/banner.png" alt="")
-						.col-lg-6.align-self-center
+							+e.vazons.img.res-i.lazy(src="#" data-src="img/@2x/banner.png" alt="")
+						+e.pt.col-lg-6
 							.h5 #[strong Поверхность из&nbsp;натурального камня любой фактуры]
 							.h5 Изготавливаем материал по&nbsp;технологии &laquo;мытый бетон&raquo; &mdash; в&nbsp;результате наполнитель из&nbsp;камней выступает на&nbsp;поверхность и&nbsp;создает особую фактуру изделию.
-					+e.type.h5 Можете выбрать #[strong любой вариант] поверхности
-					.row.text-center
+					+e.type Можете выбрать #[strong любой вариант] поверхности
+					+e.materials.row.text-center
 						.col-6.col-lg-3
 							img.res-i.lazy(src="#" data-src="img/@2x/mix.png" alt="")
 							.h5 Микс

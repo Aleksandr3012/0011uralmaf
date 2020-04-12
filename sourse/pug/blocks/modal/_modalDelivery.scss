@@ -7,7 +7,7 @@
 	.icon-info {
 		font-size: rem(20);
 		margin-right: rem(11);
-		@include media-breakpoint-up(sm){
+		@include media-breakpoint-up(sm) {
 			font-size: rem(23);
 			margin-right: rem(15);
 		}
@@ -24,12 +24,12 @@
 			margin-right: auto;
 			margin-top: rem(50);
 		}
-
 	}
 
-	&__car, &__packaging {
+	&__car,
+	&__packaging {
 		display: block;
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			max-width: rem(150);
 			margin-left: auto;
 			margin-right: auto;
@@ -44,7 +44,7 @@
 		margin-right: auto;
 		font-weight: 400;
 		margin-bottom: rem(27);
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(md) {
 			margin-bottom: rem(20);
 		}
 		@include media-breakpoint-up(md) {
@@ -72,7 +72,7 @@
 	.h5 {
 		max-width: rem(250);
 		line-height: rem(22px);
-		@include media-breakpoint-up(sm){
+		@include media-breakpoint-up(sm) {
 			max-width: rem(380);
 			line-height: rem(28px);
 		}
@@ -85,7 +85,7 @@
 			}
 		}
 
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			font-size: rem(15);
 			padding-left: rem(16);
 		}
@@ -108,24 +108,53 @@
 	}
 
 	&__head {
-		padding: rem(48) rem(80) rem(89) rem(80);
+		padding: rem(43) rem(100) rem(89) rem(100);
 		.h5 {
-			max-width: 100%;
-			@include media-breakpoint-up(xl){
-				margin-left: rem(90);
+			max-width: rem(390) !important;
+			margin-bottom: rem(23) !important;
+			@include media-breakpoint-up(xl) {
+				margin-left: rem(30);
 			}
 		}
 	}
 
+	&__cement {
+		@include media-breakpoint-up(lg) {
+			margin-left: rem(90);
+		}
+	}
+
+	&__karcher {
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(-60);
+			margin-left: rem(30);
+		}
+	}
+
+	&__vazons {
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(-80);
+			margin-left: rem(-40);
+		}
+	}
+
+	&__pt {
+		padding-top: rem(22);
+	}
+
 	&__type {
-		max-width: rem(440) !important;
+		margin-top: rem(20);
+		max-width: rem(450);
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
 		margin-bottom: rem(42);
+		font-size: rem(20);
+		font-weight: 400;
 	}
 
 	&--concrete {
+		max-width: rem(1200);
 		padding: 0 !important;
 		overflow: hidden;
 		.picture-bg {
@@ -134,7 +163,7 @@
 
 		h2 {
 			max-width: rem(840);
-			margin-bottom: rem(23) !important;
+			margin-bottom: rem(21) !important;
 		}
 
 		h4 {
@@ -147,7 +176,8 @@
 			z-index: 3;
 		}
 
-		.h2, .h4 {
+		.h2,
+		.h4 {
 			position: relative;
 		}
 	}
@@ -166,6 +196,18 @@
 			margin-left: rem(-100);
 			bottom: rem(-10);
 			z-index: 1;
+		}
+
+		&__head-text {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	
+	&__materials {
+		.h5 {
+			padding-top: rem(20);
+			margin-left: 0 !important;
 		}
 	}
 }
