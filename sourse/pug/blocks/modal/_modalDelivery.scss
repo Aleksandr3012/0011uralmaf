@@ -108,7 +108,10 @@
 	}
 
 	&__head {
-		padding: rem(43) rem(100) rem(89) rem(100);
+		padding: rem(40) rem(0);
+		@include media-breakpoint-up(md){
+			padding: rem(43) rem(100) rem(89) rem(100);
+		}
 		.h5 {
 			max-width: rem(390) !important;
 			margin-bottom: rem(23) !important;
@@ -119,22 +122,47 @@
 	}
 
 	&__cement {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
 			margin-left: rem(90);
+		}
+		@include media-breakpoint-down(sm) {
+			max-width: rem(135);
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
 		}
 	}
 
 	&__karcher {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(lg){
 			margin-top: rem(-60);
+		}
+		@include media-breakpoint-up(xl) {
 			margin-left: rem(30);
+		}
+
+		@include media-breakpoint-down(sm) {
+			max-width: rem(120);
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
 		}
 	}
 
 	&__vazons {
 		@include media-breakpoint-up(lg) {
 			margin-top: rem(-80);
+
+		}
+		@include media-breakpoint-up(xl) {
 			margin-left: rem(-40);
+		}
+
+		@include media-breakpoint-down(sm) {
+			max-width: rem(205);
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
 		}
 	}
 
@@ -208,6 +236,7 @@
 		.h5 {
 			padding-top: rem(20);
 			margin-left: 0 !important;
+			padding-left: 0 !important;
 		}
 	}
 }

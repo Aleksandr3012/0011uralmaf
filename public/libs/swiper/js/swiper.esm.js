@@ -1,5 +1,5 @@
 /**
- * Swiper 5.3.7
+ * Swiper 5.3.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: April 10, 2020
+ * Released on: February 29, 2020
  */
 
 import { $, addClass, removeClass, hasClass, toggleClass, attr, removeAttr, data, transform, transition as transition$1, on, off, trigger, transitionEnd as transitionEnd$1, outerWidth, outerHeight, offset, css, each, html, text, is, index, eq, append, prepend, next, nextAll, prev, prevAll, parent, parents, closest, find, children, filter, remove, add, styles } from 'dom7/dist/dom7.modular';
@@ -723,11 +723,8 @@ function updateAutoHeight (speed) {
   }
   // Find slides currently in view
   if (swiper.params.slidesPerView !== 'auto' && swiper.params.slidesPerView > 1) {
-    if (swiper.params.centeredSlides) {
-      swiper.visibleSlides.each((index, slide) => {
-        activeSlides.push(slide);
-      });
-    } else {
+    if (swiper.params.centeredSlides) activeSlides.push(...swiper.visibleSlides);
+    else {
       for (i = 0; i < Math.ceil(swiper.params.slidesPerView); i += 1) {
         const index = swiper.activeIndex + i;
         if (index > swiper.slides.length) break;
@@ -961,7 +958,7 @@ function updateActiveIndex (newActiveIndex) {
   if (previousRealIndex !== realIndex) {
     swiper.emit('realIndexChange');
   }
-  if (swiper.initialized || swiper.params.runCallbacksOnInit) {
+  if (swiper.initialized || swiper.runCallbacksOnInit) {
     swiper.emit('slideChange');
   }
 }
@@ -1307,21 +1304,17 @@ function slideTo (index = 0, speed = this.params.speed, runCallbacks = true, int
   }
   if (params.cssMode) {
     const isH = swiper.isHorizontal();
-    let t = -translate;
-    if (rtl) {
-      t = wrapperEl.scrollWidth - wrapperEl.offsetWidth - t;
-    }
     if (speed === 0) {
-      wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = t;
+      wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = -translate;
     } else {
       // eslint-disable-next-line
       if (wrapperEl.scrollTo) {
         wrapperEl.scrollTo({
-          [isH ? 'left' : 'top']: t,
+          [isH ? 'left' : 'top']: -translate,
           behavior: 'smooth',
         });
       } else {
-        wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = t;
+        wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = -translate;
       }
     }
     return true;
@@ -2530,17 +2523,9 @@ function onClick (e) {
 
 function onScroll () {
   const swiper = this;
-  const { wrapperEl, rtlTranslate } = swiper;
+  const { wrapperEl } = swiper;
   swiper.previousTranslate = swiper.translate;
-  if (swiper.isHorizontal()) {
-    if (rtlTranslate) {
-      swiper.translate = ((wrapperEl.scrollWidth - wrapperEl.offsetWidth) - wrapperEl.scrollLeft);
-    } else {
-      swiper.translate = -wrapperEl.scrollLeft;
-    }
-  } else {
-    swiper.translate = -wrapperEl.scrollTop;
-  }
+  swiper.translate = swiper.isHorizontal() ? -wrapperEl.scrollLeft : -wrapperEl.scrollTop;
   // eslint-disable-next-line
   if (swiper.translate === -0) swiper.translate = 0;
 
@@ -2555,7 +2540,7 @@ function onScroll () {
     newProgress = (swiper.translate - swiper.minTranslate()) / (translatesDiff);
   }
   if (newProgress !== swiper.progress) {
-    swiper.updateProgress(rtlTranslate ? -swiper.translate : swiper.translate);
+    swiper.updateProgress(swiper.translate);
   }
 
   swiper.emit('setTranslate', swiper.translate, false);
@@ -5459,9 +5444,7 @@ const Zoom = {
         return;
       }
     }
-    if (gesture.$imageEl) {
-      gesture.$imageEl.transition(0);
-    }
+    gesture.$imageEl.transition(0);
     swiper.zoom.isScaling = true;
   },
   onGestureChange(e) {
@@ -5658,12 +5641,8 @@ const Zoom = {
     const zoom = swiper.zoom;
     const { gesture } = zoom;
     if (gesture.$slideEl && swiper.previousIndex !== swiper.activeIndex) {
-      if (gesture.$imageEl) {
-        gesture.$imageEl.transform('translate3d(0,0,0) scale(1)');
-      }
-      if (gesture.$imageWrapEl) {
-        gesture.$imageWrapEl.transform('translate3d(0,0,0)');
-      }
+      gesture.$imageEl.transform('translate3d(0,0,0) scale(1)');
+      gesture.$imageWrapEl.transform('translate3d(0,0,0)');
 
       zoom.scale = 1;
       zoom.currentScale = 1;
@@ -5694,11 +5673,7 @@ const Zoom = {
     const { gesture, image } = zoom;
 
     if (!gesture.$slideEl) {
-      if (swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual) {
-        gesture.$slideEl = swiper.$wrapperEl.children(`.${swiper.params.slideActiveClass}`);
-      } else {
-        gesture.$slideEl = swiper.slides.eq(swiper.activeIndex);
-      }
+      gesture.$slideEl = swiper.slides.eq(swiper.activeIndex);
       gesture.$imageEl = gesture.$slideEl.find('img, svg, canvas, picture, .swiper-zoom-target');
       gesture.$imageWrapEl = gesture.$imageEl.parent(`.${params.containerClass}`);
     }
@@ -5784,11 +5759,7 @@ const Zoom = {
     const { gesture } = zoom;
 
     if (!gesture.$slideEl) {
-      if (swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual) {
-        gesture.$slideEl = swiper.$wrapperEl.children(`.${swiper.params.slideActiveClass}`);
-      } else {
-        gesture.$slideEl = swiper.slides.eq(swiper.activeIndex);
-      }
+      gesture.$slideEl = swiper.slides.eq(swiper.activeIndex);
       gesture.$imageEl = gesture.$slideEl.find('img, svg, canvas, picture, .swiper-zoom-target');
       gesture.$imageWrapEl = gesture.$imageEl.parent(`.${params.containerClass}`);
     }

@@ -1,6 +1,6 @@
 mixin sForm(h2,h4)
 	// start sForm
-	+b.sForm#sForm&attributes(attributes)
+	+b.sForm&attributes(attributes)
 		+pic('formBg.png', 'bg', 'lazy')(class="picture-bg")
 		.container
 			if h2
@@ -29,7 +29,9 @@ mixin sForm(h2,h4)
 						+form-wrap("Получить каталог и прайс")
 							+inputName()
 							+form-tabs()
-							+e.btn.btn(type="submit") обсудить задачу
+							+e.btn.btn(type="submit") 
+								span.bg.d-none.d-lg-flex обсудить задачу
+								span.bg.d-lg-none заказать
 							+polite
 			block
 	// end sForm

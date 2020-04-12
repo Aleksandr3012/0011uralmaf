@@ -159,22 +159,18 @@
 				max-width: rem(307);
 			}
 
-			&:hover {
-				// opacity: 1;
-				background-image: linear-gradient(to top, #51bcc0 0%, #9bd8db 100%);
-				&::after {
-					opacity: 0;
-				}
+			.bg {
+			max-height: rem(80);
 			}
 
-			&::after {
-				content: 'обсудить заказ';
-				text-transform: uppercase;
-				z-index: 0;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
+			// &:hover {
+			// 	// opacity: 1;
+			// 	background-image: linear-gradient(to top, #51bcc0 0%, #9bd8db 100%);
+			// 	&::after {
+			// 		opacity: 0;
+			// 	}
+			// }
+
 		}
 	}
 
@@ -224,6 +220,7 @@
 			color: $body-color;
 			font-weight: 400;
 			text-decoration: none !important;
+			display: inline-block;
 		}
 
 		img {
