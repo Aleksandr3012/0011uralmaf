@@ -34,11 +34,10 @@ html {
 	@extend .h2;
 	padding-bottom: em(10);
 
-	> h2 {
+	>h2 {
 		font-size: inherit;
 
-		@include media-breakpoint-up(md) {
-		}
+		@include media-breakpoint-up(md) {}
 	}
 }
 
@@ -134,6 +133,7 @@ body {
 }
 
 .mfp-with-zoom {
+
 	.mfp-container,
 	&.mfp-bg {
 		opacity: 0;
@@ -152,6 +152,7 @@ body {
 	}
 
 	&.mfp-removing {
+
 		.mfp-container,
 		&.mfp-bg {
 			opacity: 0;
@@ -322,6 +323,7 @@ ul {
 }
 
 .tabs {
+
 	&__btn {
 		&:hover {
 			cursor: pointer;
@@ -331,6 +333,7 @@ ul {
 			background-color: green;
 		}
 	}
+
 
 	&__content {
 		&.active {
@@ -503,9 +506,12 @@ a {
 	box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.35);
 	border-radius: 3px 3px 7px 7px;
 	border: transparent;
+	@include mt;
+
 	@include media-breakpoint-up(sm) {
 		letter-spacing: rem(1.8px);
 	}
+
 	background-color: #51bcc0;
 	background-image: linear-gradient(to top, #51bcc0 0%, #9bd8db 100%);
 	outline: none;
@@ -513,7 +519,9 @@ a {
 
 	&::after {
 		content: '';
-		@include a-cent;
+		position: absolute;
+		left: 0;
+		top: 0;
 		@include mt;
 		width: 100%;
 		height: 100%;
@@ -543,6 +551,7 @@ a {
 	&:hover {
 		background-color: transparent;
 		background-image: linear-gradient(to top, transparent 0%, transparent 100%);
+
 		&::after {
 			opacity: 1;
 		}
@@ -550,6 +559,7 @@ a {
 
 	&:focus {
 		box-shadow: none;
+
 		&::before {
 			// transform: scaleY(10%);
 			top: 0;
@@ -562,12 +572,17 @@ a {
 	display: block;
 	text-decoration: underline;
 	margin-top: rem(20);
-	@include media-breakpoint-up(md){
+
+	@include media-breakpoint-up(md) {
 		margin-top: rem(60);
 		margin-left: rem(14);
 	}
 
-	@include media-breakpoint-down(md){
+	@include media-breakpoint-down(md) {
 		font-size: rem(12);
 	}
+}
+
+.slick-dots .slick-active:first-child:last-child {
+	display: none;
 }

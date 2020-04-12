@@ -92,7 +92,12 @@ var JSCCommon = {
 	// табы  . 
 	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).show().addClass('active');
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active').find('.slider--js').slick('refresh');
+			$(this).closest('.' + tab).find('.' + tab + '__caption2').find('.' + tab + '__btn').eq($(this).index()).addClass('active').siblings().removeClass('active');
+		});
+		$('.' + tab + '__caption2').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active').find('.slider--js').slick('refresh');
+			$(this).closest('.' + tab).find('.' + tab + '__caption').find('.' + tab + '__btn').eq($(this).index()).addClass('active').siblings().removeClass('active');
 		});
 	},
 	// /табы  
@@ -202,29 +207,36 @@ function eventHandler() {
 		infinite: true,
 		arrows: true,
 		mobileFirst: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
+		prevArrow: arrl2,
+		nextArrow: arrr2,
 		// autoplay: true,
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive'
 	};
-	$('.slider--js').slick(_objectSpread({}, defaultSlide, {
-		slidesToShow: 1,
-		dots: true,
-		appendArrows: '.control-wrap',
-		appendDots: '.control-wrap',
-		responsive: [{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 3
-			}
-		}, {
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 2
-			}
-		}]
-	})); // $('.main-wrapper').click(function(){
+	$(".tabs__content").each(function () {
+		$(this).find('.slider--js').slick(_objectSpread({}, defaultSlide, {
+			slidesToShow: 1,
+			dots: true,
+			appendArrows: $(this).find('.control-wrap'),
+			appendDots: $(this).find('.control-wrap'),
+			responsive: [{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3
+				}
+			}, {
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			}]
+		}));
+	});
+	$(".viber-link").each(function () {
+		if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			$(this).attr('href', $(this).data("desktop"));
+		}
+	}); // $('.main-wrapper').click(function(){
 	// 	$(this).addClass('d-none');
 	// });
 }

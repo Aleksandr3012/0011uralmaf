@@ -11,11 +11,11 @@ mixin topLine()
 				.col.order-lg-last.text-right
 					+e.telephone
 						+e.messengers.d-none.d-sm-flex
-							+e.A.whatsapp(href="https://wa.me/73519454515")
+							+e.A.whatsapp(href=`https://wa.me/${telnumber}`)
 								+icon('whatsapp')
-							+e.A.viber(href="viber://add?number=73519454515")
+							+e.A.viber(href=`viber://add?number=${telnumber}`   data-desktop=`viber://chat?number=${telnumber}`)
 								+icon('viber')
-						+e.A.tel(href="tel:7(3519)45-45-15") 7 (3519) 45-45-15
+						+e.A.tel(href=`tel:${telnumber}`) 7 (3519) 45-45-15
 					+e.A.call.link-modal(href="#") Заказать  звонок #[span.d-none.d-lg-inline менеджера]
 				.col-lg.d-flex
 					+e.imgWrap.d-none.d-lg-block

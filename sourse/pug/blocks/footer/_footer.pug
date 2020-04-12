@@ -21,11 +21,11 @@ mixin footer()
 				.mobileOrder-3.col-md-3.text-right
 					+e.telephone
 						+e.messengers.d-none.d-lg-flex
-							+e.A.whatsapp(href="https://wa.me/73519454515")
+							+e.A.whatsapp(href=`https://wa.me/${telnumber}`)
 								+icon('whatsapp')
-							+e.A.viber(href="viber://add?number=73519454515")
+							+e.A.viber(href=`viber://add?number=${telnumber}`   data-desktop=`viber://chat?number=${telnumber}`)
 								+icon('viber')
-						+e.A.tel(href="tel:7(3519)45-45-15") 7 (3519) 45-45-15
+						+e.A.tel(href=`tel:${telnumber}`) 7 (3519) 45-45-15
 					+e.A.call.link-modal(href="#") Заказать звонок менеджера
 				.mobileOrder-5.col-md-4
 					+e.adres Юридический адерс и реквизиты
