@@ -1,10 +1,16 @@
-mixin sForm()
+mixin sForm(h2,h4)
 	// start sForm
 	+b.sForm#sForm&attributes(attributes)
 		+pic('formBg.png', 'bg', 'lazy')(class="picture-bg")
 		.container
-			.h2 Если вы&nbsp;не&nbsp;нашли&nbsp;то, что нужно, мы&nbsp;изготовим формы и&nbsp;#[span сделаем изделия специально&nbsp;для&nbsp;вас]
-			.h4 Расскажите о&nbsp;задаче&nbsp;&mdash; рассчитаем стоимость&nbsp;изготовления изделий&nbsp;и&nbsp;подготовим коммерческое&nbsp;предложение
+			if h2
+				.h2= h2
+			else
+				.h2 Если вы&nbsp;не&nbsp;нашли&nbsp;то, что нужно, мы&nbsp;изготовим формы и&nbsp;#[span сделаем изделия специально&nbsp;для&nbsp;вас]
+			if h4
+				.h4= h4
+			else
+				.h4 Расскажите о&nbsp;задаче&nbsp;&mdash; рассчитаем стоимость&nbsp;изготовления изделий&nbsp;и&nbsp;подготовим коммерческое&nbsp;предложение
 			.row
 				.col-lg-6
 					+e.imgWrap.d-none.d-lg-block
@@ -25,5 +31,5 @@ mixin sForm()
 							+form-tabs()
 							+e.btn.btn(type="submit") обсудить задачу
 							+polite
-			.row
+			block
 	// end sForm
