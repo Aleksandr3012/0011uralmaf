@@ -110,7 +110,7 @@
 	&__head {
 		padding: rem(48) rem(80) rem(89) rem(80);
 		.h5 {
-			max-width: 100% !important;
+			max-width: 100%;
 			@include media-breakpoint-up(xl){
 				margin-left: rem(90);
 			}

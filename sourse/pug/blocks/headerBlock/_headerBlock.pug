@@ -7,8 +7,10 @@ mixin headerBlock()
 					h1 Вазоны&nbsp;из&nbsp;мытого бетона #[span и&nbsp;крошки натуральных камней]
 					+e.subtitle Для ландшафтного дизайна улиц и&nbsp;парков, школ и&nbsp;детских садов, торговых и&nbsp;бизнес-центров, жилых комплексов и&nbsp;загородных домов
 				.col-lg
-					+e.imgWrap
-						img.lazy(src="#" data-src="img/@2x/banner.png", alt="#")
+					+e.PICTURE.imgWrap
+						source(media="(min-width: 576px)", srcset="img/@2x/banner.png")
+						//- source(media="(min-width: 576px)", srcset="img/@2x/banner.png")
+						img(src="img/@1x/banner.png", alt="#")
 			+e.advantages.d-none.d-lg-flex
 				+e.item
 					+icon('verificado')
