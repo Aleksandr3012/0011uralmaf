@@ -46,14 +46,19 @@ mixin modal()
 		+b.modalAbout(id="modalAbout")
 			+e.headBlock
 				.container
-						h2 Яшму и хризолит превращаем #[strong в вазоны и скамейки]
-						+pic('formBg.png', 'bg', 'lazy')(class="picture-bg")
+						h2 Яшму и хризолит превращаем #[strong в&nbsp;вазоны&nbsp;и&nbsp;скамейки]
+						+pic('bgModal.png', 'bg', 'lazy')(class="picture-bg")
 						.row
 							.col-lg-5
-								+e.imgWrap
-									img.lazy(src="#" data-src="img/@2x/founder.png", alt="")
+								+e.imgWrap.d-none.d-lg-block
+									+e.founder(src="img/@2x/founder.png", alt="#")
+								+e.founderSm.d-lg-none
+									+e.founderImg(src="img/@2x/founder-sm.png", alt="#")
+									+e.nameWrap
+										+e.nameSm Михаил Геннадьевич
+										+e.positionSm Сооснователь компании ООО&nbsp;«УралМаф»
 							.col-lg
-								p Здравствуйте. Меня зовут Михаил Паламарчук. Я&nbsp;сооснователь ООО &laquo;УралМаф&raquo;.
+								p Здравствуйте. Меня зовут Михаил Паламарчук.<br>Я&nbsp;сооснователь ООО &laquo;УралМаф&raquo;.
 								p Компания основана в&nbsp;2008&nbsp;году. Кроме малых архитектурных форм мы&nbsp;производим тротуарную плитку, бордюры и&nbsp;фасадную термопанель. За&nbsp;эти годы научились минимизировать издержки, снижать себестоимость без потери качества и&nbsp;устанавливать комфортную цену для покупателя.
 								p Мы&nbsp;работаем напрямую с&nbsp;поставщиками крошки полудрагоценных камней с&nbsp;Южного Урала и&nbsp;Башкирии&nbsp;&mdash; это позволяет производить самые разные фактуры изделий.
 						+e.clouds.lazy(src="#" data-src="img/@2x/clouds.png", alt="")
@@ -67,7 +72,8 @@ mixin modal()
 							+e.BUTTON.btn.btn(type="button") обсудить заказ
 					h2 Наше производство находится в Магнитогорске
 					+e.mapWrap
-						<iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A85a137c287ff30c716c28d89b3cd2cf628478df1c00eaeeb052627868fb5247a&amp;source=constructor" frameborder="0"></iframe>
+						+e.frameWrap
+							<iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A85a137c287ff30c716c28d89b3cd2cf628478df1c00eaeeb052627868fb5247a&amp;source=constructor" frameborder="0"></iframe>
 						+form-wrap()(class="form-wrap--map")
 							ul
 								li 

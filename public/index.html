@@ -533,20 +533,28 @@
 			<div class="modalAbout" id="modalAbout">
 				<div class="modalAbout__headBlock">
 					<div class="container">
-						<h2>Яшму и хризолит превращаем <strong>в вазоны и скамейки</strong></h2>
+						<h2>Яшму и хризолит превращаем <strong>в&nbsp;вазоны&nbsp;и&nbsp;скамейки</strong></h2>
 						<!-- picture-->
 						<picture class="lazy picture-bg"> 
-							<source srcset="#" data-srcset="img/@2x/formBg.png" type="image/png" media="(min-width:576px)"/>
-							<source srcset="#" data-srcset="img/@1x/formBg.png" type="image/png"/><img class="object-fit-js" src="#" data-src="img/@2x/formBg.png" alt=""/>
+							<source srcset="#" data-srcset="img/@2x/bgModal.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="#" data-srcset="img/@1x/bgModal.png" type="image/png"/><img class="object-fit-js" src="#" data-src="img/@2x/bgModal.png" alt=""/>
 						</picture>
 						<!-- /picture-->
 						<div class="row">
 							<div class="col-lg-5">
-								<div class="modalAbout__imgWrap"><img class="lazy" src="#" data-src="img/@2x/founder.png" alt=""/>
+								<div class="modalAbout__imgWrap d-none d-lg-block"><img class="modalAbout__founder" src="img/@2x/founder.png" alt="#" title=""/>
+								</div>
+								<div class="modalAbout__founderSm d-lg-none"><img class="modalAbout__founderImg" src="img/@2x/founder-sm.png" alt="#" title=""/>
+									<div class="modalAbout__nameWrap">
+										<div class="modalAbout__nameSm">Михаил Геннадьевич
+										</div>
+										<div class="modalAbout__positionSm">Сооснователь компании ООО&nbsp;«УралМаф»
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg">
-								<p>Здравствуйте. Меня зовут Михаил Паламарчук. Я&nbsp;сооснователь ООО &laquo;УралМаф&raquo;.</p>
+								<p>Здравствуйте. Меня зовут Михаил Паламарчук.<br>Я&nbsp;сооснователь ООО &laquo;УралМаф&raquo;.</p>
 								<p>Компания основана в&nbsp;2008&nbsp;году. Кроме малых архитектурных форм мы&nbsp;производим тротуарную плитку, бордюры и&nbsp;фасадную термопанель. За&nbsp;эти годы научились минимизировать издержки, снижать себестоимость без потери качества и&nbsp;устанавливать комфортную цену для покупателя.</p>
 								<p>Мы&nbsp;работаем напрямую с&nbsp;поставщиками крошки полудрагоценных камней с&nbsp;Южного Урала и&nbsp;Башкирии&nbsp;&mdash; это позволяет производить самые разные фактуры изделий.</p>
 							</div>
@@ -575,7 +583,9 @@
 							</form>
 						</div>
 						<h2>Наше производство находится в Магнитогорске</h2>
-						<div class="modalAbout__mapWrap"><iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A85a137c287ff30c716c28d89b3cd2cf628478df1c00eaeeb052627868fb5247a&amp;source=constructor" frameborder="0"></iframe>
+						<div class="modalAbout__mapWrap">
+							<div class="modalAbout__frameWrap"><iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A85a137c287ff30c716c28d89b3cd2cf628478df1c00eaeeb052627868fb5247a&amp;source=constructor" frameborder="0"></iframe>
+							</div>
 							<div class="form-wrap form-wrap form-wrap--map">
 								<form>
 									<input type="hidden" name="example-input-field"/>
