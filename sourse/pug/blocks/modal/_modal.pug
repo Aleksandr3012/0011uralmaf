@@ -42,5 +42,76 @@ mixin modal()
 			//- +text( "Комментарий")
 			+e.INPUT.btn(type="submit" value="Рассчитать") 
 			+polite()
+
+		+b.modalAbout(id="modalAbout")
+			+e.headBlock
+				.container
+						h2 Яшму и хризолит превращаем #[strong в вазоны и скамейки]
+						+pic('formBg.png', 'bg', 'lazy')(class="picture-bg")
+						.row
+							.col-lg-5
+								+e.imgWrap
+									img.lazy(src="#" data-src="img/@2x/founder.png", alt="")
+							.col-lg
+								p Здравствуйте. Меня зовут Михаил Паламарчук. Я&nbsp;сооснователь ООО &laquo;УралМаф&raquo;.
+								p Компания основана в&nbsp;2008&nbsp;году. Кроме малых архитектурных форм мы&nbsp;производим тротуарную плитку, бордюры и&nbsp;фасадную термопанель. За&nbsp;эти годы научились минимизировать издержки, снижать себестоимость без потери качества и&nbsp;устанавливать комфортную цену для покупателя.
+								p Мы&nbsp;работаем напрямую с&nbsp;поставщиками крошки полудрагоценных камней с&nbsp;Южного Урала и&nbsp;Башкирии&nbsp;&mdash; это позволяет производить самые разные фактуры изделий.
+						+e.clouds.lazy(src="#" data-src="img/@2x/clouds.png", alt="")
+			+e.body
+				.container
+					+form-wrap()
+						.h5 Вы&nbsp;можете обсудить с&nbsp;нами #[strong любой дизайн вазонов, урн, скамеек, ограничителей или другой садово-парковой мебели из&nbsp;бетона.]
+						.h5 #[strong Давайте обсудим ваш заказ прямо сейчас.] <br> Оставьте свой номер, мы&nbsp;свяжемся с&nbsp;вами, ответим на&nbsp;любые вопросы и&nbsp;расскажем больше о&nbsp;наших возможностях, назовем сроки и&nbsp;цену исполнения вашего заказа.
+						+e.inputWrap
+							+input("+7 (999) 444-44-44","tel")(required)
+							+e.BUTTON.btn.btn(type="button") обсудить заказ
+					h2 Наше производство находится в Магнитогорске
+					+e.mapWrap
+						<iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A85a137c287ff30c716c28d89b3cd2cf628478df1c00eaeeb052627868fb5247a&amp;source=constructor" frameborder="0"></iframe>
+						+form-wrap()(class="form-wrap--map")
+							ul
+								li 
+									img.res-i(src="img/@2x/map.png", alt="")
+									+e.mapDescr
+										.h6 адрес:
+										p г. Магнитогорск, ул.Клары Цеткин, 12/1
+								li 
+									img.res-i(src="img/@2x/phone.png", alt="")
+									+e.mapDescr
+										.h6 Телефон:
+										a(href="tel:+7(3519)45-45-15") +7 (3519) 45-45-15
+								li 
+									img.res-i(src="img/@2x/mail.png", alt="")
+									+e.mapDescr
+										.h6 email:
+										a(href="mailto:info@uralmaf.ru ") info@uralmaf.ru 
+								li 
+									img.res-i(src="img/@2x/clock.png", alt="")
+									+e.mapDescr
+										.h6 Работаем:
+										p с 7:00 до 19:00 (мск), без&nbsp;выходных
+
+		+b.modalDelivery(id="modalDelivery")
+			.container
+				h2 Доставляем по России, Казахстану и СНГ
+				+e.row.row
+					.col-lg-6
+						+e.car.res-i.lazy(src="#" data-src="img/@2x/car.png", alt="")
+					.col-md-6.align-self-center
+						.h5 #[strong Доставляем изделия] транспортыми #[strong компаниями]
+						.h5 
+							+icon('info')
+							| Вы&nbsp;можете узнать предварительную #[strong стоимость доставки] после согласования с&nbsp;нами веса &laquo;посылки&raquo;
+				.row
+					.col-lg-7.order-lg-last
+						+e.packaging.res-i.lazy(src="#" data-src="img/@2x/packaging.png", alt="")
+					.col-lg-5.align-self-center
+						.h5 Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;надежно упаковываем
+						.h5 Используем воздушно-пузырчатую пленку&nbsp;и&nbsp;несколько слоев стрейч-пленки. Габаритные изделия перевозятся на&nbsp;европоддонах.
+
+
+				h3 
+					+icon('verificado')
+					|Оптовым покупателям компенсируем до&nbsp;50% от&nbsp;стоимости доставки
 		// #modal-call
 	// modal

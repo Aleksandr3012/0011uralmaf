@@ -189,8 +189,10 @@
 	}
 
 	&__founder {
-		margin-bottom: rem(-40);
+		margin-bottom: rem(-100);
 		margin-left: rem(-60);
+		margin-left: rem(-230);
+
 		@include media-breakpoint-up(xl){
 			margin-top: rem(-55);
 		margin-left: rem(-30);
