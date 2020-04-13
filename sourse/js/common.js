@@ -284,13 +284,13 @@ function eventHandler() {
 			appendArrows: $(this).find('.control-wrap'),
 			appendDots: $(this).find('.control-wrap'),
 			responsive: [{
-				breakpoint: 992,
+				breakpoint: 997.98,
 				settings: {
 					slidesToShow: 3,
 				}
 
 			}, {
-				breakpoint: 768,
+				breakpoint: 767.98,
 				settings: {
 					slidesToShow: 2,
 				}
