@@ -36,6 +36,12 @@ var JSCCommon = {
 				}
 			}
 		});
+		$(".link-modal").click(function () {
+			var href = $(this).attr('href');
+			$(href).find(".lazy-modal--js").each(function () {
+				$(this).attr('src', $(this).data('src')).removeClass('.lazy-modal--js');
+			});
+		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		});

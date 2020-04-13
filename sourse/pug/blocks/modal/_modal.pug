@@ -57,7 +57,7 @@ mixin modal()
 			+e.btnWrap
 				+e.BUTTON.btn.btn(type="submit")
 					span.bg Получить каталог
-				img.d-none.d-lg-block(src="img/@2x/catalog.png", alt="")
+				img.d-none.d-lg-block.lazy-modal--js(src="#" data-src="img/@2x/catalog.png", alt="")
 			+polite()
 
 		+form-wrap()(id="modalOrder" class="  modal-win--order modal-form" ) 
@@ -81,9 +81,9 @@ mixin modal()
 						.row
 							.col-lg-5
 								+e.imgWrap.d-none.d-lg-block
-									+e.founder(src="img/@2x/founder.png", alt="")
+									+e.founder.lazy-modal--js(src="#" data-src="img/@2x/founder.png", alt="")
 								+e.founderSm.d-lg-none
-									+e.founderImg(src="img/@2x/founder-sm.png", alt="")
+									+e.founderImg.lazy-modal--js(src="#" data-src="img/@2x/founder-sm.png", alt="")
 									+e.nameWrap
 										+e.nameSm Михаил Геннадьевич
 										+e.positionSm Сооснователь компании ООО&nbsp;«УралМаф»
@@ -91,7 +91,7 @@ mixin modal()
 								p Здравствуйте. Меня зовут Михаил Паламарчук.<br>Я&nbsp;сооснователь ООО &laquo;УралМаф&raquo;.
 								p Компания основана в&nbsp;2008&nbsp;году. Кроме малых архитектурных форм мы&nbsp;производим тротуарную плитку, бордюры и&nbsp;фасадную термопанель. За&nbsp;эти годы научились минимизировать издержки, снижать себестоимость без потери качества и&nbsp;устанавливать комфортную цену для покупателя.
 								p Мы&nbsp;работаем напрямую с&nbsp;поставщиками крошки полудрагоценных камней с&nbsp;Южного Урала и&nbsp;Башкирии&nbsp;&mdash; это позволяет производить самые разные фактуры изделий.
-						+e.clouds(src="img/@2x/clouds.png", alt="")
+						+e.clouds.lazy-modal--js(src="#" data-src="img/@2x/clouds.png", alt="")
 			+e.body
 				.container
 					+form-wrap()
@@ -133,7 +133,7 @@ mixin modal()
 				h2 Доставляем по России, Казахстану и СНГ
 				+e.row.row
 					.col-lg-6
-						+e.car.res-i(src="img/@2x/car.png", alt="")
+						+e.car.res-i.lazy-modal--js(src="#" data-src="img/@2x/car.png", alt="")
 					.col-md-6.align-self-center
 						.h5 #[strong Доставляем изделия] транспортыми #[strong компаниями]
 						.h5 
@@ -141,7 +141,7 @@ mixin modal()
 							| Вы&nbsp;можете узнать предварительную #[strong стоимость доставки] после согласования с&nbsp;нами веса &laquo;посылки&raquo;
 				.row
 					.col-lg-7.order-lg-last
-						+e.packaging.res-i(src="img/@2x/packaging.png", alt="")
+						+e.packaging.res-i.lazy-modal--js(src="#" data-src="img/@2x/packaging.png", alt="")
 					.col-lg-5.align-self-center
 						.h5 Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;надежно упаковываем
 						.h5 Используем воздушно-пузырчатую пленку&nbsp;и&nbsp;несколько слоев стрейч-пленки. Габаритные изделия перевозятся на&nbsp;европоддонах.
@@ -156,19 +156,19 @@ mixin modal()
 					h4 Это обеспечивает долговечность, прочность и&nbsp;красивый внешний вид
 					.row
 						.col-md-6
-							+e.cement.res-i(src="img/@2x/cement.png" alt="")
+							+e.cement.res-i.lazy-modal--js(src="#" data-src="img/@2x/cement.png" alt="")
 						+e.pt.col-md-6
 							.h5 #[strong При круглогодичной эксплуатации срок службы изделий 5, 10&nbsp;и&nbsp;даже 20&nbsp;лет]
 							.h5 Используем цемент B42,5 (М500) и&nbsp;выше&nbsp;&mdash; оптимальную марку, благодаря которой изделиям нипочем снег, дождь, мороз и&nbsp;палящие лучи. Для дополнительной защиты все изделия покрываем лаком.
 					.row
 						.col-md-6.order-md-last
-							+e.karcher.res-i(src="img/@2x/karcher.png" alt="")
+							+e.karcher.res-i.lazy-modal--js(src="#" data-src="img/@2x/karcher.png" alt="")
 						+e.pt.col-md-6
 							.h5 #[strong Можно мыть водой и&nbsp;при необходимости очищать моющими и&nbsp;дезинфицирующими средствами]
 							.h5 А&nbsp;также проводить легкую очистку некоторыми растворителями. Так как изделия предназначены для эксплуатации вне помещений, их&nbsp;можно чистить системами типа &laquo;Karcher&raquo;
 					.row
 						.col-md-6
-							+e.vazons.img.res-i(src="img/@2x/banner.png" alt="")
+							+e.vazons.img.res-i.lazy-modal--js(src="#" data-src="img/@2x/banner.png" alt="")
 						+e.pt.col-md-6
 							.h5 #[strong Поверхность из&nbsp;натурального камня любой фактуры]
 							.h5 Изготавливаем материал по&nbsp;технологии &laquo;мытый бетон&raquo; &mdash; в&nbsp;результате наполнитель из&nbsp;камней выступает на&nbsp;поверхность и&nbsp;создает особую фактуру изделию.
@@ -176,22 +176,22 @@ mixin modal()
 					+e.materials.row.text-center
 						.col-6.col-md-3
 							a(href='img/@2x/material-1.jpg' data-fancybox=`materials`)
-								img.res-i(src="img/@1x/material-1.jpg" alt="")
+								img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-1.jpg" alt="")
 							.h5 Микс
 						.col-6.col-md-3
 							a(href='img/@2x/material-2.jpg' data-fancybox=`materials`)
-								img.res-i(src="img/@1x/material-2.jpg" alt="")
+								img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-2.jpg" alt="")
 							.h5 Златолит
 						.col-6.col-md-3
 							a(href='img/@2x/material-3.jpg' data-fancybox=`materials`)
-								img.res-i(src="img/@1x/material-3.jpg" alt="")
+								img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-3.jpg" alt="")
 							.h5 Красная яшма
 						.col-6.col-md-3
 							a(href='img/@2x/material-4.jpg' data-fancybox=`materials`)
-								img.res-i(src="img/@1x/material-4.jpg" alt="")
+								img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-4.jpg" alt="")
 							.h5 Пейзажная яшма
 			+sForm('Расскажите о задаче — мы рассчитаем стоимость изготовления изделий ','И подготовим коммерческое предложение')
-				+e.clouds(src="img/@2x/clouds.png" alt="")
+				+e.clouds.lazy-modal--js(src="#" data-src="img/@2x/clouds.png" alt="")
 
 
 
