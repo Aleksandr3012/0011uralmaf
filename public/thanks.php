@@ -219,7 +219,7 @@
 				</div>
 			</div>
 			<!-- end header-->
-			<div class="container"><a class="backToMain" href="#">Вернуться на сайт </a></div>
+			<div class="container"><a class="backToMain" href="/">Вернуться на сайт </a></div>
 			<!-- start sThanks-->
 			<section class="sThanks section" id="sThanks">
 				<div class="container">
