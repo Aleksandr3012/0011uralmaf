@@ -171,7 +171,7 @@
 			}
 
 			&::before {
-				@include media-breakpoint-down(lg) {
+				@include media-breakpoint-down(md) {
 					bottom: rem(-16);
 				}
 			}
