@@ -26,7 +26,7 @@ mixin headerBlock()
 					.h6 Фактура и&nbsp;форма под заказ:
 					p помогут реализовать оптимальное решение для любого дизайн-проекта
 			+e.btnWrap
-				img(src="img/@2x/catalog.png", alt="")
+				img.lazy(src="#" data-src="img/@2x/catalog.png", alt="")
 				+e.A.btn.btn.link-modal(href="#modalCatalog") 
 					span.bg Получить каталог с ценами
 	// end headerBlock

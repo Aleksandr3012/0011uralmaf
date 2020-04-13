@@ -570,14 +570,11 @@
 				</div>
 				<!-- start sForm-->
 				<div class="sForm">
-					<!-- picture-->
-					<picture class="picture-bg"> 
-						<source srcset="img/@2x/webp/formBg.webp" type="image/webp" media="(min-width:576px)"/>
-						<source srcset="img/@1x/webp/formBg.webp" type="image/webp"/>
-						<source srcset="img/@2x/formBg.jpg" type="image/jpg" media="(min-width:576px)"/>
-						<source srcset="img/@1x/formBg.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/formBg.jpg" alt=""/>
+					<picture class="sForm__founder imgWrap lazy-modal lazy-modal--js picture-bg">
+						<source media="(min-width: 576px)" data-srcset="img/@2x/webp/formBg.webp" type="image/webp" srcset="#"/>
+						<source media="(min-width: 576px)" data-srcset="img/@2x/formBg.jpg" type="image/jpg" srcset="#"/>
+						<source data-srcset="img/@1x/webp/formBg.webp" type="image/webp" srcset="#"/><img src="#" data-src="img/@1x/formBg.jpg" alt=""/>
 					</picture>
-					<!-- /picture-->
 					<div class="container">
 						<div class="h2">Расскажите о задаче — мы рассчитаем стоимость изготовления изделий </div>
 						<div class="h4">И подготовим коммерческое предложение</div>

@@ -117,7 +117,7 @@
 									<p>помогут реализовать оптимальное решение для любого дизайн-проекта</p>
 								</div>
 							</div>
-							<div class="headerBlock__btnWrap"><img src="img/@2x/catalog.png" alt=""/><a class="headerBlock__btn btn link-modal" href="#modalCatalog"> <span class="bg">Получить каталог с ценами</span></a>
+							<div class="headerBlock__btnWrap"><img class="lazy" src="#" data-src="img/@2x/catalog.png" alt=""/><a class="headerBlock__btn btn link-modal" href="#modalCatalog"> <span class="bg">Получить каталог с ценами</span></a>
 							</div>
 						</div>
 					</section>
@@ -1365,14 +1365,11 @@
 				</div>
 				<!-- start sForm-->
 				<div class="sForm">
-					<!-- picture-->
-					<picture class="picture-bg"> 
-						<source srcset="img/@2x/webp/formBg.webp" type="image/webp" media="(min-width:576px)"/>
-						<source srcset="img/@1x/webp/formBg.webp" type="image/webp"/>
-						<source srcset="img/@2x/formBg.jpg" type="image/jpg" media="(min-width:576px)"/>
-						<source srcset="img/@1x/formBg.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/formBg.jpg" alt=""/>
+					<picture class="sForm__founder imgWrap lazy-modal lazy-modal--js picture-bg">
+						<source media="(min-width: 576px)" data-srcset="img/@2x/webp/formBg.webp" type="image/webp" srcset="#"/>
+						<source media="(min-width: 576px)" data-srcset="img/@2x/formBg.jpg" type="image/jpg" srcset="#"/>
+						<source data-srcset="img/@1x/webp/formBg.webp" type="image/webp" srcset="#"/><img src="#" data-src="img/@1x/formBg.jpg" alt=""/>
 					</picture>
-					<!-- /picture-->
 					<div class="container">
 						<div class="h2">Расскажите о задаче — мы рассчитаем стоимость изготовления изделий </div>
 						<div class="h4">И подготовим коммерческое предложение</div>
