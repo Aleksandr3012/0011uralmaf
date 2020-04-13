@@ -31,11 +31,13 @@ const JSCCommon = {
 		});
 		$(".link-modal").click(function (){
 			let href=$(this).attr('href');
+			let map=$(href).find('.modalAbout__frameWrap').data('map');
+			$(href).find('.modalAbout__frameWrap').html(map);
 			$(href).find(".lazy-modal--js").each(function (){
 				$(this).attr('src', $(this).data('src')).removeClass('.lazy-modal--js')
 			})
-			
 		});
+
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		});
@@ -303,6 +305,8 @@ function eventHandler() {
 	// $('.main-wrapper').click(function(){
 	// 	$(this).addClass('d-none');
 	// });
+
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

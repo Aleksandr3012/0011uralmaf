@@ -38,6 +38,8 @@ var JSCCommon = {
 		});
 		$(".link-modal").click(function () {
 			var href = $(this).attr('href');
+			var map = $(href).find('.modalAbout__frameWrap').data('map');
+			$(href).find('.modalAbout__frameWrap').html(map);
 			$(href).find(".lazy-modal--js").each(function () {
 				$(this).attr('src', $(this).data('src')).removeClass('.lazy-modal--js');
 			});

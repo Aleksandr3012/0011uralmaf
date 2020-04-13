@@ -256,6 +256,7 @@
 	}
 
 	&__frameWrap {
+		
 		margin-bottom: rem(50);
 		@include media-breakpoint-up(md) {
 			max-width: rem(996);
