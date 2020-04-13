@@ -129,21 +129,23 @@
 
 	&__materials {
 		display: flex;
-		// justify-content: flex-start;
+		// justify-content: start;
+		max-width: rem(300);
+		justify-content: flex-start;
 		padding-left: rem(3);
 
 		@include media-breakpoint-up(md) {
-			padding-left: rem(16);
+			padding-left: rem(15);
 		}
 
 		margin-bottom: rem(30);
 	}
 
 	&__materialsWrap {
-		// display: inline-block;
+		// display: inline-block
 		// flex-shrink: 3;
 		&:not(:last-child) {
-			margin-right: rem(6);
+			margin-right: rem(0);
 		}
 
 		position: relative;

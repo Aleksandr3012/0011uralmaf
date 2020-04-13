@@ -576,6 +576,9 @@ a {
 	&:focus {
 		box-shadow: none;
 
+	}
+	&:active {
+
 		&::before {
 			transform: scaleY(0.1);
 			// top: 0;

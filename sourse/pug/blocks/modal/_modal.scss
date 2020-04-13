@@ -106,6 +106,37 @@
 			}
 		}
 	}
+
+	&--order {
+		.h3 {
+			max-width: 100%;
+		}
+		
+		.form-wrap__toggle-block {
+			display: none;
+		}
+
+		.form-wrap__input-wrapper {
+			margin-bottom: rem(23);
+		}
+
+		.form-wrap__comment {
+			border-bottom: dashed 2px $body-color;
+			padding-bottom: rem(5);
+			@extend .h5;
+			font-weight: 400;
+			padding-top: rem(10);
+			margin-left: auto;
+			@include mt;
+			max-width: rem(250);
+			margin-right: auto;
+			position: relative;
+
+			&:hover {
+				border-bottom: dashed 2px transparent;
+			}
+		}
+	}
 }
 
 a {

@@ -242,6 +242,10 @@ function eventHandler() {
 		if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			$(this).attr('href', $(this).data("desktop"));
 		}
+	}); //показывает инпут при клике на текст
+
+	$(".form-wrap__comment--js").click(function () {
+		$('.form-wrap__toggle-block--js').toggle();
 	}); // $('.main-wrapper').click(function(){
 	// 	$(this).addClass('d-none');
 	// });

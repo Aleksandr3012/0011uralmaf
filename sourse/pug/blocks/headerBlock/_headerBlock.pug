@@ -10,7 +10,7 @@ mixin headerBlock()
 					+e.PICTURE.imgWrap
 						source(media="(min-width: 576px)", srcset="img/@2x/banner.png")
 						//- source(media="(min-width: 576px)", srcset="img/@2x/banner.png")
-						img(src="img/@1x/banner.png", alt="#")
+						img(src="img/@1x/banner.png", alt="")
 			+e.advantages.d-none.d-lg-flex
 				+e.item
 					+icon('verificado')
@@ -25,7 +25,7 @@ mixin headerBlock()
 					.h6 Фактура и&nbsp;форма под заказ:
 					p помогут реализовать оптимальное решение для любого дизайн-проекта
 			+e.btnWrap
-				img(src="img/@2x/catalog.png", alt="#")
+				img(src="img/@2x/catalog.png", alt="")
 				+e.A.btn.btn.link-modal(href="#modalCatalog") 
 					span.bg Получить каталог с ценами
 	// end headerBlock

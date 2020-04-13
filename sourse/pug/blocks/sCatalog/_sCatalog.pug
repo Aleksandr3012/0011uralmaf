@@ -5,7 +5,7 @@ mixin itemProd(a, i, t, vz, height, width)
 		else
 			+e.availability--empty В наличии
 		+e.imgWrap
-			img(src="#" data-lazy=`img/@2x/flowerpot-${i}.png`, alt="#")
+			img(src="#" data-lazy=`img/@2x/flowerpot-${i}.png`, alt="")
 		.h4= t
 			if vz
 				span= vz
@@ -33,19 +33,19 @@ mixin itemProd(a, i, t, vz, height, width)
 			block
 		+e.materials
 			+e.materialsWrap
-				a(href='img/@2x/mix.png' data-fancybox=`materials-${i}`)
-					img.res-i(src="#" data-lazy="img/@2x/mix.png", alt="")
+				a(href='img/@2x/material-1.jpg' data-fancybox=`materials-${i}`)
+					img.res-i(src="#" data-lazy="img/@1x/material-1.jpg", alt="")
 			+e.materialsWrap
-				a(href='img/@2x/goldilith.png' data-fancybox=`materials-${i}`)
-					img.res-i(src="#" data-lazy="img/@2x/goldilith.png", alt="")
+				a(href='img/@2x/material-2.jpg' data-fancybox=`materials-${i}`)
+					img.res-i(src="#" data-lazy="img/@1x/material-2.jpg", alt="")
 			+e.materialsWrap
-				a(href='img/@2x/red-jasper.png' data-fancybox=`materials-${i}`)
-					img.res-i(src="#" data-lazy="img/@2x/red-jasper.png", alt="")
+				a(href='img/@2x/material-3.jpg' data-fancybox=`materials-${i}`)
+					img.res-i(src="#" data-lazy="img/@1x/material-3.jpg", alt="")
 			+e.materialsWrap
-				a(href='img/@2x/landscape-jasper.png' data-fancybox=`materials-${i}`)
-					img.res-i(src="#" data-lazy="img/@2x/landscape-jasper.png", alt="")
+				a(href='img/@2x/material-4.jpg' data-fancybox=`materials-${i}`)
+					img.res-i(src="#" data-lazy="img/@2x/material-4.jpg", alt="")
 		.h5.text-center 1800 руб.*
-		+e.A.btn.btn(href="#") 
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
 			span.bg Заказать
 
 

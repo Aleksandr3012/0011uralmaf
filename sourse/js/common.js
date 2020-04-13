@@ -288,6 +288,11 @@ function eventHandler() {
 		}
 	})
 
+	//показывает инпут при клике на текст
+	$(".form-wrap__comment--js").click(function () {
+		$('.form-wrap__toggle-block--js').toggle();
+	});
+
 	// $('.main-wrapper').click(function(){
 	// 	$(this).addClass('d-none');
 	// });

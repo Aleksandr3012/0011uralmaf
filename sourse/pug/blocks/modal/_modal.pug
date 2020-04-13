@@ -57,20 +57,33 @@ mixin modal()
 			+e.btnWrap
 				+e.BUTTON.btn.btn(type="submit")
 					span.bg Получить каталог
-				img.d-none.d-lg-block(src="img/@2x/catalog.png", alt="#")
+				img.d-none.d-lg-block(src="img/@2x/catalog.png", alt="")
 			+polite()
+
+		+form-wrap()(id="modalOrder" class="  modal-win--order modal-form" ) 
+			.text-center
+				.h3 Для оформления заказа оставьте ваши контакты
+			+input('Иван', 'text', 'Как к вам обращаться?','name')
+			+form-tabs()
+			+e.input-wrapper
+				+e.comment--js.text-center Задайте вопрос, если есть
+				+e.toggle-block--js
+					+input('Текст сообщения', 'textarea')
+			+e.BUTTON.btn.btn(type="submit")
+				span.bg Получить каталог
+			+polite
 
 		+b.modalAbout(id="modalAbout")
 			+e.headBlock
 				.container
 						h2 Яшму и хризолит превращаем #[strong в&nbsp;вазоны&nbsp;и&nbsp;скамейки]
-						+pic('bgModal.png', 'bg')(class="picture-bg")
+						+pic('bgModal.jpg', 'bg')(class="picture-bg")
 						.row
 							.col-lg-5
 								+e.imgWrap.d-none.d-lg-block
-									+e.founder(src="img/@2x/founder.png", alt="#")
+									+e.founder(src="img/@2x/founder.png", alt="")
 								+e.founderSm.d-lg-none
-									+e.founderImg(src="img/@2x/founder-sm.png", alt="#")
+									+e.founderImg(src="img/@2x/founder-sm.png", alt="")
 									+e.nameWrap
 										+e.nameSm Михаил Геннадьевич
 										+e.positionSm Сооснователь компании ООО&nbsp;«УралМаф»
@@ -162,20 +175,20 @@ mixin modal()
 					+e.type Можете выбрать #[strong любой вариант] поверхности
 					+e.materials.row.text-center
 						.col-6.col-md-3
-							a(href='img/@2x/mix.png' data-fancybox=`materials`)
-								img.res-i(src="img/@2x/mix.png" alt="")
+							a(href='img/@2x/material-1.jpg' data-fancybox=`materials`)
+								img.res-i(src="img/@1x/material-1.jpg" alt="")
 							.h5 Микс
 						.col-6.col-md-3
-							a(href='img/@2x/goldilith.png' data-fancybox=`materials`)
-								img.res-i(src="img/@2x/goldilith.png" alt="")
+							a(href='img/@2x/material-2.jpg' data-fancybox=`materials`)
+								img.res-i(src="img/@1x/material-2.jpg" alt="")
 							.h5 Златолит
 						.col-6.col-md-3
-							a(href='img/@2x/red-jasper.png' data-fancybox=`materials`)
-								img.res-i(src="img/@2x/red-jasper.png" alt="")
+							a(href='img/@2x/material-3.jpg' data-fancybox=`materials`)
+								img.res-i(src="img/@1x/material-3.jpg" alt="")
 							.h5 Красная яшма
 						.col-6.col-md-3
-							a(href='img/@2x/landscape-jasper.png' data-fancybox=`materials`)
-								img.res-i(src="img/@2x/landscape-jasper.png" alt="")
+							a(href='img/@2x/material-4.jpg' data-fancybox=`materials`)
+								img.res-i(src="img/@1x/material-4.jpg" alt="")
 							.h5 Пейзажная яшма
 			+sForm('Расскажите о задаче — мы рассчитаем стоимость изготовления изделий ','И подготовим коммерческое предложение')
 				+e.clouds(src="img/@2x/clouds.png" alt="")
