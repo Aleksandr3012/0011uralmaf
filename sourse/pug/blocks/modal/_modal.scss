@@ -7,7 +7,7 @@
 	border-radius: rem(6px);
 	border: rem(5px) solid #f0f0f0;
 	padding: rem(40) rem(15) rem(20);
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(sm) {
 		padding: rem(20) rem(73) rem(60) rem(72) !important;
 	}
 
