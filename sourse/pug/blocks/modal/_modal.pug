@@ -83,8 +83,8 @@ mixin modal()
 								+e.imgWrap.d-none.d-lg-block
 									+e.PICTURE.founder.imgWrap.lazy-modal--js
 										source(media="(min-width: 576px)", data-srcset="img/@2x/webp/founder.webp", type=`image/webp`, srcset="#")
-										source(media="(min-width: 576px)", srcset="img/@2x/founder.png", type=`image/png`)
-										source(srcset="img/@1x/webp/founder.webp", type=`image/webp`)
+										source(media="(min-width: 576px)", data-srcset="img/@2x/founder.png", type=`image/png` srcset="#")
+										source(data-srcset="img/@1x/webp/founder.webp", type=`image/webp`, srcset="#")
 										img(src="#" data-src="img/@1x/founder.png", alt="")
 								+e.founderSm.d-lg-none
 									+e.founderImg.lazy-modal--js(src="#" data-src="img/@2x/founder-sm.png", alt="")
@@ -98,8 +98,8 @@ mixin modal()
 						//- +e.clouds.lazy-modal--js(src="#" data-src="img/@2x/clouds.png", alt="")
 						+e.PICTURE.clouds.imgWrap.lazy-modal--js
 							source(media="(min-width: 576px)", data-srcset="img/@2x/webp/clouds.webp", type=`image/webp`, srcset="#")
-							//- source(media="(min-width: 576px)", srcset="img/@2x/clouds.png", type=`image/png`)
-							//- source(srcset="img/@1x/webp/clouds.webp", type=`image/webp`)
+							source(media="(min-width: 576px)", data-srcset="img/@2x/clouds.png", type=`image/png`, srcset="#")
+							source(data-srcset="img/@1x/webp/clouds.webp", type=`image/webp`, srcset="#")
 							img(src="#" data-src="img/@1x/clouds.png", alt="")
 			+e.body
 				.container
@@ -116,22 +116,22 @@ mixin modal()
 						+form-wrap()(class="form-wrap--map")
 							ul
 								li 
-									img.res-i(src="img/@2x/map.png", alt="")
+									img.res-i.lazy-modal--js(src="#" data-src="img/@2x/map.png", alt="")
 									+e.mapDescr
 										.h6 адрес:
 										p г. Магнитогорск, ул.Клары Цеткин, 12/1
 								li 
-									img.res-i(src="img/@2x/phone.png", alt="")
+									img.res-i.lazy-modal--js(src="#" data-src="img/@2x/phone.png", alt="")
 									+e.mapDescr
 										.h6 Телефон:
 										a(href="tel:+7(3519)45-45-15") +7 (3519) 45-45-15
 								li 
-									img.res-i(src="img/@2x/mail.png", alt="")
+									img.res-i.lazy-modal--js(src="#" data-src="img/@2x/mail.png", alt="")
 									+e.mapDescr
 										.h6 email:
 										a(href="mailto:info@uralmaf.ru ") info@uralmaf.ru 
 								li 
-									img.res-i(src="img/@2x/clock.png", alt="")
+									img.res-i.lazy-modal--js(src="#" data-src="img/@2x/clock.png", alt="")
 									+e.mapDescr
 										.h6 Работаем:
 										p с 7:00 до 19:00 (мск), без&nbsp;выходных
@@ -141,7 +141,12 @@ mixin modal()
 				h2 Доставляем по России, Казахстану и СНГ
 				+e.row.row
 					.col-lg-6
-						+e.car.res-i.lazy-modal--js(src="#" data-src="img/@2x/car.jpg", alt="")
+						//- +e.car.res-i.lazy-modal--js(src="#" data-src="img/@2x/car.jpg", alt="")
+						+e.PICTURE.car.imgWrap.lazy-modal--js
+							source(media="(min-width: 576px)", data-srcset="img/@2x/webp/car.webp", type=`image/webp`, srcset="#")
+							source(media="(min-width: 576px)", data-srcset="img/@2x/car.jpg", type=`image/jpg`, srcset="#")
+							source(data-srcset="img/@1x/webp/car.webp", srcset="#", type=`image/webp`)
+							img(src="#" data-src="img/@1x/car.jpg", alt="")
 					.col-md-6.align-self-center
 						.h5 #[strong Доставляем изделия] транспортыми #[strong компаниями]
 						.h5 
@@ -152,8 +157,8 @@ mixin modal()
 						//- +e.packaging.res-i.lazy-modal--js(src="#" data-src="img/@2x/packaging.png", alt="")
 						+e.PICTURE.packaging.imgWrap.lazy-modal--js
 							source(media="(min-width: 576px)", data-srcset="img/@2x/webp/packaging.webp", type=`image/webp`, srcset="#")
-							source(media="(min-width: 576px)", srcset="img/@2x/packaging.png", type=`image/png`)
-							source(srcset="img/@1x/webp/packaging.webp", type=`image/webp`)
+							source(media="(min-width: 576px)", data-srcset="img/@2x/packaging.png", type=`image/png`, srcset="#")
+							source(data-srcset="img/@1x/webp/packaging.webp", srcset="#", type=`image/webp`)
 							img(src="#" data-src="img/@1x/packaging.png", alt="")
 					.col-lg-5.align-self-center
 						.h5 Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;надежно упаковываем
@@ -172,8 +177,8 @@ mixin modal()
 							//- +e.cement.res-i.lazy-modal--js(src="#" data-src="img/@2x/cement.png" alt="")
 							+e.PICTURE.cement.imgWrap.lazy-modal--js
 								source(media="(min-width: 576px)", data-srcset="img/@2x/webp/cement.webp", type=`image/webp`, srcset="#")
-								source(media="(min-width: 576px)", srcset="img/@2x/cement.png", type=`image/png`)
-								source(srcset="img/@1x/webp/cement.webp", type=`image/webp`)
+								source(media="(min-width: 576px)", data-srcset="img/@2x/cement.png", type=`image/png`, srcset="#")
+								source(data-srcset="img/@1x/webp/cement.webp", type=`image/webp`, srcset="#")
 								img(src="#" data-src="img/@1x/cement.png", alt="")
 						+e.pt.col-md-6
 							.h5 #[strong При круглогодичной эксплуатации срок службы изделий 5, 10&nbsp;и&nbsp;даже 20&nbsp;лет]
@@ -183,8 +188,8 @@ mixin modal()
 							//- +e.karcher.res-i.lazy-modal--js(src="#" data-src="img/@2x/karcher.png" alt="")
 							+e.PICTURE.karcher.imgWrap.lazy-modal--js
 								source(media="(min-width: 576px)", data-srcset="img/@2x/webp/karcher.webp", type=`image/webp`, srcset="#")
-								source(media="(min-width: 576px)", srcset="img/@2x/karcher.png", type=`image/png`)
-								source(srcset="img/@1x/webp/karcher.webp", type=`image/webp`)
+								source(media="(min-width: 576px)", data-srcset="img/@2x/karcher.png", type=`image/png`, srcset="#")
+								source(data-srcset="img/@1x/webp/karcher.webp", type=`image/webp`, srcset="#")
 								img(src="#" data-src="img/@1x/karcher.png", alt="")
 						+e.pt.col-md-6
 							.h5 #[strong Можно мыть водой и&nbsp;при необходимости очищать моющими и&nbsp;дезинфицирующими средствами]
@@ -194,8 +199,8 @@ mixin modal()
 							//- +e.vazons.img.res-i.lazy-modal--js(src="#" data-src="img/@2x/banner.png" alt="")
 							+e.PICTURE.vazons.imgWrap.lazy-modal--js
 								source(media="(min-width: 576px)", data-srcset="img/@2x/webp/banner.webp", type=`image/webp`, srcset="#")
-								source(media="(min-width: 576px)", srcset="img/@2x/banner.png", type=`image/png`)
-								source(srcset="img/@1x/webp/banner.webp", type=`image/webp`)
+								source(media="(min-width: 576px)", data-srcset="img/@2x/banner.png", type=`image/png`, srcset="#")
+								source(data-srcset="img/@1x/webp/banner.webp", type=`image/webp`, srcset="#")
 								img(src="#" data-src="img/@1x/banner.png", alt="")
 						+e.pt.col-md-6
 							.h5 #[strong Поверхность из&nbsp;натурального камня любой фактуры]
@@ -205,45 +210,45 @@ mixin modal()
 						.col-6.col-md-3
 							a(href='img/@2x/material-1.jpg' data-fancybox=`materials`)
 								+e.PICTURE.imgWrap.lazy-modal--js
-									source(media="(min-width: 576px)", dasrcset="img/@2x/webp/material-1.webp", type=`image/webp`)
-									source(media="(min-width: 576px)", dasrcset="img/@2x/material-1.png", type=`image/png`)
-									source(srcset="img/@1x/webp/material-1.webp", type=`image/webp`)
-									img(src="img/@1x/material-1.png", alt="")
+									source(media="(min-width: 576px)", srcset="#", data-srcset="img/@2x/webp/material-1.webp", type=`image/webp`)
+									source(media="(min-width: 576px)", srcset="#", data-srcset="img/@2x/material-1.png", type=`image/png`)
+									source(srcset="#" data-srcset="img/@1x/webp/material-1.webp", type=`image/webp`)
+									img(src="#" data-src="img/@1x/material-1.png", alt="")
 								//- img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-1.jpg" alt="")
 							.h5 Микс
 						.col-6.col-md-3
 							a(href='img/@2x/material-2.jpg' data-fancybox=`materials`)
 								+e.PICTURE.imgWrap.lazy-modal--js
-									source(media="(min-width: 576px)", dasrcset="img/@2x/webp/material-2.webp", type=`image/webp`)
-									source(media="(min-width: 576px)", dasrcset="img/@2x/material-2.png", type=`image/png`)
-									source(srcset="img/@1x/webp/material-2.webp", type=`image/webp`)
-									img(src="img/@1x/material-2.png", alt="")
+									source(media="(min-width: 576px)", srcset="#", data-srcset="img/@2x/webp/material-2.webp", type=`image/webp`)
+									source(media="(min-width: 576px)", srcset="#", data-srcset="img/@2x/material-2.png", type=`image/png`)
+									source(srcset="#" data-srcset="img/@1x/webp/material-2.webp", type=`image/webp`)
+									img(src="#" data-src="img/@1x/material-2.png", alt="")
 								//- img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-2.jpg" alt="")
 							.h5 Златолит
 						.col-6.col-md-3
 							a(href='img/@2x/material-3.jpg' data-fancybox=`materials`)
 								+e.PICTURE.imgWrap.lazy-modal--js
-									source(media="(min-width: 576px)", dasrcset="img/@2x/webp/material-3.webp", type=`image/webp`)
-									source(media="(min-width: 576px)", dasrcset="img/@2x/material-3.png", type=`image/png`)
-									source(srcset="img/@1x/webp/material-3.webp", type=`image/webp`)
-									img(src="img/@1x/material-3.png", alt="")
+									source(media="(min-width: 576px)", srcset="#", data-srcset="img/@2x/webp/material-3.webp", type=`image/webp`)
+									source(media="(min-width: 576px)", srcset="#", data-srcset="img/@2x/material-3.png", type=`image/png`)
+									source(srcset="#" data-srcset="img/@1x/webp/material-3.webp", type=`image/webp`)
+									img(data-src="img/@1x/material-3.png", alt="", src="#")
 								//- img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-3.jpg" alt="")
 							.h5 Красная яшма
 						.col-6.col-md-3
 							a(href='img/@2x/material-4.jpg' data-fancybox=`materials`)
 								+e.PICTURE.imgWrap.lazy-modal--js
-									source(media="(min-width: 576px)", dasrcset="img/@2x/webp/material-4.webp", type=`image/webp`)
-									source(media="(min-width: 576px)", dasrcset="img/@2x/material-4.png", type=`image/png`)
-									source(srcset="img/@1x/webp/material-4.webp", type=`image/webp`)
-									img(src="img/@1x/material-4.png", alt="")
+									source(media="(min-width: 576px)", srcset="#", data-srcset="img/@2x/webp/material-4.webp", type=`image/webp`)
+									source(media="(min-width: 576px)", srcset="#", data-srcset="img/@2x/material-4.png", type=`image/png`)
+									source(srcset="#" data-srcset="img/@1x/webp/material-4.webp", type=`image/webp`)
+									img(src="#" data-src="img/@1x/material-4.png", alt="")
 								//- img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-4.jpg" alt="")
 							.h5 Пейзажная яшма
 			+sForm-modal('Расскажите о задаче — мы рассчитаем стоимость изготовления изделий ','И подготовим коммерческое предложение')
 				//- +e.clouds.lazy-modal--js(src="#" data-src="img/@2x/clouds.png" alt="")
 				+e.PICTURE.clouds.imgWrap.lazy-modal--js
 					source(media="(min-width: 576px)", data-srcset="img/@2x/webp/clouds.webp", type=`image/webp`, srcset="#")
-					//- source(media="(min-width: 576px)", srcset="img/@2x/clouds.png", type=`image/png`)
-					//- source(srcset="img/@1x/webp/clouds.webp", type=`image/webp`)
+					source(media="(min-width: 576px)", data-srcset="img/@2x/clouds.png", type=`image/png`, srcset="#")
+					source(data-srcset="img/@1x/webp/clouds.webp", type=`image/webp`, srcset="#")
 					img(src="#" data-src="img/@1x/clouds.png", alt="")
 
 

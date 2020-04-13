@@ -34,7 +34,7 @@ mixin itemProd(a, i, t, vz, height, width, ...items)
 		+e.materials
 			each item in items
 				+e.materialsWrap
-					a(href='img/@2x/material-1.jpg' data-fancybox=`materials-${i}`)
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
 						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="")
 
 		.h5.text-center 1800 руб.*

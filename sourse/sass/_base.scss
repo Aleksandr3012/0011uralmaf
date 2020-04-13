@@ -607,5 +607,5 @@ a {
 }
 
 .fancybox-button--zoom, .fancybox-button--play, .fancybox-button--thumbs{
-	display: none;
+	display: none !important;
 }
