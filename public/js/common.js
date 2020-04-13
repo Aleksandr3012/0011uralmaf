@@ -116,11 +116,9 @@ var JSCCommon = {
 	// табы  . 
 	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide(function () {
-				$(this).find(".form-wrap__input").removeAttr("required");
-			}).removeClass('active').eq($(this).index()).fadeIn(function () {
-				$(this).find(".form-wrap__input").attr("required", "required");
-			}).addClass('active').find('.slider--js').slick('refresh');
+			$(this).closest('.' + tab).find('.' + tab + '__content').find(".form-wrap__input").val('').removeAttr("required");
+			$(this).closest('.' + tab).find('.' + tab + '__content').eq($(this).index()).find(".form-wrap__input").attr("required", "required");
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active').find('.slider--js').slick('refresh');
 			$(this).closest('.' + tab).find('.' + tab + '__caption2').find('.' + tab + '__btn').eq($(this).index()).addClass('active').siblings().removeClass('active');
 		});
 		$('.' + tab + '__caption2').on('click', '.' + tab + '__btn:not(.active)', function (e) {

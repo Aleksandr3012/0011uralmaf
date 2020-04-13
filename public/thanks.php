@@ -198,16 +198,16 @@
 												<use xlink:href="img/svg/sprite.svg#viber"></use>
 											</svg></a>
 										</div><a class="topLine__tel" href="tel:+73519454515">7 (3519) 45-45-15</a>
-									</div><a class="topLine__call link-modal" href="#modal-call">Заказать  звонок <span class="d-none d-lg-inline">менеджера</span></a>
+									</div><a class="topLine__call link-modal" href="#modal-call" data-order="Заказать  звонок менеджера">Заказать  звонок <span class="d-none d-lg-inline">менеджера</span></a>
 								</div>
 								<div class="col-lg d-flex">
 									<div class="topLine__imgWrap d-none d-lg-block"><img class="res-i lazy" src="#" data-src="img/@2x/semiprecious-stones.png" alt=""/>
 									</div>
-									<div class="topLine__text"><a class="topLine__concrete link-modal" href="#modalConcrete">Что за&nbsp;бетон с&nbsp;полудрагоценными камнями?</a>
+									<div class="topLine__text"><a class="topLine__concrete link-modal" href="#modalConcrete" data-order="Что за бетон с полудрагоценными камнями?">Что за&nbsp;бетон с&nbsp;полудрагоценными камнями?</a>
 									</div>
 								</div>
 								<div class="topLine__col col-lg-auto order-lg-3">
-									<div class="topLine__about"><a class="link-modal" href="#modalAbout">О компании</a>
+									<div class="topLine__about"><a class="link-modal" href="#modalAbout" data-order="О компании">О компании</a>
 									</div>
 									<div class="topLine__delivery"><a class="link-modal" href="#modalDelivery">Доставка</a>
 									</div>
@@ -249,9 +249,9 @@
 						</div>
 						<div class="mobileOrder-2 col-md-2 col-xl">
 							<ul class="footer__map">
-								<li><a class="link-modal" href="#modalAbout">О компании</a></li>
+								<li><a class="link-modal" href="#modalAbout" data-order="О компании">О компании</a></li>
 								<li><a class="link-modal" href="#modalDelivery">Доставка</a></li>
-								<li><a class="borderBottom link-modal" href="#modalCatalog">Получить каталог</a></li>
+								<li><a class="borderBottom link-modal" href="#modalCatalog" data-order="Получить каталог">Получить каталог</a></li>
 							</ul>
 						</div>
 						<div class="mobileOrder-4 col-md">
@@ -271,7 +271,7 @@
 										<use xlink:href="img/svg/sprite.svg#viber"></use>
 									</svg></a>
 								</div><a class="footer__tel" href="tel:+73519454515">7 (3519) 45-45-15</a>
-							</div><a class="footer__call link-modal" href="#modal-call">Заказать звонок менеджера</a>
+							</div><a class="footer__call link-modal" href="#modal-call" data-order="Заказать  звонок менеджера">Заказать звонок менеджера</a>
 						</div>
 						<div class="mobileOrder-5 col-md-4">
 							<div class="footer__adres">Юридический адерс и реквизиты
@@ -281,9 +281,9 @@
 						<div class="col-md-2"></div>
 						<div class="mobileOrder-6 col-md-3">
 							<ul class="footer__polite"> 
-								<li><a href="">Политика конфиденциальности</a></li>
-								<li><a href="">Пользовательское соглашение</a></li>
-								<li><a href="">Карта сайта</a></li>
+								<li><a href="#">Политика конфиденциальности</a></li>
+								<li><a href="#">Пользовательское соглашение</a></li>
+								<li><a href="#">Карта сайта</a></li>
 							</ul>
 						</div>
 						<div class="mobileOrder-7 col-md-3">
@@ -350,8 +350,8 @@
 							<div class="form-wrap__group-title">Какой способ связи вам удобен?
 							</div>
 							<div class="tabs__caption">
-								<div class="tabs__btn">Email </div>
-								<div class="tabs__btn active">WhatsApp</div>
+								<div class="tabs__btn active">Email </div>
+								<div class="tabs__btn">WhatsApp</div>
 								<div class="tabs__btn">Viber</div>
 								<div class="tabs__btn">Telegram</div>
 							</div>
