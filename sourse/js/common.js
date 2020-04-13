@@ -11,6 +11,8 @@ const JSCCommon = {
 			arrows: false,
 			infobar: false,
 			touch: false,
+			toolbar: false,
+			autoFocus: false,
 			type: 'inline',
 			i18n: {
 				en: {
@@ -29,7 +31,7 @@ const JSCCommon = {
 		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
-		})
+		});
 	},
 	// /magnificPopupCall
 	toggleMenu() {
@@ -131,7 +133,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/04.png);"></div>');
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/01-320.png);"></div>');
 	// /добавляет подложку для pixel perfect
 
 
@@ -274,6 +276,10 @@ function eventHandler() {
 		});
 	})
 
+	$('[data-fancybox').fancybox({
+		toolbar: false,
+		infobar: false,
+	});
 
 	$(".viber-link").each(function () {
 

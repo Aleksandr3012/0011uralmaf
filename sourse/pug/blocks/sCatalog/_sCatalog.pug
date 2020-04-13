@@ -33,15 +33,20 @@ mixin itemProd(a, i, t, vz, height, width)
 			block
 		+e.materials
 			+e.materialsWrap
-				img.res-i(src="#" data-lazy="img/@2x/material-1.png", alt="#")
+				a(href='img/@2x/mix.png' data-fancybox=`materials-${i}`)
+					img.res-i(src="#" data-lazy="img/@2x/mix.png", alt="")
 			+e.materialsWrap
-				img.res-i(src="#" data-lazy="img/@2x/material-2.png", alt="#")
+				a(href='img/@2x/goldilith.png' data-fancybox=`materials-${i}`)
+					img.res-i(src="#" data-lazy="img/@2x/goldilith.png", alt="")
 			+e.materialsWrap
-				img.res-i(src="#" data-lazy="img/@2x/material-3.png", alt="#")
+				a(href='img/@2x/red-jasper.png' data-fancybox=`materials-${i}`)
+					img.res-i(src="#" data-lazy="img/@2x/red-jasper.png", alt="")
 			+e.materialsWrap
-				img.res-i(src="#" data-lazy="img/@2x/material-4.png", alt="#")
+				a(href='img/@2x/landscape-jasper.png' data-fancybox=`materials-${i}`)
+					img.res-i(src="#" data-lazy="img/@2x/landscape-jasper.png", alt="")
 		.h5.text-center 1800 руб.*
-		+e.A.btn.btn(href="#") Заказать
+		+e.A.btn.btn(href="#") 
+			span.bg Заказать
 
 
 
@@ -73,11 +78,12 @@ mixin sCatalog()
 								.slide
 									+itemProd('','3','«Венза»')
 									
-								.slide
-									+itemProd('','3','«Венза»')
+								//- .slide
+								//- 	+itemProd('','3','«Венза»')
 
 							.control-wrap
-						+e.A.allProd.btn(href="#") Смотреть все вазоны
+						+e.A.allProd.btn(href="#") 
+							span.bg Смотреть все вазоны
 						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
 					+e.content
 						
@@ -94,7 +100,8 @@ mixin sCatalog()
 									+itemProd('','3','«Венза»')
 
 							.control-wrap
-						+e.A.allProd.btn(href="#") Смотреть все вазоны
+						+e.A.allProd.btn(href="#") 
+							span.bg Смотреть все вазоны
 						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
 					+e.content
 						
@@ -107,7 +114,8 @@ mixin sCatalog()
 								.slide
 									+itemProd('','3','«Венза»')
 							.control-wrap
-						+e.A.allProd.btn(href="#") Смотреть все вазоны
+						+e.A.allProd.btn(href="#") 
+							span.bg Смотреть все вазоны
 						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
 					+e.content
 						
@@ -120,7 +128,8 @@ mixin sCatalog()
 								.slide
 									+itemProd('','3','«Венза»')
 							.control-wrap
-						+e.A.allProd.btn(href="#") Смотреть все вазоны
+						+e.A.allProd.btn(href="#") 
+							span.bg Смотреть все вазоны
 						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
 					+e.content
 						
@@ -133,7 +142,8 @@ mixin sCatalog()
 								.slide
 									+itemProd('','3','«Венза»')
 							.control-wrap
-						+e.A.allProd.btn(href="#") Смотреть все вазоны
+						+e.A.allProd.btn(href="#") 
+							span.bg Смотреть все вазоны
 						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
 				+e.caption2.d-md-none
 					+e.btn.active Вазоны бетонные цветочные

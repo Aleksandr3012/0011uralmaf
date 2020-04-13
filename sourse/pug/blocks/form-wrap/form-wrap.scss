@@ -58,16 +58,70 @@
 
 	&__btn {
 		// cursor: pointer;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
 		width: 100%;
 		border-radius: rem(7);
-		margin-top: rem(13);
+		margin-top: rem(57);
+		@include media-breakpoint-up(md) {
+			margin-top: rem(13);
+		}
 		height: rem(60);
+		position: relative;
+		// background-image: linear-gradient(to bottom, #51bcc0 0%, #9bd8db 100%) !important;
+		z-index: 2;
+		padding: 0;
+
+		.bg {
+			@include media-breakpoint-down(sm){
+				max-height: rem(60);
+			}
+		}
+
 
 		@include media-breakpoint-up(md) {
 			height: rem(107);
 			margin-top: rem(8);
 			border-radius: rem(3px) rem(3px) rem(7px) rem(7px);
 		}
+
+		// &::before {
+		// 	z-index: -1;
+		// 	top: 37%;
+		// }
+		&::after {
+		// 	z-index: 1;
+			opacity: 0;
+		// 	background-image: linear-gradient(to top, #51bcc0 0%, #9bd8db 100%); // display: none;
+		}
+
+		// &:hover &::after {
+		// 	opacity: 0;
+		// }
+
+		span {
+			display: flex;
+			width: 100%;
+			height: rem(107);
+			position: relative;
+			z-index: 3;
+			background-image: linear-gradient(to top, #51bcc0 0%, #9bd8db 100%);
+			// width: 100%;
+			// height: 100%;
+			// display: flex;
+			// justify-content: center;
+			// align-items: center;
+			// border-radius: rem(7);
+		}
+
+		// &:hover span {
+		// 	&::after {
+		// 		// opacity: 1;
+		// 	}
+		// 	// background-image: linear-gradient(to top, transparent 0%, transparent 100%);
+		// }
 	}
 
 	label {
@@ -94,7 +148,6 @@
 	}
 
 	.tabs {
-
 		&__caption2,
 		&__caption {
 			flex-wrap: wrap;
@@ -172,7 +225,11 @@
 		.custom-input {
 			position: absolute;
 			left: rem(19);
-			top: rem(27);
+			top: rem(24);
+			@include media-breakpoint-up(sm) {
+				left: 15%;
+				top: rem(25);
+			}
 
 			@include media-breakpoint-up(md) {
 				top: rem(34);
@@ -225,40 +282,56 @@
 }
 
 //
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+}
 
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+}
 
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+}
 
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+}
 
-@include media-breakpoint-up(xs) {}
-
-//
-@include media-breakpoint-between(md, xl) {}
-
-//
-@include media-breakpoint-only(xs) {}
-
-@include media-breakpoint-only(sm) {}
-
-@include media-breakpoint-only(md) {}
-
-@include media-breakpoint-only(lg) {}
-
-@include media-breakpoint-only(xl) {}
+@include media-breakpoint-up(xs) {
+}
 
 //
-@include media-breakpoint-down(xl) {}
+@include media-breakpoint-between(md, xl) {
+}
 
-@include media-breakpoint-down(lg) {}
+//
+@include media-breakpoint-only(xs) {
+}
 
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-only(sm) {
+}
 
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-only(md) {
+}
 
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-only(lg) {
+}
+
+@include media-breakpoint-only(xl) {
+}
+
+//
+@include media-breakpoint-down(xl) {
+}
+
+@include media-breakpoint-down(lg) {
+}
+
+@include media-breakpoint-down(md) {
+}
+
+@include media-breakpoint-down(sm) {
+}
+
+@include media-breakpoint-down(xs) {
+}
 
 .custom-input {
 	display: block;
@@ -301,7 +374,7 @@
 		}
 	}
 
-	&__input[type='checkbox']+&__lab {
+	&__input[type='checkbox'] + &__lab {
 		&::after {
 			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
 			position: absolute;
@@ -310,7 +383,7 @@
 		}
 	}
 
-	&__input[type='radio']+&__lab {
+	&__input[type='radio'] + &__lab {
 		border-radius: 50%;
 
 		&::after {
@@ -318,7 +391,7 @@
 		}
 	}
 
-	&__input:checked+&__lab {
+	&__input:checked + &__lab {
 		background-color: $success;
 
 		&::after {

@@ -229,6 +229,22 @@
 					</div>
 				</div>
 			</section>
+<<<<<<< HEAD:public/thanks.php
+=======
+			<!-- start sThanks-->
+			<section class="sThanks section" id="sThanks">
+				<div class="container">
+					<div class="section-title text-center">
+						<svg class="icon icon-verificado ">
+							<use xlink:href="img/svg/sprite.svg#verificado"></use>
+						</svg>
+						<h1>Спасибо, мы&nbsp;приняли вашу заявку!</h1>
+						<h3>Менеджер компании перезвонит вам в&nbsp;течение рабочего дня и&nbsp;ответит на&nbsp;ваши вопросы.</h3>
+						<h4>Удачного дня!</h4>
+					</div>
+				</div>
+			</section>
+>>>>>>> ab8ef8c060643572907b09513d93cc383cf0002c:public/thanks.html
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="row">
@@ -243,9 +259,9 @@
 						</div>
 						<div class="mobileOrder-2 col-md-2 col-xl">
 							<ul class="footer__map">
-								<li><a href="#">О компании</a></li>
-								<li><a href="#">Доставка</a></li>
-								<li><a class="borderBottom" href="#">Получить каталог</a></li>
+								<li><a class="link-modal" href="#modalAbout">О компании</a></li>
+								<li><a class="link-modal" href="#modalDelivery">Доставка</a></li>
+								<li><a class="borderBottom link-modal" href="#modalCatalog">Получить каталог</a></li>
 							</ul>
 						</div>
 						<div class="mobileOrder-4 col-md">
@@ -264,8 +280,13 @@
 									<svg class="icon icon-viber ">
 										<use xlink:href="img/svg/sprite.svg#viber"></use>
 									</svg></a>
+<<<<<<< HEAD:public/thanks.php
 								</div><a class="footer__tel" href="tel:+73519454515">7 (3519) 45-45-15</a>
 							</div><a class="footer__call link-modal" href="#">Заказать звонок менеджера</a>
+=======
+								</div><a class="footer__tel" href="tel:73519454515">7 (3519) 45-45-15</a>
+							</div><a class="footer__call link-modal" href="#modal-call">Заказать звонок менеджера</a>
+>>>>>>> ab8ef8c060643572907b09513d93cc383cf0002c:public/thanks.html
 						</div>
 						<div class="mobileOrder-5 col-md-4">
 							<div class="footer__adres">Юридический адерс и реквизиты
@@ -298,16 +319,92 @@
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="text-center">
-						<div class="form-wrap__title h2 ttu">Укажите контактные данные для звонка
-						</div>
-						<div class="h5">Менеджер компании позвонит вам в&nbsp;течение рабочего дня: мы&nbsp;работаем: пн-пт с&nbsp;7:00 до&nbsp;19:00 (Мск)</div>
+						<div class="h3">Укажите контактные данные для звонка</div>
+						<div class="h5">Менеджер компании позвонит вам в&nbsp;течение&nbsp;рабочего дня:<br>мы&nbsp;работаем: пн-пт&nbsp;с&nbsp;7:00 до&nbsp;19:00 (Мск)</div>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Как к вам обращаться?" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/> 
+						</label> 
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Введите телефон" name="tel" required="required"/>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Введите телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="tel" required="required"/>
+						</label>
 					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn btn" type="submit" value="Заказать звонок"/>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"><span class="bg">Заказать звонок</span>
+					</button>
+					<div class="form-wrap__polite">
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text"></span>
+						</label>
+						<div class="form-wrap__text">Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие<br>на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь&nbsp;с&nbsp;<a href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="form-wrap modal-win modal-win--catalog modal-form" id="modalCatalog">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="text-center">
+						<div class="h3">Получите каталог малых архитектурных форм</div>
+						<div class="h5">С&nbsp;их&nbsp;помощью вы&nbsp;создадите уютную атмосферу мест, куда гости захотят вернуться</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/> 
+						</label> 
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="tabs tabsModal">
+						<div class="form-wrap__group">
+							<div class="form-wrap__group-title">Какой способ связи вам удобен?
+							</div>
+							<div class="tabs__caption">
+								<div class="tabs__btn">Email </div>
+								<div class="tabs__btn active">WhatsApp</div>
+								<div class="tabs__btn">Viber</div>
+								<div class="tabs__btn">Telegram</div>
+							</div>
+						</div>
+						<div class="tabs__wrap">
+							<div class="tabs__content active">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__title">Введите Email</span><input class="form-wrap__input form-control" type="email" placeholder="Email" name="mail" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="tabs__content">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__title">Введите whatsapp</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="whatsapp"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="tabs__content">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__title">Введите viber</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="viber"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="tabs__content">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__title">Введите viber</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="viber"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+					</div>
+					<div class="form-wrap__btnWrap">
+						<button class="form-wrap__btn btn" type="submit"><span class="bg">Получить каталог</span>
+						</button><img class="d-none d-lg-block" src="img/@2x/catalog.png" alt="#"/>
+					</div>
 					<div class="form-wrap__polite">
 						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text"></span>
 						</label>
@@ -344,7 +441,7 @@
 								<p>Компания основана в&nbsp;2008&nbsp;году. Кроме малых архитектурных форм мы&nbsp;производим тротуарную плитку, бордюры и&nbsp;фасадную термопанель. За&nbsp;эти годы научились минимизировать издержки, снижать себестоимость без потери качества и&nbsp;устанавливать комфортную цену для покупателя.</p>
 								<p>Мы&nbsp;работаем напрямую с&nbsp;поставщиками крошки полудрагоценных камней с&nbsp;Южного Урала и&nbsp;Башкирии&nbsp;&mdash; это позволяет производить самые разные фактуры изделий.</p>
 							</div>
-						</div><img class="modalAbout__clouds lazy" src="#" data-src="img/@2x/clouds.png" alt="" role="presentation"/>
+						</div><img class="modalAbout__clouds" src="img/@2x/clouds.png" alt="" role="presentation"/>
 					</div>
 				</div>
 				<div class="modalAbout__body">
@@ -363,14 +460,14 @@
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="tel" required="required"/>
 									</div>
 									<!-- +e.input-wrap-->
-									<button class="form-wrap__btn btn" type="button">обсудить заказ
+									<button class="form-wrap__btn btn" type="button"> <span class="bg">обсудить заказ</span>
 									</button>
 								</div>
 							</form>
 						</div>
 						<h2>Наше производство находится в Магнитогорске</h2>
 						<div class="modalAbout__mapWrap">
-							<div class="modalAbout__frameWrap"><iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A85a137c287ff30c716c28d89b3cd2cf628478df1c00eaeeb052627868fb5247a&amp;source=constructor" frameborder="0"></iframe>
+							<div class="modalAbout__frameWrap"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A15f21b25c515e780d425c521af82a8ce28902637b1a59ec706a7c145a1f2bb50&amp;width=100%25&amp;lang=ru_RU&amp;scroll=false&amp;"></script>
 							</div>
 							<div class="form-wrap form-wrap form-wrap--map">
 								<form>
@@ -414,7 +511,7 @@
 				<div class="container">
 					<h2>Доставляем по России, Казахстану и СНГ</h2>
 					<div class="modalDelivery__row row">
-						<div class="col-lg-6"><img class="modalDelivery__car res-i lazy" src="#" data-src="img/@2x/car.png" alt="" role="presentation"/>
+						<div class="col-lg-6"><img class="modalDelivery__car res-i" src="img/@2x/car.png" alt="" role="presentation"/>
 						</div>
 						<div class="col-md-6 align-self-center">
 							<div class="h5"><strong>Доставляем изделия</strong> транспортыми <strong>компаниями</strong></div>
@@ -426,7 +523,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-7 order-lg-last"><img class="modalDelivery__packaging res-i lazy" src="#" data-src="img/@2x/packaging.png" alt="" role="presentation"/>
+						<div class="col-lg-7 order-lg-last"><img class="modalDelivery__packaging res-i" src="img/@2x/packaging.png" alt="" role="presentation"/>
 						</div>
 						<div class="col-lg-5 align-self-center">
 							<div class="h5">Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;надежно упаковываем</div>
@@ -446,25 +543,25 @@
 						<h2>В&nbsp;составе наших изделий более&nbsp;80%&nbsp;крошки натуральных камней</h2>
 						<h4>Это обеспечивает долговечность, прочность и&nbsp;красивый внешний вид</h4>
 						<div class="row">
-							<div class="col-lg-6"><img class="modalDelivery__cement res-i lazy" src="#" data-src="img/@2x/cement.png" alt="" role="presentation"/>
+							<div class="col-md-6"><img class="modalDelivery__cement res-i" src="img/@2x/cement.png" alt="" role="presentation"/>
 							</div>
-							<div class="modalDelivery__pt col-lg-6">
+							<div class="modalDelivery__pt col-md-6">
 								<div class="h5"><strong>При круглогодичной эксплуатации срок службы изделий 5, 10&nbsp;и&nbsp;даже 20&nbsp;лет</strong></div>
 								<div class="h5">Используем цемент B42,5 (М500) и&nbsp;выше&nbsp;&mdash; оптимальную марку, благодаря которой изделиям нипочем снег, дождь, мороз и&nbsp;палящие лучи. Для дополнительной защиты все изделия покрываем лаком.</div>
 							</div>
 						</div>
 						<div class="row">
-							<div class="modalDelivery__pt col-lg-6">
+							<div class="col-md-6 order-md-last"><img class="modalDelivery__karcher res-i" src="img/@2x/karcher.png" alt="" role="presentation"/>
+							</div>
+							<div class="modalDelivery__pt col-md-6">
 								<div class="h5"><strong>Можно мыть водой и&nbsp;при необходимости очищать моющими и&nbsp;дезинфицирующими средствами</strong></div>
 								<div class="h5">А&nbsp;также проводить легкую очистку некоторыми растворителями. Так как изделия предназначены для эксплуатации вне помещений, их&nbsp;можно чистить системами типа &laquo;Karcher&raquo;</div>
 							</div>
-							<div class="col-lg-6"><img class="modalDelivery__karcher res-i lazy" src="#" data-src="img/@2x/karcher.png" alt="" role="presentation"/>
-							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-6"><img class="modalDelivery__vazons img res-i lazy" src="#" data-src="img/@2x/banner.png" alt="" role="presentation"/>
+							<div class="col-md-6"><img class="modalDelivery__vazons img res-i" src="img/@2x/banner.png" alt="" role="presentation"/>
 							</div>
-							<div class="modalDelivery__pt col-lg-6">
+							<div class="modalDelivery__pt col-md-6">
 								<div class="h5"><strong>Поверхность из&nbsp;натурального камня любой фактуры</strong></div>
 								<div class="h5">Изготавливаем материал по&nbsp;технологии &laquo;мытый бетон&raquo; &mdash; в&nbsp;результате наполнитель из&nbsp;камней выступает на&nbsp;поверхность и&nbsp;создает особую фактуру изделию.</div>
 							</div>
@@ -472,23 +569,23 @@
 						<div class="modalDelivery__type">Можете выбрать <strong>любой вариант</strong> поверхности
 						</div>
 						<div class="modalDelivery__materials row text-center">
-							<div class="col-6 col-lg-3"><img class="res-i lazy" src="#" data-src="img/@2x/mix.png" alt=""/>
+							<div class="col-6 col-md-3"><a href="img/@2x/mix.png" data-fancybox="materials"><img class="res-i" src="img/@2x/mix.png" alt=""/></a>
 								<div class="h5">Микс</div>
 							</div>
-							<div class="col-6 col-lg-3"><img class="res-i lazy" src="#" data-src="img/@2x/goldilith.png" alt=""/>
+							<div class="col-6 col-md-3"><a href="img/@2x/goldilith.png" data-fancybox="materials"><img class="res-i" src="img/@2x/goldilith.png" alt=""/></a>
 								<div class="h5">Златолит</div>
 							</div>
-							<div class="col-6 col-lg-3"><img class="res-i lazy" src="#" data-src="img/@2x/red-jasper.png" alt=""/>
+							<div class="col-6 col-md-3"><a href="img/@2x/red-jasper.png" data-fancybox="materials"><img class="res-i" src="img/@2x/red-jasper.png" alt=""/></a>
 								<div class="h5">Красная яшма</div>
 							</div>
-							<div class="col-6 col-lg-3"><img class="res-i lazy" src="#" data-src="img/@2x/landscape-jasper.png" alt=""/>
+							<div class="col-6 col-md-3"><a href="img/@2x/landscape-jasper.png" data-fancybox="materials"><img class="res-i" src="img/@2x/landscape-jasper.png" alt=""/></a>
 								<div class="h5">Пейзажная яшма</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- start sForm-->
-				<div class="sForm" id="sForm">
+				<div class="sForm">
 					<!-- picture-->
 					<picture class="lazy picture-bg"> 
 						<source srcset="#" data-srcset="img/@2x/formBg.png" type="image/png" media="(min-width:576px)"/>
@@ -566,7 +663,7 @@
 													</div>
 												</div>
 											</div>
-											<button class="form-wrap__btn btn" type="submit">обсудить задачу
+											<button class="form-wrap__btn btn" type="submit"> <span class="bg d-none d-lg-flex">обсудить задачу</span><span class="bg d-lg-none">заказать</span>
 											</button>
 											<div class="form-wrap__polite">
 												<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text"></span>

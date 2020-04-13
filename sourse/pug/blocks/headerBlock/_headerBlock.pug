@@ -26,5 +26,6 @@ mixin headerBlock()
 					p помогут реализовать оптимальное решение для любого дизайн-проекта
 			+e.btnWrap
 				img(src="img/@2x/catalog.png", alt="#")
-				+e.BUTTON.btn.btn Получить каталог с ценами
+				+e.A.btn.btn.link-modal(href="#modalCatalog") 
+					span.bg Получить каталог с ценами
 	// end headerBlock

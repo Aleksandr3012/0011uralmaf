@@ -34,20 +34,37 @@ mixin modal()
 	.d-none
 		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
 			.text-center
-				+e.title.h2.ttu Укажите контактные данные для звонка
-				.h5 Менеджер компании позвонит вам в&nbsp;течение рабочего дня: мы&nbsp;работаем: пн-пт с&nbsp;7:00 до&nbsp;19:00 (Мск)
-			+input("Как к вам обращаться?")(required) 
-			+input("Введите телефон","tel")(required)
+				.h3 Укажите контактные данные для звонка
+				.h5 Менеджер компании позвонит вам в&nbsp;течение&nbsp;рабочего дня:<br>мы&nbsp;работаем: пн-пт&nbsp;с&nbsp;7:00 до&nbsp;19:00 (Мск)
+			+input("Иван", 'text','Как к вам обращаться?', 'name')(required) 
+			+input("+7 (999) 444-44-44","tel", "Введите телефон")(required)
 			//- +input("email","Ваше email")(required)
 			//- +text( "Комментарий")
-			+e.INPUT.btn.btn(type="submit" value="Заказать звонок") 
+			+e.BUTTON.btn.btn(type="submit")
+					span.bg Заказать звонок
+			+polite()
+
+
+		+form-wrap()(id="modalCatalog" class="  modal-win--catalog modal-form" )
+			.text-center
+				.h3 Получите каталог малых архитектурных форм
+				.h5 С&nbsp;их&nbsp;помощью вы&nbsp;создадите уютную атмосферу мест, куда гости захотят вернуться
+			+input("Иван", 'text','Как к вам обращаться?', 'name')(required) 
+			+form-tabs-modal
+			//- +input("+7 (999) 444-44-44","tel", "Введите телефон")(required)
+			//- +input("email","Ваше email")(required)
+			//- +text( "Комментарий")
+			+e.btnWrap
+				+e.BUTTON.btn.btn(type="submit")
+					span.bg Получить каталог
+				img.d-none.d-lg-block(src="img/@2x/catalog.png", alt="#")
 			+polite()
 
 		+b.modalAbout(id="modalAbout")
 			+e.headBlock
 				.container
 						h2 Яшму и хризолит превращаем #[strong в&nbsp;вазоны&nbsp;и&nbsp;скамейки]
-						+pic('bgModal.png', 'bg', 'lazy')(class="picture-bg")
+						+pic('bgModal.png', 'bg')(class="picture-bg")
 						.row
 							.col-lg-5
 								+e.imgWrap.d-none.d-lg-block
@@ -61,7 +78,7 @@ mixin modal()
 								p Здравствуйте. Меня зовут Михаил Паламарчук.<br>Я&nbsp;сооснователь ООО &laquo;УралМаф&raquo;.
 								p Компания основана в&nbsp;2008&nbsp;году. Кроме малых архитектурных форм мы&nbsp;производим тротуарную плитку, бордюры и&nbsp;фасадную термопанель. За&nbsp;эти годы научились минимизировать издержки, снижать себестоимость без потери качества и&nbsp;устанавливать комфортную цену для покупателя.
 								p Мы&nbsp;работаем напрямую с&nbsp;поставщиками крошки полудрагоценных камней с&nbsp;Южного Урала и&nbsp;Башкирии&nbsp;&mdash; это позволяет производить самые разные фактуры изделий.
-						+e.clouds.lazy(src="#" data-src="img/@2x/clouds.png", alt="")
+						+e.clouds(src="img/@2x/clouds.png", alt="")
 			+e.body
 				.container
 					+form-wrap()
@@ -69,11 +86,12 @@ mixin modal()
 						.h5 #[strong Давайте обсудим ваш заказ прямо сейчас.] <br> Оставьте свой номер, мы&nbsp;свяжемся с&nbsp;вами, ответим на&nbsp;любые вопросы и&nbsp;расскажем больше о&nbsp;наших возможностях, назовем сроки и&nbsp;цену исполнения вашего заказа.
 						+e.inputWrap
 							+input("+7 (999) 444-44-44","tel")(required)
-							+e.BUTTON.btn.btn(type="button") обсудить заказ
+							+e.BUTTON.btn.btn(type="button") 
+								span.bg обсудить заказ
 					h2 Наше производство находится в Магнитогорске
 					+e.mapWrap
 						+e.frameWrap
-							<iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A85a137c287ff30c716c28d89b3cd2cf628478df1c00eaeeb052627868fb5247a&amp;source=constructor" frameborder="0"></iframe>
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A15f21b25c515e780d425c521af82a8ce28902637b1a59ec706a7c145a1f2bb50&amp;width=100%25&amp;lang=ru_RU&amp;scroll=false&amp;"></script>
 						+form-wrap()(class="form-wrap--map")
 							ul
 								li 
@@ -102,7 +120,7 @@ mixin modal()
 				h2 Доставляем по России, Казахстану и СНГ
 				+e.row.row
 					.col-lg-6
-						+e.car.res-i.lazy(src="#" data-src="img/@2x/car.png", alt="")
+						+e.car.res-i(src="img/@2x/car.png", alt="")
 					.col-md-6.align-self-center
 						.h5 #[strong Доставляем изделия] транспортыми #[strong компаниями]
 						.h5 
@@ -110,7 +128,7 @@ mixin modal()
 							| Вы&nbsp;можете узнать предварительную #[strong стоимость доставки] после согласования с&nbsp;нами веса &laquo;посылки&raquo;
 				.row
 					.col-lg-7.order-lg-last
-						+e.packaging.res-i.lazy(src="#" data-src="img/@2x/packaging.png", alt="")
+						+e.packaging.res-i(src="img/@2x/packaging.png", alt="")
 					.col-lg-5.align-self-center
 						.h5 Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;надежно упаковываем
 						.h5 Используем воздушно-пузырчатую пленку&nbsp;и&nbsp;несколько слоев стрейч-пленки. Габаритные изделия перевозятся на&nbsp;европоддонах.
@@ -124,36 +142,40 @@ mixin modal()
 					h2 В&nbsp;составе наших изделий более&nbsp;80%&nbsp;крошки натуральных камней
 					h4 Это обеспечивает долговечность, прочность и&nbsp;красивый внешний вид
 					.row
-						.col-lg-6
-							+e.cement.res-i.lazy(src="#" data-src="img/@2x/cement.png" alt="")
-						+e.pt.col-lg-6
+						.col-md-6
+							+e.cement.res-i(src="img/@2x/cement.png" alt="")
+						+e.pt.col-md-6
 							.h5 #[strong При круглогодичной эксплуатации срок службы изделий 5, 10&nbsp;и&nbsp;даже 20&nbsp;лет]
 							.h5 Используем цемент B42,5 (М500) и&nbsp;выше&nbsp;&mdash; оптимальную марку, благодаря которой изделиям нипочем снег, дождь, мороз и&nbsp;палящие лучи. Для дополнительной защиты все изделия покрываем лаком.
 					.row
-						+e.pt.col-lg-6
+						.col-md-6.order-md-last
+							+e.karcher.res-i(src="img/@2x/karcher.png" alt="")
+						+e.pt.col-md-6
 							.h5 #[strong Можно мыть водой и&nbsp;при необходимости очищать моющими и&nbsp;дезинфицирующими средствами]
 							.h5 А&nbsp;также проводить легкую очистку некоторыми растворителями. Так как изделия предназначены для эксплуатации вне помещений, их&nbsp;можно чистить системами типа &laquo;Karcher&raquo;
-						.col-lg-6
-							+e.karcher.res-i.lazy(src="#" data-src="img/@2x/karcher.png" alt="")
 					.row
-						.col-lg-6
-							+e.vazons.img.res-i.lazy(src="#" data-src="img/@2x/banner.png" alt="")
-						+e.pt.col-lg-6
+						.col-md-6
+							+e.vazons.img.res-i(src="img/@2x/banner.png" alt="")
+						+e.pt.col-md-6
 							.h5 #[strong Поверхность из&nbsp;натурального камня любой фактуры]
 							.h5 Изготавливаем материал по&nbsp;технологии &laquo;мытый бетон&raquo; &mdash; в&nbsp;результате наполнитель из&nbsp;камней выступает на&nbsp;поверхность и&nbsp;создает особую фактуру изделию.
 					+e.type Можете выбрать #[strong любой вариант] поверхности
 					+e.materials.row.text-center
-						.col-6.col-lg-3
-							img.res-i.lazy(src="#" data-src="img/@2x/mix.png" alt="")
+						.col-6.col-md-3
+							a(href='img/@2x/mix.png' data-fancybox=`materials`)
+								img.res-i(src="img/@2x/mix.png" alt="")
 							.h5 Микс
-						.col-6.col-lg-3
-							img.res-i.lazy(src="#" data-src="img/@2x/goldilith.png" alt="")
+						.col-6.col-md-3
+							a(href='img/@2x/goldilith.png' data-fancybox=`materials`)
+								img.res-i(src="img/@2x/goldilith.png" alt="")
 							.h5 Златолит
-						.col-6.col-lg-3
-							img.res-i.lazy(src="#" data-src="img/@2x/red-jasper.png" alt="")
+						.col-6.col-md-3
+							a(href='img/@2x/red-jasper.png' data-fancybox=`materials`)
+								img.res-i(src="img/@2x/red-jasper.png" alt="")
 							.h5 Красная яшма
-						.col-6.col-lg-3
-							img.res-i.lazy(src="#" data-src="img/@2x/landscape-jasper.png" alt="")
+						.col-6.col-md-3
+							a(href='img/@2x/landscape-jasper.png' data-fancybox=`materials`)
+								img.res-i(src="img/@2x/landscape-jasper.png" alt="")
 							.h5 Пейзажная яшма
 			+sForm('Расскажите о задаче — мы рассчитаем стоимость изготовления изделий ','И подготовим коммерческое предложение')
 				+e.clouds(src="img/@2x/clouds.png" alt="")

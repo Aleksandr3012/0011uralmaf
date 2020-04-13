@@ -15,23 +15,34 @@
 	&__btn {
 		@include media-breakpoint-down(sm) {
 			font-size: rem(14);
+			line-height: rem(15);
 		}
 
 		@media screen and (max-width: 474px) {
+			margin-left: 0;
 			&:nth-child(2n) {
 				margin-left: rem(14);
 			}
 		}
 
 		width: rem(138px);
-
+		@include media-breakpoint-down(md) {
+			margin-left: rem(14);
+		}
 		@include media-breakpoint-only(lg) {
 			width: rem(180px);
+		}
+		@include media-breakpoint-only(md) {
+			margin-left: rem(14px);
+
 		}
 
 		min-height: rem(47px);
 		// padding-left: rem(3);
 		// padding-right: rem(3);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(14);
+		}
 		margin-bottom: rem(15);
 		text-align: center;
 		display: flex;
@@ -114,12 +125,16 @@
 	&__allProd {
 		display: block;
 		max-width: rem(382);
-		padding-top: rem(20);
-		padding-bottom: rem(20);
+		// padding-top: rem(20);
+		// padding-bottom: rem(20);
 
 		@include media-breakpoint-up(md) {
-			padding-top: rem(30);
-			padding-bottom: rem(31);
+			// padding-top: rem(30);
+			// padding-bottom: rem(31);
+		}
+
+		@include media-breakpoint-down(sm) {
+			display: none;
 		}
 
 		margin-left: auto;
@@ -128,8 +143,13 @@
 		font-size: rem(18);
 		margin-bottom: rem(35);
 
-		&::before {
-			height: rem(29);
+		// &::before {
+		// 	height: rem(29);
+		// }
+		
+		margin-top: rem(25);
+		.bg {
+			max-height: rem(80);
 		}
 	}
 
@@ -146,8 +166,9 @@
 			line-height: rem(26px);
 		}
 
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			font-size: rem(12);
+			margin-bottom: rem(40);
 		}
 	}
 
@@ -183,7 +204,7 @@
 	.slick-dots {
 		text-align: center;
 		list-style-type: none;
-		margin-bottom: rem(25);
+		margin-bottom: rem(27);
 
 		@include media-breakpoint-up(md) {
 			margin-bottom: 1rem;
@@ -233,6 +254,31 @@
 
 		button {
 			display: none !important;
+		}
+	}
+
+}
+
+.tabsModal {
+	.tabs__caption {
+		@include media-breakpoint-down(md) {
+			flex-wrap: wrap;
+		}
+	}
+
+	.tabs__btn {
+		@include media-breakpoint-down(lg) {
+			margin-left: rem(0);
+		}
+		@include media-breakpoint-down(md){
+			flex: 0 0 50%;
+			max-width: 50%;
+			&:nth-child(2n+1) {
+				border-radius: 6px 0 0 6px;
+			}
+			&:nth-child(2n) {
+				border-radius: 0 6px 6px 0;
+			}
 		}
 	}
 }

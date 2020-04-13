@@ -3,7 +3,35 @@
 	width: 100%;
 	max-width: rem(595);
 	position: relative;
+	overflow: hidden;
 	border-radius: rem(6px);
+	border: rem(5px) solid #f0f0f0;
+	padding: rem(40) rem(15) rem(20);
+	@include media-breakpoint-up(lg) {
+		padding: rem(20) rem(73) rem(60) rem(72) !important;
+	}
+
+	.h3 {
+		padding-left: 0;
+		max-width: rem(285);
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: 400;
+		margin-bottom: rem(20);
+	}
+
+	.h5 {
+		font-weight: 400;
+		line-height: rem(30);
+		max-width: rem(377);
+		margin-left: auto;
+		margin-right: auto;
+		color: $secondary;
+		margin-bottom: rem(35);
+		@include media-breakpoint-down(md) {
+			font-size: rem(17);
+		}
+	}
 
 	.modal-content {
 		// max-width: 485px;
@@ -15,8 +43,68 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+
 	&::before {
 		display: none;
+	}
+
+	// .form-wrap {
+	// 	&__title {
+
+	// 	}
+	// }
+
+	&--catalog {
+		@include media-breakpoint-down(md) {
+			max-width: rem(450);
+		}
+		.h3 {
+			max-width: 100%;
+		}
+
+		.h5 {
+			max-width: 100%;
+		}
+
+		.form-wrap__btn {
+			@include media-breakpoint-down(lg) {
+				// max-height: rem(70);
+
+				.bg {
+					// max-height: rem(70);
+					border-radius: 6px;
+					&::after {
+						border-radius: 6px;
+	
+					}
+				}
+			}
+		}
+
+		.form-wrap {
+			&__btnWrap {
+				position: relative;
+				font-size: rem(19);
+
+				img {
+					@include media-breakpoint-down(md) {
+						display: none;
+					}
+					max-width: rem(400);
+					position: absolute;
+					@include a-cent(y);
+					left: rem(180);
+					z-index: 2;
+				}
+
+				span {
+					@include media-breakpoint-up(lg) {
+						justify-content: left;
+						padding-left: rem(40);
+					}
+				}
+			}
+		}
 	}
 }
 

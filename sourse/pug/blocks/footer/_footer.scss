@@ -145,7 +145,12 @@
 		a {
 			margin-top: rem(2);
 			text-decoration: none;
-			display: inline-block;
+			display: block;
+			max-width: rem(126);
+			@include media-breakpoint-down(sm) {
+				margin-left: auto;
+				margin: auto;
+			}
 			color: $primary;
 			border-bottom: solid 1px $primary;
 			&:hover {
@@ -213,7 +218,7 @@
 	&__messengers {
 		padding-right: rem(33);
 		@include media-breakpoint-up(xl) {
-			padding-right: rem(43);
+			padding-right: rem(38);
 			margin-top: rem(-7);
 		}
 
