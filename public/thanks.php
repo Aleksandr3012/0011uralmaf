@@ -231,22 +231,6 @@
 					</div>
 				</div>
 			</section>
-<<<<<<< HEAD:public/thanks.php
-=======
-			<!-- start sThanks-->
-			<section class="sThanks section" id="sThanks">
-				<div class="container">
-					<div class="section-title text-center">
-						<svg class="icon icon-verificado ">
-							<use xlink:href="img/svg/sprite.svg#verificado"></use>
-						</svg>
-						<h1>Спасибо, мы&nbsp;приняли вашу заявку!</h1>
-						<h3>Менеджер компании перезвонит вам в&nbsp;течение рабочего дня и&nbsp;ответит на&nbsp;ваши вопросы.</h3>
-						<h4>Удачного дня!</h4>
-					</div>
-				</div>
-			</section>
->>>>>>> ab8ef8c060643572907b09513d93cc383cf0002c:public/thanks.html
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="row">
@@ -282,13 +266,8 @@
 									<svg class="icon icon-viber ">
 										<use xlink:href="img/svg/sprite.svg#viber"></use>
 									</svg></a>
-<<<<<<< HEAD:public/thanks.php
 								</div><a class="footer__tel" href="tel:+73519454515">7 (3519) 45-45-15</a>
-							</div><a class="footer__call link-modal" href="#">Заказать звонок менеджера</a>
-=======
-								</div><a class="footer__tel" href="tel:73519454515">7 (3519) 45-45-15</a>
 							</div><a class="footer__call link-modal" href="#modal-call">Заказать звонок менеджера</a>
->>>>>>> ab8ef8c060643572907b09513d93cc383cf0002c:public/thanks.html
 						</div>
 						<div class="mobileOrder-5 col-md-4">
 							<div class="footer__adres">Юридический адерс и реквизиты

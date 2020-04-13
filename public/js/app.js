@@ -18,6 +18,15 @@ var headerBlockVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
+var sCatalogVue = new Vue({
+	el: '#sCatalog',
+	data: {
+		imgSRc: 'img/'
+	},
+	methods: {},
+	created: function created() {},
+	computed: {}
+});
 var sAdvantagesVue = new Vue({
 	el: '#sAdvantages',
 	data: {
@@ -27,27 +36,8 @@ var sAdvantagesVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-<<<<<<< HEAD
 var sContactVue = new Vue({
 	el: '#sContact',
-=======
-var sCatalogVue = new Vue({
-	el: '#sCatalog',
->>>>>>> ab8ef8c060643572907b09513d93cc383cf0002c
-	data: {
-		imgSRc: 'img/'
-	},
-	methods: {},
-	created: function created() {},
-	computed: {}
-});
-<<<<<<< HEAD
-var sContentVue = new Vue({
-	el: '#sContent',
-=======
-var sContactVue = new Vue({
-	el: '#sContact',
->>>>>>> ab8ef8c060643572907b09513d93cc383cf0002c
 	data: {
 		imgSRc: 'img/'
 	},
