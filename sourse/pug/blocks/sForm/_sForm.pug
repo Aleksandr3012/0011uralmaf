@@ -1,7 +1,7 @@
 mixin sForm(h2,h4)
 	// start sForm
 	+b.sForm&attributes(attributes)
-		+pic('formBg.jpg', 'bg')(class="picture-bg")
+		+pic('formBg.jpg', 'bg', 'lazy')(class="picture-bg")
 		.container
 			if h2
 				.h2= h2
@@ -14,12 +14,12 @@ mixin sForm(h2,h4)
 			.row
 				+e.col.col-lg-6
 					+e.imgWrap.d-none.d-lg-block
-						+e.founder(src="img/@2x/founder.png", alt="")
+						+e.founder.lazy(src="#" data-src="img/@2x/founder.png", alt="")
 						+e.label
 							+e.name Михаил Геннадьевич
 							+e.position Сооснователь компании ООО «УралМаф»
 					+e.founderSm.d-lg-none
-						+e.founderImg(src="img/@2x/founder-sm.png", alt="")
+						+e.founderImg.lazy(src="#" data-src="img/@2x/founder-sm.png", alt="")
 						+e.nameWrap
 							+e.nameSm Михаил Геннадьевич
 							+e.positionSm Сооснователь компании ООО&nbsp;«УралМаф»
@@ -35,3 +35,40 @@ mixin sForm(h2,h4)
 							+polite
 			block
 	// end sForm
+
+mixin sForm-modal(h2,h4)
+	// start sForm
+	+b.sForm&attributes(attributes)
+		+pic('formBg.jpg', 'bg')(class="picture-bg")
+		.container
+			if h2
+				.h2= h2
+			else
+				.h2 Если вы&nbsp;не&nbsp;нашли&nbsp;то, что нужно, мы&nbsp;изготовим формы и&nbsp;#[span сделаем изделия специально&nbsp;для&nbsp;вас]
+			if h4
+				.h4= h4
+			else
+				.h4 Расскажите о&nbsp;задаче&nbsp;&mdash; рассчитаем стоимость&nbsp;изготовления изделий&nbsp;и&nbsp;подготовим коммерческое&nbsp;предложение
+			.row
+				+e.col.col-lg-6
+					+e.imgWrap.d-none.d-lg-block
+						+e.founder.lazy-modal--js(src="#" data-src="img/@2x/founder.png", alt="")
+						+e.label
+							+e.name Михаил Геннадьевич
+							+e.position Сооснователь компании ООО «УралМаф»
+					+e.founderSm.d-lg-none
+						+e.founderImg.lazy-modal--js(src="#" data-src="img/@2x/founder-sm.png", alt="")
+						+e.nameWrap
+							+e.nameSm Михаил Геннадьевич
+							+e.positionSm Сооснователь компании ООО&nbsp;«УралМаф»
+
+				.col
+					+e.head-text 
+						+form-wrap("Получить каталог и прайс")
+							+inputName()
+							+form-tabs()
+							+e.btn.btn(type="submit") 
+								span.bg.d-none.d-lg-flex обсудить задачу
+								span.bg.d-lg-none заказать
+							+polite
+			block
