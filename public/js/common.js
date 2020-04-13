@@ -36,6 +36,23 @@ var JSCCommon = {
 				}
 			}
 		});
+		$(".link-modal").click(function () {
+			var href = $(this).attr('href');
+			var map = $(href).find('.modalAbout__frameWrap').data('map');
+			$(href).find('.modalAbout__frameWrap').html(map);
+			$(href).find(".lazy-modal--js").each(function () {
+				if ($(this).data('src')) {
+					$(this).attr('src', $(this).data('src')).removeClass('.lazy-modal--js');
+				}
+
+				$(this).find('source').each(function () {
+					$(this).attr('srcset', $(this).data('srcset'));
+				});
+				$(this).find('img').each(function () {
+					$(this).attr('src', $(this).data('src'));
+				});
+			});
+		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		});
@@ -235,13 +252,19 @@ function eventHandler() {
 		}));
 	});
 	$('[data-fancybox').fancybox({
-		toolbar: false,
+		// Zoom: false,
+		// slideshow: false,
+		// Thumbnails: false,
 		infobar: false
 	});
 	$(".viber-link").each(function () {
 		if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			$(this).attr('href', $(this).data("desktop"));
 		}
+	}); //показывает инпут при клике на текст
+
+	$(".form-wrap__comment--js").click(function () {
+		$('.form-wrap__toggle-block--js').toggle();
 	}); // $('.main-wrapper').click(function(){
 	// 	$(this).addClass('d-none');
 	// });

@@ -576,6 +576,9 @@ a {
 	&:focus {
 		box-shadow: none;
 
+	}
+	&:active {
+
 		&::before {
 			transform: scaleY(0.1);
 			// top: 0;
@@ -601,4 +604,8 @@ a {
 
 .slick-dots .slick-active:first-child:last-child {
 	display: none;
+}
+
+.fancybox-button--zoom, .fancybox-button--play, .fancybox-button--thumbs{
+	display: none !important;
 }

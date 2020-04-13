@@ -234,10 +234,10 @@
 
 		&__clouds {
 			position: absolute;
-			width: 130%;
-			margin-left: rem(-120);
+			width: 101%;
+			// margin-left: rem(-120);
 			@include media-breakpoint-up(xl) {
-				margin-left: rem(-20);
+				// margin-left: rem(-20);
 			}
 			bottom: rem(-10);
 			z-index: 1;

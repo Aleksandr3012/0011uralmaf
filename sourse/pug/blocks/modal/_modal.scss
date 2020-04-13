@@ -7,7 +7,7 @@
 	border-radius: rem(6px);
 	border: rem(5px) solid #f0f0f0;
 	padding: rem(40) rem(15) rem(20);
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(sm) {
 		padding: rem(20) rem(73) rem(60) rem(72) !important;
 	}
 
@@ -54,16 +54,20 @@
 	// 	}
 	// }
 
+	@include media-breakpoint-down(sm) {
+		max-width: rem(450);
+	}
 	&--catalog {
-		@include media-breakpoint-down(md) {
-			max-width: rem(450);
-		}
 		.h3 {
 			max-width: 100%;
 		}
 
 		.h5 {
 			max-width: 100%;
+		}
+
+		.tabs__btn {
+			margin-left: 0 !important;
 		}
 
 		.form-wrap__btn {
@@ -103,6 +107,38 @@
 						padding-left: rem(40);
 					}
 				}
+			}
+		}
+	}
+
+	&--order {
+		.h3 {
+			max-width: 100%;
+		}
+
+		.form-wrap__toggle-block {
+			display: none;
+		}
+
+		.form-wrap__input-wrapper {
+			margin-bottom: rem(23);
+		}
+
+		.form-wrap__comment {
+			cursor: pointer;
+			border-bottom: dashed 2px $body-color;
+			padding-bottom: rem(5);
+			@extend .h5;
+			font-weight: 400;
+			padding-top: rem(10);
+			margin-left: auto;
+			@include mt;
+			max-width: rem(250);
+			margin-right: auto;
+			position: relative;
+
+			&:hover {
+				border-bottom: dashed 2px transparent;
 			}
 		}
 	}
