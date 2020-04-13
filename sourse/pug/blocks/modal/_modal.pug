@@ -63,14 +63,14 @@ mixin modal()
 		+form-wrap()(id="modalOrder" class="  modal-win--order modal-form" ) 
 			.text-center
 				.h3 Для оформления заказа оставьте ваши контакты
-			+input('Иван', 'text', 'Как к вам обращаться?','name')
+			+input('Иван', 'text', 'Как к вам обращаться?','name')(required)
 			+form-tabs()
 			+e.input-wrapper
 				+e.comment--js.text-center Задайте вопрос, если есть
 				+e.toggle-block--js
 					+input('Текст сообщения', 'textarea')
 			+e.BUTTON.btn.btn(type="submit")
-				span.bg Получить каталог
+				span.bg оформить заказ
 			+polite
 
 		+b.modalAbout(id="modalAbout")
