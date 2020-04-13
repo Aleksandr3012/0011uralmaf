@@ -18,6 +18,8 @@ var JSCCommon = {
 			arrows: false,
 			infobar: false,
 			touch: false,
+			toolbar: false,
+			autoFocus: false,
 			type: 'inline',
 			i18n: {
 				en: {
@@ -231,6 +233,10 @@ function eventHandler() {
 				}
 			}]
 		}));
+	});
+	$('[data-fancybox').fancybox({
+		toolbar: false,
+		infobar: false
 	});
 	$(".viber-link").each(function () {
 		if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

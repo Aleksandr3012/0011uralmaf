@@ -106,7 +106,7 @@ mixin form-tabs()
 				+input("+7 (999) 444-44-44","tel",'Введите viber',"viber")
 
 mixin form-tabs-modal()
-	.tabs--modal
+	.tabs.tabsModal
 		+e.group
 			+e.group-title Какой способ связи вам удобен?
 			
@@ -124,11 +124,12 @@ mixin form-tabs-modal()
 					//- +icon('viber')
 					| Telegram
 
+
 		block
 		.tabs__wrap
-			.tabs__content
-				+input("Email","email",'Введите Email',"mail")(required)
 			.tabs__content.active
+				+input("Email","email",'Введите Email',"mail")(required)
+			.tabs__content
 				+input("+7 (999) 444-44-44","tel",'Введите whatsapp',"whatsapp")
 			.tabs__content
 				+input("+7 (999) 444-44-44","tel",'Введите viber',"viber")

@@ -43,9 +43,11 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+
 	&::before {
 		display: none;
 	}
+
 	// .form-wrap {
 	// 	&__title {
 
@@ -53,12 +55,30 @@
 	// }
 
 	&--catalog {
+		@include media-breakpoint-down(md) {
+			max-width: rem(450);
+		}
 		.h3 {
 			max-width: 100%;
 		}
 
 		.h5 {
 			max-width: 100%;
+		}
+
+		.form-wrap__btn {
+			@include media-breakpoint-down(lg) {
+				// max-height: rem(70);
+
+				.bg {
+					// max-height: rem(70);
+					border-radius: 6px;
+					&::after {
+						border-radius: 6px;
+	
+					}
+				}
+			}
 		}
 
 		.form-wrap {
@@ -70,9 +90,10 @@
 					@include media-breakpoint-down(md) {
 						display: none;
 					}
+					max-width: rem(400);
 					position: absolute;
 					@include a-cent(y);
-					left: rem(200);
+					left: rem(180);
 					z-index: 2;
 				}
 

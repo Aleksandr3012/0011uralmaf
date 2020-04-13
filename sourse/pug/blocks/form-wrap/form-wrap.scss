@@ -75,7 +75,7 @@
 		padding: 0;
 
 		.bg {
-			@include media-breakpoint-down(md){
+			@include media-breakpoint-down(sm){
 				max-height: rem(60);
 			}
 		}
@@ -225,7 +225,11 @@
 		.custom-input {
 			position: absolute;
 			left: rem(19);
-			top: rem(27);
+			top: rem(24);
+			@include media-breakpoint-up(sm) {
+				left: 15%;
+				top: rem(25);
+			}
 
 			@include media-breakpoint-up(md) {
 				top: rem(34);

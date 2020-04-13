@@ -147,6 +147,10 @@
 				padding: rem(45) rem(115) rem(42) rem(49);
 			}
 
+			@include media-breakpoint-only(md) {
+				height: rem(70);
+			}
+
 		}
 
 
