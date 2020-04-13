@@ -49,6 +49,7 @@ mixin modal()
 			.text-center
 				.h3 Получите каталог малых архитектурных форм
 				.h5 С&nbsp;их&nbsp;помощью вы&nbsp;создадите уютную атмосферу мест, куда гости захотят вернуться
+			input(type="hidden" name="catalog" value="catalog")
 			+input("Иван", 'text','Как к вам обращаться?', 'name')(required) 
 			+form-tabs-modal
 			//- +input("+7 (999) 444-44-44","tel", "Введите телефон")(required)

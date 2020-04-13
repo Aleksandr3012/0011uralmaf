@@ -52,6 +52,11 @@ var JSCCommon = {
 					$(this).attr('src', $(this).data('src'));
 				});
 			});
+			$(href).find(".order").val($(this).data("order"));
+		});
+		$(".itemProd__btn").click(function () {
+			var href = $(this).attr('href');
+			$(href).find(".order").val("Заказать " + $(this).parents(".itemProd").find(".h4").text());
 		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
@@ -111,7 +116,11 @@ var JSCCommon = {
 	// табы  . 
 	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active').find('.slider--js').slick('refresh');
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide(function () {
+				$(this).find(".form-wrap__input").removeAttr("required");
+			}).removeClass('active').eq($(this).index()).fadeIn(function () {
+				$(this).find(".form-wrap__input").attr("required", "required");
+			}).addClass('active').find('.slider--js').slick('refresh');
 			$(this).closest('.' + tab).find('.' + tab + '__caption2').find('.' + tab + '__btn').eq($(this).index()).addClass('active').siblings().removeClass('active');
 		});
 		$('.' + tab + '__caption2').on('click', '.' + tab + '__btn:not(.active)', function (e) {
@@ -268,6 +277,33 @@ function eventHandler() {
 	}); // $('.main-wrapper').click(function(){
 	// 	$(this).addClass('d-none');
 	// });
+
+	var gets = function () {
+		var a = window.location.search;
+		var b = new Object();
+		a = a.substring(1).split("&");
+
+		for (var i = 0; i < a.length; i++) {
+			var c = a[i].split("=");
+			b[c[0]] = c[1];
+		}
+
+		return b;
+	}(); // form
+
+
+	$("form").each(function () {
+		//Change
+		var th = $(this);
+		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
+		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
+		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
+		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
+		$(this).attr({
+			"action": 'thanks.php',
+			"method": "post"
+		});
+	});
 }
 
 ;

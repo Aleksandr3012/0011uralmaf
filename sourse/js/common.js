@@ -29,22 +29,28 @@ const JSCCommon = {
 				},
 			},
 		});
-		$(".link-modal").click(function (){
-			let href=$(this).attr('href');
-			let map=$(href).find('.modalAbout__frameWrap').data('map');
+		$(".link-modal").click(function () {
+			let href = $(this).attr('href');
+			let map = $(href).find('.modalAbout__frameWrap').data('map');
 			$(href).find('.modalAbout__frameWrap').html(map);
-			$(href).find(".lazy-modal--js").each(function (){
-				if($(this).data('src')){
+			$(href).find(".lazy-modal--js").each(function () {
+				if ($(this).data('src')) {
 					$(this).attr('src', $(this).data('src')).removeClass('.lazy-modal--js')
 				}
-				$(this).find('source').each(function(){
+				$(this).find('source').each(function () {
 					$(this).attr('srcset', $(this).data('srcset'))
 				})
-				$(this).find('img').each(function(){
+				$(this).find('img').each(function () {
 					$(this).attr('src', $(this).data('src'))
 				})
 			})
+			$(href).find(".order").val($(this).data("order"))
 		});
+
+		$(".itemProd__btn").click(function () {
+			let href = $(this).attr('href');
+			$(href).find(".order").val("Заказать " + $(this).parents(".itemProd").find(".h4").text())
+		})
 
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
@@ -106,8 +112,12 @@ const JSCCommon = {
 
 			$(this)
 				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active').find('.slider--js').slick('refresh');
+				.closest('.' + tab).find('.' + tab + '__content').hide(function () {
+					$(this).find(".form-wrap__input").removeAttr("required")
+				}).removeClass('active')
+				.eq($(this).index()).fadeIn(function () {
+					$(this).find(".form-wrap__input").attr("required", "required")
+				}).addClass('active').find('.slider--js').slick('refresh');
 			$(this).closest('.' + tab)
 				.find('.' + tab + '__caption2').find('.' + tab + '__btn').eq($(this).index()).addClass('active').siblings().removeClass('active')
 		});
@@ -316,7 +326,30 @@ function eventHandler() {
 	// 	$(this).addClass('d-none');
 	// });
 
-	
+
+	var gets = (function () {
+		var a = window.location.search;
+		var b = new Object();
+		a = a.substring(1).split("&");
+		for (var i = 0; i < a.length; i++) {
+			let c = a[i].split("=");
+			b[c[0]] = c[1];
+		}
+		return b;
+	})();
+	// form
+	$("form").each(function () { //Change
+		var th = $(this);
+		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
+		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
+		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
+		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
+		$(this).attr({
+			"action": 'thanks.php',
+			"method": "post",
+		})
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

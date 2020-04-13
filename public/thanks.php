@@ -80,6 +80,10 @@
 						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Текст сообщения:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td></tr>';
 				}
 	
+				if (!empty($_POST['textarea'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Текст сообщения:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['textarea'] . '</b></td></tr>';
+				}
+	
 	
 				if (!empty($_POST['type-company'])) {
 						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вид компании: </td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['type-company']) .  '</b></td>';
@@ -335,6 +339,7 @@
 						<div class="h3">Получите каталог малых архитектурных форм</div>
 						<div class="h5">С&nbsp;их&nbsp;помощью вы&nbsp;создадите уютную атмосферу мест, куда гости захотят вернуться</div>
 					</div>
+					<input type="hidden" name="catalog" value="catalog"/>
 					<div class="form-wrap__input-wrap form-group">
 						<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/> 
 						</label> 
