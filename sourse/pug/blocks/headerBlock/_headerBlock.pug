@@ -8,8 +8,9 @@ mixin headerBlock()
 					+e.subtitle Для ландшафтного дизайна улиц и&nbsp;парков, школ и&nbsp;детских садов, торговых и&nbsp;бизнес-центров, жилых комплексов и&nbsp;загородных домов
 				.col-lg
 					+e.PICTURE.imgWrap
-						source(media="(min-width: 576px)", srcset="img/@2x/banner.png")
-						//- source(media="(min-width: 576px)", srcset="img/@2x/banner.png")
+						source(media="(min-width: 576px)", srcset="img/@2x/webp/banner.webp", type=`image/webp`)
+						source(media="(min-width: 576px)", srcset="img/@2x/banner.png", type=`image/png`)
+						source(srcset="img/@1x/webp/banner.webp", type=`image/webp`)
 						img(src="img/@1x/banner.png", alt="")
 			+e.advantages.d-none.d-lg-flex
 				+e.item

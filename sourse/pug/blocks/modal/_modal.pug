@@ -81,7 +81,11 @@ mixin modal()
 						.row
 							.col-lg-5
 								+e.imgWrap.d-none.d-lg-block
-									+e.founder.lazy-modal--js(src="#" data-src="img/@2x/founder.png", alt="")
+									+e.PICTURE.founder.imgWrap.lazy-modal--js
+										source(media="(min-width: 576px)", data-srcset="img/@2x/webp/founder.webp", type=`image/webp`, srcset="#")
+										source(media="(min-width: 576px)", srcset="img/@2x/founder.png", type=`image/png`)
+										source(srcset="img/@1x/webp/founder.webp", type=`image/webp`)
+										img(src="#" data-src="img/@1x/founder.png", alt="")
 								+e.founderSm.d-lg-none
 									+e.founderImg.lazy-modal--js(src="#" data-src="img/@2x/founder-sm.png", alt="")
 									+e.nameWrap
@@ -132,7 +136,7 @@ mixin modal()
 				h2 Доставляем по России, Казахстану и СНГ
 				+e.row.row
 					.col-lg-6
-						+e.car.res-i.lazy-modal--js(src="#" data-src="img/@2x/car.png", alt="")
+						+e.car.res-i.lazy-modal--js(src="#" data-src="img/@2x/car.jpg", alt="")
 					.col-md-6.align-self-center
 						.h5 #[strong Доставляем изделия] транспортыми #[strong компаниями]
 						.h5 
@@ -175,19 +179,39 @@ mixin modal()
 					+e.materials.row.text-center
 						.col-6.col-md-3
 							a(href='img/@2x/material-1.jpg' data-fancybox=`materials`)
-								img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-1.jpg" alt="")
+								+e.PICTURE.imgWrap.lazy-modal--js
+									source(media="(min-width: 576px)", dasrcset="img/@2x/webp/material-1.webp", type=`image/webp`)
+									source(media="(min-width: 576px)", dasrcset="img/@2x/material-1.png", type=`image/png`)
+									source(srcset="img/@1x/webp/material-1.webp", type=`image/webp`)
+									img(src="img/@1x/material-1.png", alt="")
+								//- img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-1.jpg" alt="")
 							.h5 Микс
 						.col-6.col-md-3
 							a(href='img/@2x/material-2.jpg' data-fancybox=`materials`)
-								img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-2.jpg" alt="")
+								+e.PICTURE.imgWrap.lazy-modal--js
+									source(media="(min-width: 576px)", dasrcset="img/@2x/webp/material-2.webp", type=`image/webp`)
+									source(media="(min-width: 576px)", dasrcset="img/@2x/material-2.png", type=`image/png`)
+									source(srcset="img/@1x/webp/material-2.webp", type=`image/webp`)
+									img(src="img/@1x/material-2.png", alt="")
+								//- img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-2.jpg" alt="")
 							.h5 Златолит
 						.col-6.col-md-3
 							a(href='img/@2x/material-3.jpg' data-fancybox=`materials`)
-								img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-3.jpg" alt="")
+								+e.PICTURE.imgWrap.lazy-modal--js
+									source(media="(min-width: 576px)", dasrcset="img/@2x/webp/material-3.webp", type=`image/webp`)
+									source(media="(min-width: 576px)", dasrcset="img/@2x/material-3.png", type=`image/png`)
+									source(srcset="img/@1x/webp/material-3.webp", type=`image/webp`)
+									img(src="img/@1x/material-3.png", alt="")
+								//- img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-3.jpg" alt="")
 							.h5 Красная яшма
 						.col-6.col-md-3
 							a(href='img/@2x/material-4.jpg' data-fancybox=`materials`)
-								img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-4.jpg" alt="")
+								+e.PICTURE.imgWrap.lazy-modal--js
+									source(media="(min-width: 576px)", dasrcset="img/@2x/webp/material-4.webp", type=`image/webp`)
+									source(media="(min-width: 576px)", dasrcset="img/@2x/material-4.png", type=`image/png`)
+									source(srcset="img/@1x/webp/material-4.webp", type=`image/webp`)
+									img(src="img/@1x/material-4.png", alt="")
+								//- img.res-i.lazy-modal--js(src="#" data-src="img/@1x/material-4.jpg" alt="")
 							.h5 Пейзажная яшма
 			+sForm-modal('Расскажите о задаче — мы рассчитаем стоимость изготовления изделий ','И подготовим коммерческое предложение')
 				+e.clouds.lazy-modal--js(src="#" data-src="img/@2x/clouds.png" alt="")

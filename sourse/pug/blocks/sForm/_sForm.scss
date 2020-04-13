@@ -194,9 +194,14 @@
 	}
 
 	&__founder {
+		width: initial;
+		height: initial;
 		margin-bottom: rem(-100);
 		margin-left: rem(-60);
 		margin-left: rem(-230);
+		img {
+			max-width: none;
+		}
 
 		@include media-breakpoint-up(xl){
 			margin-top: rem(-55);

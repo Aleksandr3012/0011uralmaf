@@ -27,20 +27,20 @@ module.exports = function () {
 					// },
 
 
-					//  {
-					// 	// Produce @0.5x images
-					// 	width: '25%', quality: 75, progressive: true,  rename: { prefix: '@0.5x/', }
-					// },
+					 {
+						// Produce @0.5x images
+						width: '32%', quality: 75, progressive: true,  rename: { prefix: '@0.5x/', }
+					},
 
-					// { 	width: '100%',quality: 75, progressive: true,  rename: { prefix: '@2x/webp/', extname: '.webp', 	},
-					// },
+					{ 	width: '100%',quality: 75, progressive: true,  rename: { prefix: '@2x/webp/', extname: '.webp', 	},
+					},
 
 					// // { 	width: '100%',quality: 1, progressive: true,  rename: { prefix: '@0x/webp/', extname: '.webp', 	},
 					// // },
 
 
-					// { 	width: '50%',quality: 75, progressive: true,  rename: {  prefix: '@1x/webp/',  extname: '.webp', 	},
-					// } ,
+					{ 	width: '50%',quality: 75, progressive: true,  rename: {  prefix: '@1x/webp/',  extname: '.webp', 	},
+					} ,
 
 					// { 	width: '25%',quality: 75, progressive: true,  rename: {  prefix: '@0.5x/webp/',  extname: '.webp', 	},
 					// } ,

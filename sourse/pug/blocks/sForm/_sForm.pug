@@ -14,7 +14,8 @@ mixin sForm(h2,h4)
 			.row
 				+e.col.col-lg-6
 					+e.imgWrap.d-none.d-lg-block
-						+e.founder.lazy(src="#" data-src="img/@2x/founder.png", alt="")
+						+pic('founder.png', '', 'lazy', '')(class="sForm__founder")
+						//- +e.founder.lazy(src="#" data-src="img/@2x/founder.png", alt="")
 						+e.label
 							+e.name Михаил Геннадьевич
 							+e.position Сооснователь компании ООО «УралМаф»
@@ -52,7 +53,12 @@ mixin sForm-modal(h2,h4)
 			.row
 				+e.col.col-lg-6
 					+e.imgWrap.d-none.d-lg-block
-						+e.founder.lazy-modal--js(src="#" data-src="img/@2x/founder.png", alt="")
+						+e.PICTURE.founder.imgWrap.lazy-modal--js
+							source(media="(min-width: 576px)", data-srcset="img/@2x/webp/founder.webp", type=`image/webp`, srcset="#")
+							//- source(media="(min-width: 576px)", srcset="img/@2x/founder.png", type=`image/png`)
+							//- source(srcset="img/@1x/webp/founder.webp", type=`image/webp`)
+							img(src="#" data-src="img/@1x/founder.png", alt="")
+						//- +e.founder.lazy-modal--js(src="#" data-src="img/@2x/founder.png", alt="")
 						+e.label
 							+e.name Михаил Геннадьевич
 							+e.position Сооснователь компании ООО «УралМаф»

@@ -41,7 +41,16 @@ var JSCCommon = {
 			var map = $(href).find('.modalAbout__frameWrap').data('map');
 			$(href).find('.modalAbout__frameWrap').html(map);
 			$(href).find(".lazy-modal--js").each(function () {
-				$(this).attr('src', $(this).data('src')).removeClass('.lazy-modal--js');
+				if ($(this).data('src')) {
+					$(this).attr('src', $(this).data('src')).removeClass('.lazy-modal--js');
+				}
+
+				$(this).find('source').each(function () {
+					$(this).attr('srcset', $(this).data('srcset'));
+				});
+				$(this).find('img').each(function () {
+					$(this).attr('src', $(this).data('src'));
+				});
 			});
 		});
 		$(".modal-close-js").click(function () {

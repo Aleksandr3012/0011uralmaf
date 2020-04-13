@@ -1,4 +1,4 @@
-mixin itemProd(a, i, t, vz, height, width)
+mixin itemProd(a, i, t, vz, height, width, ...items)
 	+b.itemProd
 		if a
 			+e.availability В наличии
@@ -32,18 +32,11 @@ mixin itemProd(a, i, t, vz, height, width)
 					td 45 кг.
 			block
 		+e.materials
-			+e.materialsWrap
-				a(href='img/@2x/material-1.jpg' data-fancybox=`materials-${i}`)
-					img.res-i(src="#" data-lazy="img/@1x/material-1.jpg", alt="")
-			+e.materialsWrap
-				a(href='img/@2x/material-2.jpg' data-fancybox=`materials-${i}`)
-					img.res-i(src="#" data-lazy="img/@1x/material-2.jpg", alt="")
-			+e.materialsWrap
-				a(href='img/@2x/material-3.jpg' data-fancybox=`materials-${i}`)
-					img.res-i(src="#" data-lazy="img/@1x/material-3.jpg", alt="")
-			+e.materialsWrap
-				a(href='img/@2x/material-4.jpg' data-fancybox=`materials-${i}`)
-					img.res-i(src="#" data-lazy="img/@2x/material-4.jpg", alt="")
+			each item in items
+				+e.materialsWrap
+					a(href='img/@2x/material-1.jpg' data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="")
+
 		.h5.text-center 1800 руб.*
 		+e.A.btn.btn.link-modal(href="#modalOrder") 
 			span.bg Заказать
@@ -72,12 +65,12 @@ mixin sCatalog()
 						.slider-wrap
 							.slider--js
 								.slide
-									+itemProd('a','1','«Афина»')
+									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','2','«Болено»')
+									+itemProd('','2','«Болено»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','3','«Венза»')
-									
+									+itemProd('','3','«Венза»','','','', 1,2,3,4)
+
 								//- .slide
 								//- 	+itemProd('','3','«Венза»')
 
@@ -89,14 +82,11 @@ mixin sCatalog()
 						.slider-wrap
 							.slider--js
 								.slide
-									+itemProd('a','1','«Афина»')
+									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','2','«Болено»')
+									+itemProd('','2','«Болено»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','3','«Венза»')
-									
-								.slide
-									+itemProd('','3','«Венза»')
+									+itemProd('','3','«Венза»','','','', 1,2,3,4)
 
 							.control-wrap
 						+e.A.allProd.btn(href="#") 
@@ -106,11 +96,11 @@ mixin sCatalog()
 						.slider-wrap
 							.slider--js
 								.slide
-									+itemProd('a','1','«Афина»')
+									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','2','«Болено»')
+									+itemProd('','2','«Болено»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','3','«Венза»')
+									+itemProd('','3','«Венза»','','','', 1,2,3,4)
 							.control-wrap
 						+e.A.allProd.btn(href="#") 
 							span.bg Смотреть все вазоны
@@ -119,11 +109,11 @@ mixin sCatalog()
 						.slider-wrap
 							.slider--js
 								.slide
-									+itemProd('a','1','«Афина»')
+									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','2','«Болено»')
+									+itemProd('','2','«Болено»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','3','«Венза»')
+									+itemProd('','3','«Венза»','','','', 1,2,3,4)
 							.control-wrap
 						+e.A.allProd.btn(href="#") 
 							span.bg Смотреть все вазоны
@@ -132,11 +122,11 @@ mixin sCatalog()
 						.slider-wrap
 							.slider--js
 								.slide
-									+itemProd('a','1','«Афина»')
+									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','2','«Болено»')
+									+itemProd('','2','«Болено»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','3','«Венза»')
+									+itemProd('','3','«Венза»','','','', 1,2,3,4)
 							.control-wrap
 						+e.A.allProd.btn(href="#") 
 							span.bg Смотреть все вазоны
