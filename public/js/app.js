@@ -27,20 +27,19 @@ var sAdvantagesVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sContentVue = new Vue({
-	el: '#sContent',
+var sContactVue = new Vue({
+	el: '#sContact',
 	data: {
 		imgSRc: 'img/'
 	},
 	created: function created() {},
 	computed: {}
 });
-var sDeliveryVue = new Vue({
-	el: '#sDelivery',
+var sContentVue = new Vue({
+	el: '#sContent',
 	data: {
 		imgSRc: 'img/'
 	},
-	methods: {},
 	created: function created() {},
 	computed: {}
 });
@@ -53,16 +52,17 @@ var sCatalogVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sFormVue = new Vue({
-	el: '#sForm',
+var sDeliveryVue = new Vue({
+	el: '#sDelivery',
 	data: {
 		imgSRc: 'img/'
 	},
+	methods: {},
 	created: function created() {},
 	computed: {}
 });
-var sContactVue = new Vue({
-	el: '#sContact',
+var sFormVue = new Vue({
+	el: '#sForm',
 	data: {
 		imgSRc: 'img/'
 	},

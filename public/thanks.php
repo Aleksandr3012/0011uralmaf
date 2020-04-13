@@ -1,4 +1,139 @@
 <!DOCTYPE html>
+<div class="d-none">
+	<?php
+		if(!empty($_POST)){
+				ini_set( 'display_errors', 1 );
+				require __DIR__ . '/vendor/autoload.php';
+				// $to='trifectahealthnyc@gmail.com';
+				$mail = new PHPMailer(true);
+				$mail->IsMail();
+				$mail->IsHTML(true);
+				$mail->Priority = '1';
+				$mail->Encoding = 'base64';
+				$mail->CharSet = 'utf-8';
+	
+		///от кого письмо
+				$mail->setFrom('info@info.com');
+	
+				$mail->addAddress('wol1414@gmail.com');
+				// $mail->addAddress('spike.mgn@gmail.com');
+				// $mail->addAddress('grouplend@mail.ru');
+				// $mail->addAddress('rocketsstat@yandex.ru');
+				// $mail->addAddress('455203@mail.ru');
+	
+	
+		//Субъект
+				$mail->Subject = 'Заявка с сайта groupv.ru (Верстаки)';
+	
+				$time = date('d.m.Y в H:i');
+				$html = '
+	
+		<table style="width: 100%;">';
+				if (!empty($_POST['order'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид формы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['order'] . '</b></td></tr>';
+				}
+	
+		 
+		 
+				if (!empty($_POST['price'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Стоимость:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['price'] . '</b></td></tr>';
+				}
+	
+				
+		 
+				if (!empty($_POST['color'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Цвет:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['color'] . '</b></td></tr>';
+				}
+	
+				if (!empty($_POST['name'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Имя:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['name'] . '</b></td></tr>';
+				}
+	
+				if (!empty($_POST['tel'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
+				}
+				
+				if (!empty($_POST['email'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td></tr>';
+				}
+				
+				if (!empty($_POST['whatsapp'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Whatsapp:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['whatsapp'] . '</b></td></tr>';
+				}
+				
+				if (!empty($_POST['viber'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Viber:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['viber'] . '</b></td></tr>';
+				}
+				if (!empty($_POST['time'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для звонка:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td></tr>';
+				}
+	
+	
+				if (!empty($_POST['choose-type'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Тип шлакоблок:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['choose-type'] . '</b></td></tr>';
+				}
+	
+				if (!empty($_POST['result'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Объем:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['result'] . '</b></td></tr>';
+				}
+				if (!empty($_POST['comment'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Текст сообщения:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td></tr>';
+				}
+	
+	
+				if (!empty($_POST['type-company'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вид компании: </td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['type-company']) .  '</b></td>';
+				}
+	
+				if (!empty($_POST['utm_source'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">utm_source:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_source'] . '</b></td>';
+				}
+	
+				if (!empty($_POST['utm_term'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_term:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_term'] . '</b></td>';
+				}
+				
+				if (!empty($_POST['utm_medium'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_medium:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_medium'] . '</b></td>';
+				}
+				if (!empty($_POST['utm_campaign'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_campaign:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_campaign'] . '</b></td>';
+				}
+	
+				// if (!empty($_POST['tech'])) {
+				//     $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Техника:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['tech']) . '</b></td></tr>';
+				// }
+	
+	
+				$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">  Время отправки:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $time . '</b></td>
+					<tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> IP:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_SERVER['REMOTE_ADDR'] . '</b></td> 
+		</table>
+		';
+				$mail->Body = $html;
+	
+				$uploaddir = __DIR__ . '/upload/';
+	
+				// if ($_FILES['file']['tmp_name']) {
+				// 		$mail->addAttachment($_FILES['file']['tmp_name'],$_FILES['file']['name']);
+				// }
+	
+		// if ($_FILES['file2']['tmp_name']) {
+		//  $mail->addAttachment($_FILES['file2']['tmp_name'],$_FILES['file2']['name']);
+		// }
+	
+		//send the message, check for errors
+			 
+				if (!$mail->send()) {
+		//        echo "Mailer Error: " . $mail->ErrorInfo;
+				} else {
+		//        echo "Message sent!";
+				}
+				if (isset($uploadfile))unlink($uploadfile);
+				if (isset($uploadfile2))unlink($uploadfile2);
+	 
+		}
+		?>
+</div>
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
@@ -56,7 +191,7 @@
 											<svg class="icon icon-viber ">
 												<use xlink:href="img/svg/sprite.svg#viber"></use>
 											</svg></a>
-										</div><a class="topLine__tel" href="tel:73519454515">7 (3519) 45-45-15</a>
+										</div><a class="topLine__tel" href="tel:+73519454515">7 (3519) 45-45-15</a>
 									</div><a class="topLine__call link-modal" href="#modal-call">Заказать  звонок <span class="d-none d-lg-inline">менеджера</span></a>
 								</div>
 								<div class="col-lg d-flex">
@@ -78,7 +213,7 @@
 				</div>
 			</div>
 			<!-- end header-->
-			<div class="container"><a class="backToMain" href="#">Вернуться на сайт</a></div>
+			<div class="container"><a class="backToMain" href="#">Вернуться на сайт </a></div>
 			<!-- start sThanks-->
 			<section class="sThanks section" id="sThanks">
 				<div class="container">
@@ -86,27 +221,14 @@
 						<svg class="icon icon-verificado ">
 							<use xlink:href="img/svg/sprite.svg#verificado"></use>
 						</svg>
-						<h1>Спасибо, мы&nbsp;приняли вашу заявку!</h1>
+						<h1>Спасибо, мы&nbsp;приняли вашу заявку!</h1><?php if(isset($_POST["catalog"])) { ?>
 						<h3>Мы&nbsp;уже отправили ссылку на&nbsp;каталог по&nbsp;указанному&nbsp;адресу.</h3>
-						<h4>Если вы&nbsp;не&nbsp;нашли&nbsp;то, что нужно, расскажите нам о&nbsp;задаче,&nbsp;мы рассчитаем стоимость изготовления изделий&nbsp;и подготовим коммерческое предложение.</h4>
+						<h4>Если вы&nbsp;не&nbsp;нашли&nbsp;то, что нужно, расскажите нам о&nbsp;задаче,&nbsp;мы рассчитаем стоимость изготовления изделий&nbsp;и подготовим коммерческое предложение.</h4><?php } else{	  ?>
+						<h3>Менеджер компании перезвонит вам в&nbsp;течение рабочего дня и&nbsp;ответит на&nbsp;ваши вопросы.</h3><?php	} ?>
 						<h4>Удачного дня!</h4>
 					</div>
 				</div>
 			</section>
-			<!-- start sThanks-->
-			<section class="sThanks section" id="sThanks">
-				<div class="container">
-					<div class="section-title text-center">
-						<svg class="icon icon-verificado ">
-							<use xlink:href="img/svg/sprite.svg#verificado"></use>
-						</svg>
-						<h1>Спасибо, мы&nbsp;приняли вашу заявку!</h1>
-						<h3>Менеджер компании перезвонит вам в&nbsp;течение рабочего дня и&nbsp;ответит на&nbsp;ваши вопросы.</h3>
-						<h4>Удачного дня!</h4>
-					</div>
-				</div>
-			</section>
-			<!-- end sThanks-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="row">
@@ -142,7 +264,7 @@
 									<svg class="icon icon-viber ">
 										<use xlink:href="img/svg/sprite.svg#viber"></use>
 									</svg></a>
-								</div><a class="footer__tel" href="tel:73519454515">7 (3519) 45-45-15</a>
+								</div><a class="footer__tel" href="tel:+73519454515">7 (3519) 45-45-15</a>
 							</div><a class="footer__call link-modal" href="#">Заказать звонок менеджера</a>
 						</div>
 						<div class="mobileOrder-5 col-md-4">

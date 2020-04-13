@@ -42,8 +42,9 @@ $.gulp.task('default', $.gulp.series(
 		'img',
 		'libs',
 		'scripts',
+
 		// 'scripts:common',
 		'scripts:app',
 	),
-	$.gulp.parallel('sass', 'watch', 'serv')
+	$.gulp.parallel('sass', 'watch', 'serv', 'thanks')
 ));
