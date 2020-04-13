@@ -294,7 +294,9 @@ function eventHandler() {
 	})
 
 	$('[data-fancybox').fancybox({
-		toolbar: false,
+		// Zoom: false,
+		// slideshow: false,
+		// Thumbnails: false,
 		infobar: false,
 	});
 

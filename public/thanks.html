@@ -30,10 +30,10 @@
 				<div class="container">
 					<!-- picture-->
 					<picture class="lazy picture-bg"> 
-						<source srcset="#" data-srcset="img/@2x/header-bg.png" type="image/png" media="(min-width:576px)"/>
-						<source srcset="#" data-srcset="img/@1x/header-bg.png" type="image/png"/>
 						<source srcset="#" data-srcset="img/@2x/webp/header-bg.webp" type="image/webp" media="(min-width:576px)"/>
-						<source srcset="#" data-srcset="img/@1x/webp/header-bg.webp" type="image/webp"/><img class="object-fit-js" src="#" data-src="img/@2x/header-bg.png" alt=""/>
+						<source srcset="#" data-srcset="img/@1x/webp/header-bg.webp" type="image/webp"/>
+						<source srcset="#" data-srcset="img/@2x/header-bg.png" type="image/png" media="(min-width:576px)"/>
+						<source srcset="#" data-srcset="img/@1x/header-bg.png" type="image/png"/><img class="object-fit-js" src="#" data-src="img/@2x/header-bg.png" alt=""/>
 					</picture>
 					<!-- /picture-->
 					<!-- start topLine-->
@@ -346,10 +346,10 @@
 						<h2>Яшму и хризолит превращаем <strong>в&nbsp;вазоны&nbsp;и&nbsp;скамейки</strong></h2>
 						<!-- picture-->
 						<picture class="lazy picture-bg"> 
-							<source srcset="#" data-srcset="img/@2x/bgModal.jpg" type="image/jpg" media="(min-width:576px)"/>
-							<source srcset="#" data-srcset="img/@1x/bgModal.jpg" type="image/jpg"/>
 							<source srcset="#" data-srcset="img/@2x/webp/bgModal.webp" type="image/webp" media="(min-width:576px)"/>
-							<source srcset="#" data-srcset="img/@1x/webp/bgModal.webp" type="image/webp"/><img class="object-fit-js" src="#" data-src="img/@2x/bgModal.jpg" alt=""/>
+							<source srcset="#" data-srcset="img/@1x/webp/bgModal.webp" type="image/webp"/>
+							<source srcset="#" data-srcset="img/@2x/bgModal.jpg" type="image/jpg" media="(min-width:576px)"/>
+							<source srcset="#" data-srcset="img/@1x/bgModal.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/bgModal.jpg" alt=""/>
 						</picture>
 						<!-- /picture-->
 						<div class="row">
@@ -375,7 +375,10 @@
 								<p>Компания основана в&nbsp;2008&nbsp;году. Кроме малых архитектурных форм мы&nbsp;производим тротуарную плитку, бордюры и&nbsp;фасадную термопанель. За&nbsp;эти годы научились минимизировать издержки, снижать себестоимость без потери качества и&nbsp;устанавливать комфортную цену для покупателя.</p>
 								<p>Мы&nbsp;работаем напрямую с&nbsp;поставщиками крошки полудрагоценных камней с&nbsp;Южного Урала и&nbsp;Башкирии&nbsp;&mdash; это позволяет производить самые разные фактуры изделий.</p>
 							</div>
-						</div><img class="modalAbout__clouds lazy-modal lazy-modal--js" src="#" data-src="img/@2x/clouds.png" alt="" role="presentation"/>
+						</div>
+						<picture class="modalAbout__clouds imgWrap lazy-modal lazy-modal--js">
+							<source media="(min-width: 576px)" data-srcset="img/@2x/webp/clouds.webp" type="image/webp" srcset="#"/><img src="#" data-src="img/@1x/clouds.png" alt=""/>
+						</picture>
 					</div>
 				</div>
 				<div class="modalAbout__body">
@@ -457,7 +460,12 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-7 order-lg-last"><img class="modalDelivery__packaging res-i lazy-modal lazy-modal--js" src="#" data-src="img/@2x/packaging.png" alt="" role="presentation"/>
+						<div class="col-lg-7 order-lg-last">
+							<picture class="modalDelivery__packaging imgWrap lazy-modal lazy-modal--js">
+								<source media="(min-width: 576px)" data-srcset="img/@2x/webp/packaging.webp" type="image/webp" srcset="#"/>
+								<source media="(min-width: 576px)" srcset="img/@2x/packaging.png" type="image/png"/>
+								<source srcset="img/@1x/webp/packaging.webp" type="image/webp"/><img src="#" data-src="img/@1x/packaging.png" alt=""/>
+							</picture>
 						</div>
 						<div class="col-lg-5 align-self-center">
 							<div class="h5">Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;надежно упаковываем</div>
@@ -477,7 +485,12 @@
 						<h2>В&nbsp;составе наших изделий более&nbsp;80%&nbsp;крошки натуральных камней</h2>
 						<h4>Это обеспечивает долговечность, прочность и&nbsp;красивый внешний вид</h4>
 						<div class="row">
-							<div class="col-md-6"><img class="modalDelivery__cement res-i lazy-modal lazy-modal--js" src="#" data-src="img/@2x/cement.png" alt="" role="presentation"/>
+							<div class="col-md-6">
+								<picture class="modalDelivery__cement imgWrap lazy-modal lazy-modal--js">
+									<source media="(min-width: 576px)" data-srcset="img/@2x/webp/cement.webp" type="image/webp" srcset="#"/>
+									<source media="(min-width: 576px)" srcset="img/@2x/cement.png" type="image/png"/>
+									<source srcset="img/@1x/webp/cement.webp" type="image/webp"/><img src="#" data-src="img/@1x/cement.png" alt=""/>
+								</picture>
 							</div>
 							<div class="modalDelivery__pt col-md-6">
 								<div class="h5"><strong>При круглогодичной эксплуатации срок службы изделий 5, 10&nbsp;и&nbsp;даже 20&nbsp;лет</strong></div>
@@ -485,7 +498,12 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-6 order-md-last"><img class="modalDelivery__karcher res-i lazy-modal lazy-modal--js" src="#" data-src="img/@2x/karcher.png" alt="" role="presentation"/>
+							<div class="col-md-6 order-md-last">
+								<picture class="modalDelivery__karcher imgWrap lazy-modal lazy-modal--js">
+									<source media="(min-width: 576px)" data-srcset="img/@2x/webp/karcher.webp" type="image/webp" srcset="#"/>
+									<source media="(min-width: 576px)" srcset="img/@2x/karcher.png" type="image/png"/>
+									<source srcset="img/@1x/webp/karcher.webp" type="image/webp"/><img src="#" data-src="img/@1x/karcher.png" alt=""/>
+								</picture>
 							</div>
 							<div class="modalDelivery__pt col-md-6">
 								<div class="h5"><strong>Можно мыть водой и&nbsp;при необходимости очищать моющими и&nbsp;дезинфицирующими средствами</strong></div>
@@ -493,7 +511,12 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-6"><img class="modalDelivery__vazons img res-i lazy-modal lazy-modal--js" src="#" data-src="img/@2x/banner.png" alt="" role="presentation"/>
+							<div class="col-md-6">
+								<picture class="modalDelivery__vazons imgWrap lazy-modal lazy-modal--js">
+									<source media="(min-width: 576px)" data-srcset="img/@2x/webp/banner.webp" type="image/webp" srcset="#"/>
+									<source media="(min-width: 576px)" srcset="img/@2x/banner.png" type="image/png"/>
+									<source srcset="img/@1x/webp/banner.webp" type="image/webp"/><img src="#" data-src="img/@1x/banner.png" alt=""/>
+								</picture>
 							</div>
 							<div class="modalDelivery__pt col-md-6">
 								<div class="h5"><strong>Поверхность из&nbsp;натурального камня любой фактуры</strong></div>
@@ -542,10 +565,10 @@
 				<div class="sForm">
 					<!-- picture-->
 					<picture class="picture-bg"> 
-						<source srcset="img/@2x/formBg.jpg" type="image/jpg" media="(min-width:576px)"/>
-						<source srcset="img/@1x/formBg.jpg" type="image/jpg"/>
 						<source srcset="img/@2x/webp/formBg.webp" type="image/webp" media="(min-width:576px)"/>
-						<source srcset="img/@1x/webp/formBg.webp" type="image/webp"/><img class="object-fit-js" src="img/@2x/formBg.jpg" alt=""/>
+						<source srcset="img/@1x/webp/formBg.webp" type="image/webp"/>
+						<source srcset="img/@2x/formBg.jpg" type="image/jpg" media="(min-width:576px)"/>
+						<source srcset="img/@1x/formBg.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/formBg.jpg" alt=""/>
 					</picture>
 					<!-- /picture-->
 					<div class="container">
@@ -634,8 +657,11 @@
 									</div>
 								</div>
 							</div>
-						</div><img class="sForm__clouds lazy-modal lazy-modal--js" src="#" data-src="img/@2x/clouds.png" alt="" role="presentation"/>
+						</div>
 					</div>
+					<picture class="sForm__clouds imgWrap lazy-modal lazy-modal--js">
+						<source media="(min-width: 576px)" data-srcset="img/@2x/webp/clouds.webp" type="image/webp" srcset="#"/><img src="#" data-src="img/@1x/clouds.png" alt=""/>
+					</picture>
 				</div>
 			</div>
 			<!-- #modal-call-->

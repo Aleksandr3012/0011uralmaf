@@ -54,16 +54,20 @@
 	// 	}
 	// }
 
+	@include media-breakpoint-down(md) {
+		max-width: rem(450);
+	}
 	&--catalog {
-		@include media-breakpoint-down(md) {
-			max-width: rem(450);
-		}
 		.h3 {
 			max-width: 100%;
 		}
 
 		.h5 {
 			max-width: 100%;
+		}
+
+		.tabs__btn {
+			margin-left: 0 !important;
 		}
 
 		.form-wrap__btn {

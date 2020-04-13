@@ -605,3 +605,7 @@ a {
 .slick-dots .slick-active:first-child:last-child {
 	display: none;
 }
+
+.fancybox-button--zoom, .fancybox-button--play, .fancybox-button--thumbs{
+	display: none;
+}
