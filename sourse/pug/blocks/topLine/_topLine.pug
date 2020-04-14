@@ -11,9 +11,9 @@ mixin topLine()
 				.col.order-lg-last.text-right
 					+e.telephone
 						+e.messengers.d-none.d-sm-flex
-							+e.A.whatsapp(href=`https://wa.me/${telnumber}`)
+							+e.A.whatsapp(href=`https://wa.me/${telnumber}` target="_blank")
 								+icon('whatsapp')
-							+e.A.viber(href=`viber://add?number=${telnumber}`   data-desktop=`viber://chat?number=${telnumber}`)
+							+e.A.viber(href=`viber://add?number=${telnumber}`   data-desktop=`viber://chat?number=${telnumber}` target="_blank")
 								+icon('viber')
 						+e.A.tel(href=`tel:+${telnumber}`) 7 (3519) 45-45-15
 					+e.A.call.link-modal(href="#modal-call" data-order="Заказать  звонок менеджера") Заказать  звонок #[span.d-none.d-lg-inline менеджера]
@@ -23,10 +23,10 @@ mixin topLine()
 					+e.text
 						+e.A.concrete.link-modal(href="#modalConcrete"  data-order="Что за бетон с полудрагоценными камнями?") Что за&nbsp;бетон с&nbsp;полудрагоценными камнями?
 				+e.col.col-lg-auto.order-lg-3
-					+e.about
-						a.link-modal(href="#modalAbout"  data-order="О компании") О компании
 					+e.delivery
 						a.link-modal(href="#modalDelivery") Доставка
+					+e.about
+						a.link-modal(href="#modalAbout"  data-order="О компании") О компании
 
 
 

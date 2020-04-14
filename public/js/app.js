@@ -36,16 +36,16 @@ var sCatalogVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sContactVue = new Vue({
-	el: '#sContact',
+var sContentVue = new Vue({
+	el: '#sContent',
 	data: {
 		imgSRc: 'img/'
 	},
 	created: function created() {},
 	computed: {}
 });
-var sContentVue = new Vue({
-	el: '#sContent',
+var sContactVue = new Vue({
+	el: '#sContact',
 	data: {
 		imgSRc: 'img/'
 	},
@@ -61,20 +61,20 @@ var sDeliveryVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sFormVue = new Vue({
-	el: '#sForm',
-	data: {
-		imgSRc: 'img/'
-	},
-	created: function created() {},
-	computed: {}
-});
 var sThanksVue = new Vue({
 	el: '#sThanks',
 	data: {
 		imgSRc: 'img/'
 	},
 	methods: {},
+	created: function created() {},
+	computed: {}
+});
+var sFormVue = new Vue({
+	el: '#sForm',
+	data: {
+		imgSRc: 'img/'
+	},
 	created: function created() {},
 	computed: {}
 });

@@ -73,6 +73,10 @@
 			margin-left: 0 !important;
 		}
 
+		.tabs__caption {
+			padding-bottom: rem(30) !important;
+		}
+
 		.form-wrap__btn {
 			@include media-breakpoint-down(lg) {
 				// max-height: rem(70);
@@ -140,12 +144,23 @@
 			padding-top: rem(10);
 			margin-left: auto;
 			@include mt;
-			max-width: rem(250);
+			max-width: rem(350);
 			margin-right: auto;
 			position: relative;
+			@include media-breakpoint-down(md){
+				font-size: rem(17);
+			}
 
 			&:hover {
 				border-bottom: dashed 2px transparent;
+			}
+		}
+
+		.form-wrap__specialist  {
+			max-width: rem(378);
+			line-height: 1.4;
+			@include media-breakpoint-down(md){
+				font-size: rem(17) !important;
 			}
 		}
 	}

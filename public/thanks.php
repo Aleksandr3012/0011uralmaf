@@ -190,10 +190,10 @@
 								</div>
 								<div class="col order-lg-last text-right">
 									<div class="topLine__telephone">
-										<div class="topLine__messengers d-none d-sm-flex"><a class="topLine__whatsapp" href="https://wa.me/73519454515">
+										<div class="topLine__messengers d-none d-sm-flex"><a class="topLine__whatsapp" href="https://wa.me/73519454515" target="_blank">
 											<svg class="icon icon-whatsapp ">
 												<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-											</svg></a><a class="topLine__viber" href="viber://add?number=73519454515" data-desktop="viber://chat?number=73519454515">
+											</svg></a><a class="topLine__viber" href="viber://add?number=73519454515" data-desktop="viber://chat?number=73519454515" target="_blank">
 											<svg class="icon icon-viber ">
 												<use xlink:href="img/svg/sprite.svg#viber"></use>
 											</svg></a>
@@ -207,9 +207,9 @@
 									</div>
 								</div>
 								<div class="topLine__col col-lg-auto order-lg-3">
-									<div class="topLine__about"><a class="link-modal" href="#modalAbout" data-order="О компании">О компании</a>
-									</div>
 									<div class="topLine__delivery"><a class="link-modal" href="#modalDelivery">Доставка</a>
+									</div>
+									<div class="topLine__about"><a class="link-modal" href="#modalAbout" data-order="О компании">О компании</a>
 									</div>
 								</div>
 							</div>
@@ -238,21 +238,25 @@
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="row">
-						<div class="mobileOrder-1 col-md-4"><a class="footer__logo" href="/">
+						<div class="mobileOrder-1 col-md-4 col-lg-4"><a class="footer__logo" href="/">
 							<svg class="icon icon-logo ">
 								<use xlink:href="img/svg/sprite.svg#logo"></use>
 							</svg>
 							<div class="footer__brand">Урал Маф
 							</div>
-							<div class="footer__descr d-none d-md-block">Малые архитектурные формы: производим в&nbsp;Магнитогорске, реализуем по&nbsp;России и&nbsp;СНГ
+							<div class="footer__descr d-none d-lg-block">Малые архитектурные формы: производим в&nbsp;Магнитогорске, реализуем по&nbsp;России и&nbsp;СНГ
 							</div></a>
 						</div>
-						<div class="mobileOrder-2 col-md-2 col-xl">
+						<div class="mobileOrder-2 col-md-4 col-lg-2 col-xl">
 							<ul class="footer__map">
 								<li><a class="link-modal" href="#modalAbout" data-order="О компании">О компании</a></li>
 								<li><a class="link-modal" href="#modalDelivery">Доставка</a></li>
 								<li><a class="borderBottom link-modal" href="#modalCatalog" data-order="Получить каталог">Получить каталог</a></li>
 							</ul>
+						</div>
+						<div class="mdOrder col-4 d-none d-md-block d-lg-none">
+							<div class="footer__descr footer__descr--md">Малые архитектурные формы: производим в&nbsp;Магнитогорске, реализуем по&nbsp;России и&nbsp;СНГ
+							</div>
 						</div>
 						<div class="mobileOrder-4 col-md">
 							<div class="footer__workWrap">
@@ -263,30 +267,30 @@
 						</div>
 						<div class="mobileOrder-3 col-md-3 text-right">
 							<div class="footer__telephone">
-								<div class="footer__messengers d-none d-lg-flex"><a class="footer__whatsapp" href="https://wa.me/73519454515">
+								<div class="footer__messengers d-none d-lg-flex"><a class="footer__whatsapp" href="https://wa.me/73519454515" target="_blank">
 									<svg class="icon icon-whatsapp ">
 										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-									</svg></a><a class="footer__viber" href="viber://add?number=73519454515" data-desktop="viber://chat?number=73519454515">
+									</svg></a><a class="footer__viber" href="viber://add?number=73519454515" data-desktop="viber://chat?number=73519454515" target="_blank">
 									<svg class="icon icon-viber ">
 										<use xlink:href="img/svg/sprite.svg#viber"></use>
 									</svg></a>
 								</div><a class="footer__tel" href="tel:+73519454515">7 (3519) 45-45-15</a>
 							</div><a class="footer__call link-modal" href="#modal-call" data-order="Заказать  звонок менеджера">Заказать звонок менеджера</a>
 						</div>
-						<div class="mobileOrder-5 col-md-4">
+						<div class="mobileOrder-5 col-md-5 col-lg-4">
 							<div class="footer__adres">Юридический адерс и реквизиты
 							</div>
 							<p>455026, Челябинская область, г.&nbsp;Магнитогорск, ул. Клары Цеткин,&nbsp;д.12/1 ИНН&nbsp;XXXXXXXXXX ОГРН&nbsp;XXXXXXXXXXXXXX</p>
 						</div>
-						<div class="col-md-2"></div>
-						<div class="mobileOrder-6 col-md-3">
+						<div class="col-lg-2"></div>
+						<div class="mobileOrder-6 col-md-4 col-lg-3">
 							<ul class="footer__polite"> 
 								<li><a href="#">Политика конфиденциальности</a></li>
 								<li><a href="#">Пользовательское соглашение</a></li>
 								<li><a href="#">Карта сайта</a></li>
 							</ul>
 						</div>
-						<div class="mobileOrder-7 col-md-3">
+						<div class="mobileOrder-7 col-md-7 col-lg-3">
 							<div class="footer__develop">Разработка и продвижение сайта: <a href="#">Веб-студия «Барс»</a>
 							</div><a class="develop-link" href="#" target="_blank"><span class="develop-link__panel"><img class="img-1 lazy" src="#" data-src="img/svg/hand.svg" alt=""/><img class="img-2 lazy" src="#" data-src="img/svg/logo-text.svg" alt=""/></span></a>
 						</div>
@@ -366,14 +370,14 @@
 							</div>
 							<div class="tabs__content">
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__title">Введите whatsapp</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="whatsapp"/>
+									<label><span class="form-wrap__title">Введите Whatsapp</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="whatsapp"/>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
 							</div>
 							<div class="tabs__content">
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__title">Введите viber</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="viber"/>
+									<label><span class="form-wrap__title">Введите Viber</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="viber"/>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
@@ -450,13 +454,15 @@
 						</div>
 					</div>
 					<div class="form-wrap__input-wrapper">
-						<div class="form-wrap__comment form-wrap__comment--js text-center">Задайте вопрос, если есть
+						<div class="form-wrap__comment form-wrap__comment--js text-center">Напишите, комментарии, если хотите
 						</div>
 						<div class="form-wrap__toggle-block form-wrap__toggle-block--js">
 							<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Текст сообщения" name="textarea"></textarea>
 							</div>
 							<!-- +e.input-wrap-->
 						</div>
+					</div>
+					<div class="form-wrap__specialist h5 text-center">Специалист компании &laquo;УралМаф&raquo; позвонит вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем&nbsp;пн-пт с&nbsp;07:00 до&nbsp;19:00&nbsp;(Мск)
 					</div>
 					<button class="form-wrap__btn btn" type="submit"><span class="bg">оформить заказ</span>
 					</button>
@@ -603,7 +609,7 @@
 							</picture>
 						</div>
 						<div class="col-lg-5 align-self-center">
-							<div class="h5">Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;надежно упаковываем</div>
+							<div class="h5">Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;<strong>надежно упаковываем</strong></div>
 							<div class="h5">Используем воздушно-пузырчатую пленку&nbsp;и&nbsp;несколько слоев стрейч-пленки. Габаритные изделия перевозятся на&nbsp;европоддонах.</div>
 						</div>
 					</div>
@@ -698,7 +704,7 @@
 				</div>
 				<!-- start sForm-->
 				<div class="sForm">
-					<picture class="sForm__imgWrap lazy-modal lazy-modal--js picture-bg">
+					<picture class="sForm__imgWrap sForm__imgWrap--bg lazy-modal lazy-modal--js picture-bg">
 						<source media="(min-width: 576px)" data-srcset="img/@2x/webp/formBg.webp" type="image/webp" srcset="#"/>
 						<source media="(min-width: 576px)" data-srcset="img/@2x/formBg.jpg" type="image/jpg" srcset="#"/>
 						<source data-srcset="img/@1x/webp/formBg.webp" type="image/webp" srcset="#"/><img src="#" data-src="img/@1x/formBg.jpg" alt=""/>

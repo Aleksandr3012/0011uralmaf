@@ -60,7 +60,7 @@
 					transform: skew(-7deg, 0);
 					min-height: rem(179px);
 				}
-				min-height: rem(190px);
+				min-height: rem(160px);
 				top: rem(-20);
 				border-radius: rem(15);
 				z-index: -1;
@@ -101,7 +101,7 @@
 
 	p {
 		font-size: rem(15);
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(lg){
 			font-size: rem(17);
 		}
 		letter-spacing: rem(0.4px);

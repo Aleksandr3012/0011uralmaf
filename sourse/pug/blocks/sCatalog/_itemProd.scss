@@ -143,10 +143,10 @@
 		padding-left: rem(3);
 
 		@include media-breakpoint-up(md) {
-			padding-left: rem(15);
+			padding-left: rem(12);
 		}
 
-		margin-bottom: rem(30);
+		margin-bottom: rem(35);
 	}
 
 	&__materialsWrap {
@@ -176,7 +176,7 @@
 			}
 
 			@include media-breakpoint-up(xl) {
-				max-width: rem(60);
+				max-width: rem(66);
 
 			}
 

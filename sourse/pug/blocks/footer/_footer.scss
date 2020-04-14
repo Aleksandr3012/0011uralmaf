@@ -28,7 +28,7 @@
 
 	&__logo {
 		display: flex;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(sm) {
 			justify-content: center;
 		}
 		color: $body-color !important;
@@ -52,6 +52,10 @@
 		max-width: rem(200);
 		font-size: $small;
 		line-height: rem(23px);
+		// &--md {
+		// 	margin-left: auto;
+		// 	margin-right: auto;
+		// }
 	}
 
 	.text-right {
@@ -67,12 +71,17 @@
 
 		@include media-breakpoint-down(sm) {
 			text-align: center;
+		}
+		@include media-breakpoint-down(sm) {
 			margin-top: rem(22);
 		}
 
 		li a {
 			color: $body-color;
-			line-height: rem(28px);
+			line-height: 1.8;
+			@include media-breakpoint-only(md) {
+				line-height: 1.1;
+			}
 			text-decoration: none !important;
 			&:hover {
 				color: $primary;
@@ -101,14 +110,17 @@
 			padding-left: rem(35);
 		}
 
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			padding-top: rem(10);
 		}
 
+		@include media-breakpoint-only(md) {
+			text-align: right;
+		}
 		@include media-breakpoint-down(sm) {
 			text-align: center;
 			li {
-				line-height: rem(19px);
+				line-height: 1.1;
 			}
 		}
 
@@ -131,6 +143,9 @@
 		padding-top: rem(9);
 		font-size: rem(12);
 		font-weight: 500;
+		@include media-breakpoint-only(md) {
+			text-align: right;
+		}
 		@include media-breakpoint-down(sm) {
 			text-align: center;
 		}
@@ -147,6 +162,9 @@
 			text-decoration: none;
 			display: block;
 			max-width: rem(126);
+			@include media-breakpoint-only(md){
+				margin-left: auto;
+			}
 			@include media-breakpoint-down(sm) {
 				margin-left: auto;
 				margin: auto;
@@ -291,7 +309,33 @@
 		}
 	}
 
+	.mdOrder {
+		order: 4;
+	}
 	.mobileOrder {
+		@include media-breakpoint-only(md){
+			&-1 {
+				order: 1;
+			}
+			&-2 {
+				order: 5;
+			}
+			&-4 {
+				order: 2;
+			}
+			&-3 {
+				order: 3;
+			}
+			&-5 {
+				order: 7;
+			}
+			&-6 {
+				order: 6;
+			}
+			&-7 {
+				order: 8;
+			}
+		}
 		@include media-breakpoint-down(sm) {
 			&-1 {
 				order: 1;
@@ -387,8 +431,11 @@
 	&__panel {
 		position: relative;
 		display: flex;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(md){
 			margin-left: auto;
+
+		}
+		@include media-breakpoint-down(sm) {
 			margin-right: auto;
 		}
 		align-items: center;

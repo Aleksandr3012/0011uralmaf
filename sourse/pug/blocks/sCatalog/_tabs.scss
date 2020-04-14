@@ -141,13 +141,16 @@
 		margin-right: auto;
 		// margin-top: rem(56);
 		font-size: rem(18);
-		margin-bottom: rem(35);
+		margin-bottom: rem(39);
 
 		// &::before {
 		// 	height: rem(29);
 		// }
 		
 		margin-top: rem(25);
+		@include media-breakpoint-up(lg){
+			margin-top: rem(63);
+		}
 		.bg {
 			max-height: rem(80);
 		}
