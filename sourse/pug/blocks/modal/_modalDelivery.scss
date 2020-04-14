@@ -195,11 +195,11 @@
 
 		h2 {
 			max-width: rem(840);
-			@include media-breakpoint-up(sm){
+			@include media-breakpoint-up(sm) {
 				margin-bottom: rem(15) !important;
 			}
-			@include media-breakpoint-up(xl){
-			margin-bottom: rem(21) !important;
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(21) !important;
 			}
 		}
 
@@ -211,6 +211,11 @@
 
 		.form-wrap {
 			z-index: 3;
+			&::before {
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+			}
 		}
 
 		.h2,
@@ -219,7 +224,7 @@
 		}
 
 		.h2 {
-			@include media-breakpoint-only(md){
+			@include media-breakpoint-only(md) {
 				font-size: rem(26);
 			}
 		}
@@ -244,7 +249,7 @@
 	}
 
 	.sForm {
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			padding-top: 0;
 		}
 		padding-bottom: rem(50);
@@ -253,12 +258,20 @@
 		&__founder {
 			z-index: 1;
 			margin-left: rem(-250);
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(xl) {
 				margin-left: rem(-165);
 			}
 		}
 		&__label {
-			left: rem(160);
+			@include media-breakpoint-up(xl) {
+				left: rem(160);
+			}
+		}
+
+		&__position {
+			@include media-breakpoint-only(lg) {
+				padding-right: rem(30);
+			}
 		}
 
 		&__clouds {
