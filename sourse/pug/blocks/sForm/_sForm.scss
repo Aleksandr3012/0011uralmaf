@@ -70,9 +70,11 @@
 		background-color: transparent;
 	}
 
-	// &__imgWrap {
-	// 	position: relative;
-	// }
+	&__imgWrap {
+		source, img {
+			height: 100%;
+		}
+	}
 
 	&__head-text {
 		max-width: rem(600);
