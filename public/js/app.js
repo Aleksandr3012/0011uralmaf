@@ -1,6 +1,15 @@
 "use strict";
 
 // .footer scripts goes here
+var header = new Vue({
+	el: '#header',
+	data: {
+		imgSRc: 'img/',
+		a: a
+	},
+	created: function created() {},
+	computed: {}
+});
 var headerBlockVue = new Vue({
 	el: '#headerBlock',
 	data: {
@@ -27,16 +36,16 @@ var sCatalogVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sContactVue = new Vue({
-	el: '#sContact',
+var sContentVue = new Vue({
+	el: '#sContent',
 	data: {
 		imgSRc: 'img/'
 	},
 	created: function created() {},
 	computed: {}
 });
-var sContentVue = new Vue({
-	el: '#sContent',
+var sContactVue = new Vue({
+	el: '#sContact',
 	data: {
 		imgSRc: 'img/'
 	},
@@ -60,14 +69,6 @@ var sFormVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var topLineVue = new Vue({
-	el: '#topLine',
-	data: {
-		imgSRc: 'img/'
-	},
-	created: function created() {},
-	computed: {}
-});
 var sThanksVue = new Vue({
 	el: '#sThanks',
 	data: {
@@ -77,11 +78,10 @@ var sThanksVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var header = new Vue({
-	el: '#header',
+var topLineVue = new Vue({
+	el: '#topLine',
 	data: {
-		imgSRc: 'img/',
-		a: a
+		imgSRc: 'img/'
 	},
 	created: function created() {},
 	computed: {}
