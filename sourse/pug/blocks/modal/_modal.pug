@@ -67,9 +67,10 @@ mixin modal()
 			+input('Иван', 'text', 'Как к вам обращаться?','name')(required)
 			+form-tabs()
 			+e.input-wrapper
-				+e.comment--js.text-center Задайте вопрос, если есть
+				+e.comment--js.text-center Напишите, комментарии, если хотите
 				+e.toggle-block--js
 					+input('Текст сообщения', 'textarea')
+			+e.specialist.h5.text-center Специалист компании &laquo;УралМаф&raquo; позвонит вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем&nbsp;пн-пт с&nbsp;07:00 до&nbsp;19:00&nbsp;(Мск)
 			+e.BUTTON.btn.btn(type="submit")
 				span.bg оформить заказ
 			+polite
@@ -162,7 +163,7 @@ mixin modal()
 							source(data-srcset="img/@1x/webp/packaging.webp", srcset="#", type=`image/webp`)
 							img(src="#" data-src="img/@1x/packaging.png", alt="")
 					.col-lg-5.align-self-center
-						.h5 Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;надежно упаковываем
+						.h5 Перед отправкой проверяем на&nbsp;брак&nbsp;и&nbsp;#[strong надежно упаковываем]
 						.h5 Используем воздушно-пузырчатую пленку&nbsp;и&nbsp;несколько слоев стрейч-пленки. Габаритные изделия перевозятся на&nbsp;европоддонах.
 				h3 
 					+icon('verificado')

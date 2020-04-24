@@ -233,8 +233,8 @@ function eventHandler() {
 		infinite: true,
 		arrows: true,
 		mobileFirst: true,
-		prevArrow: arrl2,
-		nextArrow: arrr2,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
 		// autoplay: true,
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive'
@@ -302,6 +302,10 @@ function eventHandler() {
 			"method": "post"
 		});
 	});
+	setTimeout(function () {
+		$(".sForm__founder img").attr('src', $(".sForm__founder img").data('src'));
+		$(".sForm__founder source").attr('srcset', $(".sForm__founder source").data('srcset'));
+	}, 2000);
 }
 
 ;
