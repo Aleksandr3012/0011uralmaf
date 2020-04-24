@@ -5,7 +5,7 @@ mixin itemProd(a, i, t, vz, height, width, ...items)
 		else
 			+e.availability--empty В наличии
 		+e.imgWrap
-			img(src="#" data-lazy=`img/@2x/flowerpot-${i}.png`, alt="")
+			img(src="#" data-lazy=`img/@2x/flowerpot-${i}.png`, alt="_____")
 		.h4= t
 			if vz
 				span= vz  
@@ -35,7 +35,7 @@ mixin itemProd(a, i, t, vz, height, width, ...items)
 			each item in items
 				+e.materialsWrap
 					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
-						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="")
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
 
 		.h5.text-center 1800 руб.*
 		+e.A.btn.btn.link-modal(href="#modalOrder") 
@@ -43,6 +43,429 @@ mixin itemProd(a, i, t, vz, height, width, ...items)
 
 
 
+
+mixin afina(a, i, t, vz, height, width, ...items)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img(src="#" data-lazy=`img/@2x/afina.jpg`, alt="Афина")
+		.h4= t
+			if vz
+				span= vz  
+			else
+				span вазон бетонный 
+		table
+			tr
+				td Высота: 
+				if height
+					td= height
+				else
+					td 300 мм.
+			tr
+				td Ширина: 
+				if width
+					td= width
+				else
+					td 400 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 55 кг.
+			block
+		+e.materials
+			each item in items
+				+e.materialsWrap
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
+
+		.h5.text-center 3.000 руб.*
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
+			span.bg Заказать
+
+			
+//- начало
+mixin venza(a, i, t, vz, height, width, ...items)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img(src="#" data-lazy=`img/@2x/venza.jpg`, alt="Венза")
+		.h4= t
+			if vz
+				span= vz  
+			else
+				span вазон бетонный 
+		table
+			tr
+				td Высота: 
+				if height
+					td= height
+				else
+					td 1000 мм.
+			tr
+				td Ширина: 
+				if width
+					td= width
+				else
+					td 530 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 252 кг.
+			block
+		+e.materials
+			each item in items
+				+e.materialsWrap
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
+
+		.h5.text-center 11.000 руб.*
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
+			span.bg Заказать
+//- конец
+			
+//- начало
+mixin shar(a, i, t, vz, height, width, ...items)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img(src="#" data-lazy=`img/@2x/shar.jpg`, alt="shar")
+		.h4= t
+			if vz
+				span= vz  
+			else
+				span вазон бетонный 
+		table
+			tr
+				td Высота: 
+				if height
+					td= height
+				else
+					td 450 мм.
+			tr
+				td Ширина: 
+				if width
+					td= width
+				else
+					td 600 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 210 кг.
+			block
+		+e.materials
+			each item in items
+				+e.materialsWrap
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
+
+		.h5.text-center 6.000 руб.*
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
+			span.bg Заказать
+//- конец
+
+
+mixin baleno(a, i, t, vz, height, width, ...items)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img(src="#" data-lazy=`img/@2x/baleno.jpg`, alt="Балено")
+		.h4= t
+			if vz
+				span= vz  
+			else
+				span вазон бетонный 
+		table
+			tr
+				td ВхШ: 
+				if height
+					td= height
+				else
+					td 400х400 мм.
+			tr
+				td Длина: 
+				if width
+					td= width
+				else
+					td 1200 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 265 кг.
+			block
+		+e.materials
+			each item in items
+				+e.materialsWrap
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
+
+		.h5.text-center 10.000 руб.*
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
+			span.bg Заказать
+
+
+mixin polusfera(a, i, t, vz, height, width, ...items)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img(src="#" data-lazy=`img/@2x/polusfera.jpg`, alt="polusfera")
+		.h4= t
+			if vz
+				span= vz  
+			else
+				span ограничитель парковки 
+		table
+			tr
+				td Высота: 
+				if height
+					td= height
+				else
+					td 250 мм.
+			tr
+				td Диаметр: 
+				if width
+					td= width
+				else
+					td 500 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 75 кг.
+			block
+		+e.materials
+			each item in items
+				+e.materialsWrap
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
+
+		.h5.text-center 3.500 руб.*
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
+			span.bg Заказать
+
+mixin sfera(a, i, t, vz, height, width, ...items)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img(src="#" data-lazy=`img/@2x/sfera.jpg`, alt="sfrea")
+		.h4= t
+			if vz
+				span= vz  
+			else
+				span ограничитель парковки 
+		table
+			tr
+				td Высота: 
+				if height
+					td= height
+				else
+					td 550 мм.
+			tr
+				td Диаметр: 
+				if width
+					td= width
+				else
+					td 600 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 150 кг.
+			block
+		+e.materials
+			each item in items
+				+e.materialsWrap
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
+
+		.h5.text-center 5.500 руб.*
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
+			span.bg Заказать
+
+//- начало
+mixin krishka(a, i, t, vz, height, width, ...items)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img(src="#" data-lazy=`img/@2x/krishka.jpg`, alt="krishka")
+		.h4= t
+			if vz
+				span= vz  
+			else
+				span парапет бетонный 
+		table
+			tr
+				td Высота: 
+				if height
+					td= height
+				else
+					td 55 мм.
+			tr
+				td Ширина: 
+				if width
+					td= width
+				else
+					td 270 мм.
+			tr
+				td Длина: 
+				if length
+					td= length
+				else
+					td 400 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 10 кг.
+			block
+		+e.materials
+			each item in items
+				+e.materialsWrap
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
+
+		.h5.text-center 250 руб.*
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
+			span.bg Заказать
+//- конец
+
+//- начало
+mixin navershie(a, i, t, vz, height, width, ...items)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img(src="#" data-lazy=`img/@2x/navershie.jpg`, alt="navershie")
+		.h4= t
+			if vz
+				span= vz  
+			else
+				span парапет бетонный 
+		table
+			tr
+				td Высота: 
+				if height
+					td= height
+				else
+					td 120 мм.
+			tr
+				td Ширина: 
+				if width
+					td= width
+				else
+					td 450 мм.
+			tr
+				td Длина: 
+				if length
+					td= length
+				else
+					td 450 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 16 кг.
+			block
+		+e.materials
+			each item in items
+				+e.materialsWrap
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
+
+		.h5.text-center 750 руб.*
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
+			span.bg Заказать
+//- конец
+
+//- начало
+mixin kirat(a, i, t, vz, height, width, ...items)
+	+b.itemProd
+		if a
+			+e.availability В наличии
+		else
+			+e.availability--empty В наличии
+		+e.imgWrap
+			img(src="#" data-lazy=`img/@2x/kirat.jpg`, alt="kirat")
+		.h4= t
+			if vz
+				span= vz  
+			else
+				span Скамейка 
+		table
+			tr
+				td Высота: 
+				if height
+					td= height
+				else
+					td 450 мм.
+			tr
+				td Ширина: 
+				if width
+					td= width
+				else
+					td 400 мм.
+			tr
+				td Длина: 
+				if length
+					td= length
+				else
+					td 400 мм.
+			tr
+				td Вес: 
+				if weight
+					td= weight
+				else
+					td 190 кг. (без досок)
+			block
+		+e.materials
+			each item in items
+				+e.materialsWrap
+					a(href=`img/@2x/material-${item}.jpg` data-fancybox=`materials-${i}`)
+						img.res-i(src="#" data-lazy=`img/@0.5x/material-${item}.jpg` alt="фактура")
+
+		.h5.text-center 11.000 руб.*
+		+e.A.btn.btn.link-modal(href="#modalOrder") 
+			span.bg Заказать
+//- конец
+
+
+
+//-====================================================
+//- Табы
 mixin sCatalog()
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
@@ -56,91 +479,84 @@ mixin sCatalog()
 					+e.btn Парапет
 					+e.btn Ограничитель парковки
 					+e.btn Скамейки
-					+e.btn Урны
+					//-+e.btn Урны
 				+e.wrap
 					+e.content.vazons.active
 						+e.vazons
 							+icon('info')
 							p Во&nbsp;всех вазонах делаем дренажные отверстия для&nbsp;воды
+
+
+							//-  Вазоны  ====================================================
 						.slider-wrap
 							.slider--js
 								.slide
-									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
+									+afina('a','1','«Афина»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','2','«Болено»','','','', 1,2,3,4)
+									+baleno('a','2','«Балено»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','3','«Венза»','','','', 1,2,3,4)
+									+venza('a','3','«Венза»','','','', 1,2,3,4)
+								.slide
+									+shar('a','4','«Шар»','','','', 1,2,3,4)
 
-								//- .slide
-								//- 	+itemProd('','3','«Венза»')
-
-							.control-wrap
-						+e.A.allProd.btn(href="#") 
-							span.bg Смотреть все вазоны
-						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
-					+e.content
-						
-						.slider-wrap
-							.slider--js
-								.slide
-									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
-								.slide
-									+itemProd('','2','«Болено»','','','', 1,2,3,4)
-								.slide
-									+itemProd('','3','«Венза»','','','', 1,2,3,4)
 
 							.control-wrap
-						+e.A.allProd.btn(href="#") 
+						//-+e.A.allProd.btn(href="#") 
 							span.bg Смотреть все вазоны
 						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
 					+e.content
 						
+
+
+						//-  Парапет  ====================================================
 						.slider-wrap
 							.slider--js
 								.slide
-									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
+									+krishka('a','1','«Крышка на забор»','','','', 1,2,3,4)
 								.slide
-									+itemProd('','2','«Болено»','','','', 1,2,3,4)
-								.slide
-									+itemProd('','3','«Венза»','','','', 1,2,3,4)
+									+navershie('a','1','«Навершие на забор»','','','', 1,2,3,4)
+
 							.control-wrap
-						+e.A.allProd.btn(href="#") 
+						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
+					+e.content
+
+
+						//-  Ограничители  ====================================================
+						.slider-wrap
+							.slider--js
+								.slide
+									+polusfera('a','1','«Полусфера»','','','', 1,2,3,4)
+								.slide
+									+sfera('a','1','«Сфера»','','','', 1,2,3,4)
+							.control-wrap
+						//-+e.A.allProd.btn(href="#") 
 							span.bg Смотреть все вазоны
 						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
 					+e.content
-						
+
+						//-  Скамейки  ====================================================
 						.slider-wrap
 							.slider--js
 								.slide
-									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
-								.slide
-									+itemProd('','2','«Болено»','','','', 1,2,3,4)
-								.slide
-									+itemProd('','3','«Венза»','','','', 1,2,3,4)
+									+kirat('a','1','«Кират» (комплект)','','','', 1,2,3,4)
 							.control-wrap
-						+e.A.allProd.btn(href="#") 
-							span.bg Смотреть все вазоны
 						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
-					+e.content
-						
+					
+					
+					//-  Урны  ====================================================
+					//-+e.content
 						.slider-wrap
 							.slider--js
 								.slide
 									+itemProd('a','1','«Афина»','','','', 1,2,3,4)
-								.slide
-									+itemProd('','2','«Болено»','','','', 1,2,3,4)
-								.slide
-									+itemProd('','3','«Венза»','','','', 1,2,3,4)
 							.control-wrap
-						+e.A.allProd.btn(href="#") 
-							span.bg Смотреть все вазоны
 						.h6 *Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.
 				+e.caption2.d-md-none
 					+e.btn.active Вазоны бетонные цветочные
 					+e.btn Парапет
 					+e.btn Ограничитель парковки
 					+e.btn Скамейки
-					+e.btn Урны
+					//-+e.btn Урны
 
 
 

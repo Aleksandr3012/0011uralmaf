@@ -30,9 +30,9 @@
 			font-size: 1.2rem;
 		}
 
-		&__advantages {
+		//&__advantages {
 			// padding-bottom: 1.125rem
-		}
+		//}
 
 		&__imgWrap {
 			top: -40%;
@@ -89,7 +89,7 @@
 		}
 
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(100);
+			margin-bottom: rem(75);
 		}
 
 		@include media-breakpoint-down(md) {
@@ -170,7 +170,7 @@
 			padding-left: rem(50);
 		}
 
-		padding-bottom: rem(80);
+		padding-bottom: rem(50);
 	}
 
 	// &__btnWrap {

@@ -15,15 +15,15 @@
 		///от кого письмо
 				$mail->setFrom('info@info.com');
 	
-				$mail->addAddress('wol1414@gmail.com');
-				// $mail->addAddress('spike.mgn@gmail.com');
-				// $mail->addAddress('grouplend@mail.ru');
-				// $mail->addAddress('rocketsstat@yandex.ru');
+				//$mail->addAddress('wol1414@gmail.com');
+				 $mail->addAddress('spike.mgn@gmail.com');
+					$mail->addAddress('mgn-art@mail.ru');
+				 $mail->addAddress('rocketsstat@yandex.ru');
 				// $mail->addAddress('455203@mail.ru');
 	
 	
 		//Субъект
-				$mail->Subject = 'Заявка с сайта groupv.ru (Верстаки)';
+				$mail->Subject = 'Заявка с сайта uralmaf.ru (УралМаф)';
 	
 				$time = date('d.m.Y в H:i');
 				$html = '
@@ -142,20 +142,21 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Урал Маф</title>
-		<meta name="description" content="о чем страница">
+		<meta name="description" content="Производим вазоны, парапет, ограничители парквовки, скамейки, урны из мытого бетона">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
 		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png"><meta name="format-detection" content="telephone=no">
-		<link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
+		<link rel="image_src" href="http://uralmaf.ru/img/soc-logo.png">
 		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="content">
-		<meta property="og:title" content="content">
-		<meta property="og:description" content="content">
+		<meta property="og:site_name" content="УралМаф">
+		<meta property="og:title" content="УралМаф, малые архитектурные формы из мытого бетона с доставкой по России и СНГ">
+		<meta property="og:description" content="Производим вазоны, парапет, ограничители парквовки, скамейки, урны из мытого бетона">
 		<meta property="og:url" content="content">
 		<meta property="og:locale" content="ru_RU">
-		<meta property="og:image" content="path/to/image.jpg">
+		<meta property="og:image" content="img/image.jpg">
 		<meta property="og:image:width" content="968">
 		<meta property="og:image:height" content="504">
+		<meta name="yandex-verification" content="ca730c759c1facf4">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
@@ -197,7 +198,7 @@
 											<svg class="icon icon-viber ">
 												<use xlink:href="img/svg/sprite.svg#viber"></use>
 											</svg></a>
-										</div><a class="topLine__tel" href="tel:+73519454515">7 (3519) 45-45-15</a>
+										</div><a class="topLine__tel" href="tel:+73519454515">7 (912) 805-45-15</a>
 									</div><a class="topLine__call link-modal" href="#modal-call" data-order="Заказать  звонок менеджера">Заказать  звонок <span class="d-none d-lg-inline">менеджера</span></a>
 								</div>
 								<div class="col-lg d-flex">
@@ -280,19 +281,18 @@
 						<div class="mobileOrder-5 col-md-5 col-lg-4">
 							<div class="footer__adres">Юридический адерс и реквизиты
 							</div>
-							<p>455026, Челябинская область, г.&nbsp;Магнитогорск, ул. Клары Цеткин,&nbsp;д.12/1 ИНН&nbsp;XXXXXXXXXX ОГРН&nbsp;XXXXXXXXXXXXXX</p>
+							<p>455026, Челябинская область, г.&nbsp;Магнитогорск, ул. Клары Цеткин,&nbsp;д.12/1 </p>
 						</div>
 						<div class="col-lg-2"></div>
 						<div class="mobileOrder-6 col-md-4 col-lg-3">
 							<ul class="footer__polite"> 
-								<li><a href="#">Политика конфиденциальности</a></li>
-								<li><a href="#">Пользовательское соглашение</a></li>
-								<li><a href="#">Карта сайта</a></li>
+								<li><a href="privacy-policy.pdf" target="_blank">Политика конфиденциальности</a></li>
+								<li><a href="processing-conditions.pdf" target="_blank">Пользовательское соглашение</a></li>
 							</ul>
 						</div>
 						<div class="mobileOrder-7 col-md-7 col-lg-3">
-							<div class="footer__develop">Разработка и продвижение сайта: <a href="#">Веб-студия «Барс»</a>
-							</div><a class="develop-link" href="#" target="_blank"><span class="develop-link__panel"><img class="img-1 lazy" src="#" data-src="img/svg/hand.svg" alt=""/><img class="img-2 lazy" src="#" data-src="img/svg/logo-text.svg" alt=""/></span></a>
+							<div class="footer__develop">Разработка и продвижение сайта: <a href="https://studiobars.ru" target="_blank">Веб-студия «Барс»</a>
+							</div><a class="develop-link" href="https://studiobars.ru" target="_blank"><span class="develop-link__panel"><img class="img-1 lazy" src="#" data-src="img/svg/hand.svg" alt=""/><img class="img-2 lazy" src="#" data-src="img/svg/logo-text.svg" alt=""/></span></a>
 						</div>
 					</div>
 				</div>
@@ -721,7 +721,7 @@
 										<source data-srcset="img/@1x/webp/founder.webp" type="image/webp" srcset="#"/><img src="#" data-src="img/@1x/founder.png" alt=""/>
 									</picture>
 									<div class="sForm__label">
-										<div class="sForm__name">Михаил Геннадьевич
+										<div class="sForm__name">Михаил Паламарчук
 										</div>
 										<div class="sForm__position">Сооснователь компании ООО «УралМаф»
 										</div>
@@ -729,7 +729,7 @@
 								</div>
 								<div class="sForm__founderSm d-lg-none"><img class="sForm__founderImg lazy-modal lazy-modal--js" src="#" data-src="img/@2x/founder-sm.png" alt="" role="presentation"/>
 									<div class="sForm__nameWrap">
-										<div class="sForm__nameSm">Михаил Геннадьевич
+										<div class="sForm__nameSm">Михаил Паламарчук
 										</div>
 										<div class="sForm__positionSm">Сооснователь компании ООО&nbsp;«УралМаф»
 										</div>
@@ -825,6 +825,6 @@
 		<script src="libs/svg4everybody/svg4everybody.min.js"></script>
 		<!-- /for svg libs-->
 		<script src="libs/inputmask/jquery.inputmask.min.js"></script>
-		<script src="js/common.js"></script>
+		<script src="js/common.js"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(62036422, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62036422" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 	</body>
 </html>

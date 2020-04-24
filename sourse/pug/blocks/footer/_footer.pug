@@ -30,16 +30,16 @@ mixin footer()
 					+e.A.call.link-modal(href="#modal-call" data-order="Заказать  звонок менеджера") Заказать звонок менеджера
 				.mobileOrder-5.col-md-5.col-lg-4
 					+e.adres Юридический адерс и реквизиты
-					p 455026, Челябинская область, г.&nbsp;Магнитогорск, ул. Клары Цеткин,&nbsp;д.12/1 ИНН&nbsp;XXXXXXXXXX ОГРН&nbsp;XXXXXXXXXXXXXX
+					p 455026, Челябинская область, г.&nbsp;Магнитогорск, ул. Клары Цеткин,&nbsp;д.12/1 
 				.col-lg-2
 				.mobileOrder-6.col-md-4.col-lg-3
 					+e.UL.polite 
-						li: a(href="#") Политика конфиденциальности
-						li: a(href="#") Пользовательское соглашение
-						li: a(href="#") Карта сайта
+						li: a(href="privacy-policy.pdf" target="_blank") Политика конфиденциальности
+						li: a(href="processing-conditions.pdf" target="_blank") Пользовательское соглашение
+						//-li: a(href="#") Карта сайта
 				.mobileOrder-7.col-md-7.col-lg-3
-					+e.develop Разработка и продвижение сайта: #[a(href="#") Веб-студия «Барс»]
-					+b.develop-link(href="#" target="_blank")
+					+e.develop Разработка и продвижение сайта: #[a(href="https://studiobars.ru" target="_blank") Веб-студия «Барс»]
+					+b.develop-link(href="https://studiobars.ru" target="_blank")
 						+e.panel
 							img.img-1.lazy(src="#" data-src="img/svg/hand.svg", alt="")
 							img.img-2.lazy(src="#" data-src="img/svg/logo-text.svg", alt="")
