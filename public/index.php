@@ -210,9 +210,7 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/afina.jpg" alt="Афина"/>
-												</div>
+												</div><a class="itemProd__imgWrap" href="img/@2x/afina-x.jpg" data-fancybox="gal-afina"> <img src="#" data-lazy="img/@2x/afina.jpg" alt="Афина"/></a>
 												<div class="h4">«Афина»<span>вазон бетонный </span>
 												</div>
 												<table>
@@ -245,9 +243,7 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/baleno.jpg" alt="Балено"/>
-												</div>
+												</div><a class="itemProd__imgWrap" href="img/@2x/baleno-x.jpg" data-fancybox="gal-baleno"> <img src="#" data-lazy="img/@2x/baleno.jpg" alt="Балено"/></a>
 												<div class="h4">«Балено»<span>вазон бетонный </span>
 												</div>
 												<table>
@@ -280,9 +276,7 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/venza.jpg" alt="Венза"/>
-												</div>
+												</div><a class="itemProd__imgWrap" href="img/@2x/venza-x.jpg" data-fancybox="gal-venza"> <img src="#" data-lazy="img/@2x/venza.jpg" alt="Венза"/></a>
 												<div class="h4">«Венза»<span>вазон бетонный </span>
 												</div>
 												<table>
@@ -315,9 +309,7 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/shar.jpg" alt="shar"/>
-												</div>
+												</div><a class="itemProd__imgWrap" href="img/@2x/shar-x.jpg" data-fancybox="gal-shar"> <img src="#" data-lazy="img/@2x/shar.jpg" alt="shar"/></a>
 												<div class="h4">«Шар»<span>вазон бетонный </span>
 												</div>
 												<table>
@@ -358,9 +350,7 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/krishka.jpg" alt="krishka"/>
-												</div>
+												</div><a class="itemProd__imgWrap" href="img/@2x/krishka-x.jpg" data-fancybox="gal-krishka"> <img src="#" data-lazy="img/@2x/krishka.jpg" alt="krishka"/></a>
 												<div class="h4">«Крышка на забор»<span>парапет бетонный </span>
 												</div>
 												<table>
@@ -397,9 +387,7 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/navershie.jpg" alt="navershie"/>
-												</div>
+												</div><a class="itemProd__imgWrap" href="img/@2x/navershie-x.jpg" data-fancybox="gal-navershie"> <img src="#" data-lazy="img/@2x/navershie.jpg" alt="navershie"/></a>
 												<div class="h4">«Навершие на забор»<span>парапет бетонный </span>
 												</div>
 												<table>
@@ -444,9 +432,7 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/polusfera.jpg" alt="polusfera"/>
-												</div>
+												</div><a class="itemProd__imgWrap" href="img/@2x/polusfera-x.jpg" data-fancybox="gal-polusfera"> <img src="#" data-lazy="img/@2x/polusfera.jpg" alt="polusfera"/></a>
 												<div class="h4">«Полусфера»<span>ограничитель парковки </span>
 												</div>
 												<table>
@@ -479,9 +465,7 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/sfera.jpg" alt="sfrea"/>
-												</div>
+												</div><a class="itemProd__imgWrap" href="img/@2x/sfera-x.jpg" data-fancybox="gal-sfera"> <img src="#" data-lazy="img/@2x/sfera.jpg" alt="sfrea"/></a>
 												<div class="h4">«Сфера»<span>ограничитель парковки </span>
 												</div>
 												<table>
@@ -522,9 +506,7 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/kirat.jpg" alt="kirat"/>
-												</div>
+												</div><a class="itemProd__imgWrap" href="img/@2x/kirat-x.jpg" data-fancybox="gal-kirat"> <img src="#" data-lazy="img/@2x/kirat.jpg" alt="kirat"/></a>
 												<div class="h4">«Кират» (комплект)<span>Скамейка </span>
 												</div>
 												<table>
