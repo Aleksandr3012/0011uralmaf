@@ -3,6 +3,18 @@
 // .footer scripts goes here
 var header = new Vue({
 	el: '#header',
+<<<<<<< HEAD
+=======
+	data: {
+		imgSRc: 'img/',
+		a: a
+	},
+	created: function created() {},
+	computed: {}
+});
+var headerBlockVue = new Vue({
+	el: '#headerBlock',
+>>>>>>> 11255e48928af2c0f07ab99834d4fc6b445fdcd7
 	data: {
 		imgSRc: 'img/',
 		a: a
@@ -61,6 +73,7 @@ var sContentVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
+<<<<<<< HEAD
 var sFormVue = new Vue({
 	el: '#sForm',
 	data: {
@@ -69,6 +82,8 @@ var sFormVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
+=======
+>>>>>>> 11255e48928af2c0f07ab99834d4fc6b445fdcd7
 var sThanksVue = new Vue({
 	el: '#sThanks',
 	data: {

@@ -13,7 +13,7 @@
 
 	@media (max-width: 1400.98px) and (min-width: 1200px) {
 		// display: none;
-		padding-top: rem(50);
+		padding-top: rem(60);
 		// padding-bottom: rem(0 / 2);
 
 		h1 {
@@ -26,13 +26,19 @@
 		}
 
 		.headerBlock__subtitle {
-			margin-bottom: 3.5rem;
+			// margin-bottom: rem(100);
 			font-size: 1.2rem;
 		}
 
+<<<<<<< HEAD
 		//&__advantages {
 			// padding-bottom: 1.125rem
 		//}
+=======
+		&__advantages {
+			// padding-bottom: rem(80);
+		}
+>>>>>>> 11255e48928af2c0f07ab99834d4fc6b445fdcd7
 
 		&__imgWrap {
 			top: -40%;
@@ -89,7 +95,11 @@
 		}
 
 		@include media-breakpoint-up(lg) {
+<<<<<<< HEAD
 			margin-bottom: rem(75);
+=======
+			margin-bottom: rem(80);
+>>>>>>> 11255e48928af2c0f07ab99834d4fc6b445fdcd7
 		}
 
 		@include media-breakpoint-down(md) {
@@ -167,7 +177,8 @@
 		padding-left: rem(30);
 
 		@include media-breakpoint-up(xl) {
-			padding-left: rem(50);
+			padding-left: rem(70);
+			margin-right: rem(-10);
 		}
 
 		padding-bottom: rem(50);
