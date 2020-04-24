@@ -1,24 +1,24 @@
-<?php 
-$title = "МАФы&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
-if(isset($_GET['utm_campaign'])){ 
-if($_GET['utm_campaign'] == 'beton'){ 
-$title = "Вазоны&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
-} 
-else if($_GET['utm_campaign'] == 'parkovka'){ 
-$title = "Органичители парковки </br> <span>из&nbsp;мытого бетона и&nbsp;крошки камней</span>"; 
-} 
-else if($_GET['utm_campaign'] == 'skam'){ 
-$title = "Скамейки&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
-}
-else if($_GET['utm_campaign'] == 'urn'){ 
-$title = "Урны&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
-}
-else if($_GET['utm_campaign'] == 'arch'){ 
-$title = "Архитектурный бетон <span>из&nbsp;крошки натуральных камней</span>"; 
-}
-} 
-?> 
 <!DOCTYPE html>
+<?php 
+	$title = "МАФы&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
+	if(isset($_GET['utm_campaign'])){ 
+	if($_GET['utm_campaign'] == 'beton'){ 
+	$title = "Вазоны&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
+	} 
+	else if($_GET['utm_campaign'] == 'parkovka'){ 
+	$title = "Органичители парковки </br> <span>из&nbsp;мытого бетона и&nbsp;крошки камней</span>"; 
+	} 
+	else if($_GET['utm_campaign'] == 'skam'){ 
+	$title = "Скамейки&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
+	}
+	else if($_GET['utm_campaign'] == 'urn'){ 
+	$title = "Урны&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
+	}
+	else if($_GET['utm_campaign'] == 'arch'){ 
+	$title = "Архитектурный бетон <span>из&nbsp;крошки натуральных камней</span>"; 
+	}
+	} 
+	?>
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
@@ -40,7 +40,6 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 		<meta name="yandex-verification" content="ca730c759c1facf4">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
-		<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
@@ -103,8 +102,8 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 						<div class="container">
 							<div class="row">
 								<div class="col-lg-7 col-xl-6">
-									<h1><?php echo $title;?></h1>
-									
+									<h1>
+										 <?php echo $title;?></h1>
 									<div class="headerBlock__subtitle">Для ландшафтного дизайна улиц и&nbsp;парков, школ и&nbsp;детских садов, торговых и&nbsp;бизнес-центров, жилых комплексов и&nbsp;загородных домов
 									</div>
 								</div>
@@ -212,7 +211,7 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/afina.png" alt="Афина"/>
+												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/afina.jpg" alt="Афина"/>
 												</div>
 												<div class="h4">«Афина»<span>вазон бетонный </span>
 												</div>
@@ -247,7 +246,7 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/baleno.png" alt="Балено"/>
+												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/baleno.jpg" alt="Балено"/>
 												</div>
 												<div class="h4">«Балено»<span>вазон бетонный </span>
 												</div>
@@ -282,7 +281,7 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/venza.png" alt="Венза"/>
+												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/venza.jpg" alt="Венза"/>
 												</div>
 												<div class="h4">«Венза»<span>вазон бетонный </span>
 												</div>
@@ -317,7 +316,7 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/shar.png" alt="shar"/>
+												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/shar.jpg" alt="shar"/>
 												</div>
 												<div class="h4">«Шар»<span>вазон бетонный </span>
 												</div>
@@ -360,7 +359,7 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/krishka.png" alt="krishka"/>
+												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/krishka.jpg" alt="krishka"/>
 												</div>
 												<div class="h4">«Крышка на забор»<span>парапет бетонный </span>
 												</div>
@@ -399,7 +398,7 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/navershie.png" alt="navershie"/>
+												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/navershie.jpg" alt="navershie"/>
 												</div>
 												<div class="h4">«Навершие на забор»<span>парапет бетонный </span>
 												</div>
@@ -446,7 +445,7 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/polusfera.png" alt="polusfera"/>
+												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/polusfera.jpg" alt="polusfera"/>
 												</div>
 												<div class="h4">«Полусфера»<span>ограничитель парковки </span>
 												</div>
@@ -481,7 +480,7 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/sfera.png" alt="sfrea"/>
+												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/sfera.jpg" alt="sfrea"/>
 												</div>
 												<div class="h4">«Сфера»<span>ограничитель парковки </span>
 												</div>
@@ -524,9 +523,9 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
 												</div>
-												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/kirat.png" alt="kirat"/>
+												<div class="itemProd__imgWrap"><img src="#" data-lazy="img/@2x/kirat.jpg" alt="kirat"/>
 												</div>
-												<div class="h4">«Кират» (комплект)<span>форма для скамейки </span>
+												<div class="h4">«Кират» (комплект)<span>Скамейка </span>
 												</div>
 												<table>
 													<tr>
@@ -594,11 +593,10 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 					<div class="h4">Расскажите о&nbsp;задаче&nbsp;&mdash; рассчитаем стоимость&nbsp;изготовления изделий&nbsp;и&nbsp;подготовим коммерческое&nbsp;предложение</div>
 					<div class="row">
 						<div class="sForm__col col-lg-6">
-							<div class="sForm__imgWrap d-none d-lg-block">
-								<!-- picture-->
-								<picture class="sForm__founder"> <img src="img/@2x/founder.png" alt=""/>
-								</picture>
-								<!-- /picture-->
+							<div class="sForm__imgWrap d-none d-lg-block"><picture class=" sForm__founder"> 
+<source srcset="#" data-srcset="img/@2x/webp/founder.webp" type="image/webp">
+<img src="#" data-src="img/@2x/founder.png" alt="">
+</picture>
 								<div class="sForm__label">
 									<div class="sForm__name">Михаил Паламарчук
 									</div>
@@ -606,14 +604,15 @@ $title = "Архитектурный бетон <span>из&nbsp;крошки н�
 									</div>
 								</div>
 							</div>
-							<div class="sForm__founderSm d-lg-none"><img class="sForm__founderImg lazy" src="#" data-src="img/@2x/founder-sm.png" alt="Михаил Паламарчук" title=""/>
+							<picture class="sForm__founderSm d-lg-none lazy">
+								<source media="(min-width: 576px)" srcset="#" data-srcset="img/@2x/webp/founder-sm.webp" type="image/webp"/><img class="sForm__founderImg" src="#" data-src="img/@2x/founder-sm.png" alt="" role="presentation"/>
 								<div class="sForm__nameWrap">
 									<div class="sForm__nameSm">Михаил Паламарчук
 									</div>
 									<div class="sForm__positionSm">Сооснователь компании ООО&nbsp;«УралМаф»
 									</div>
 								</div>
-							</div>
+							</picture>
 						</div>
 						<div class="col">
 							<div class="sForm__head-text"> 

@@ -30,15 +30,9 @@
 			font-size: 1.2rem;
 		}
 
-<<<<<<< HEAD
-		//&__advantages {
-			// padding-bottom: 1.125rem
-		//}
-=======
 		&__advantages {
 			// padding-bottom: rem(80);
 		}
->>>>>>> 11255e48928af2c0f07ab99834d4fc6b445fdcd7
 
 		&__imgWrap {
 			top: -40%;
@@ -95,11 +89,7 @@
 		}
 
 		@include media-breakpoint-up(lg) {
-<<<<<<< HEAD
-			margin-bottom: rem(75);
-=======
 			margin-bottom: rem(80);
->>>>>>> 11255e48928af2c0f07ab99834d4fc6b445fdcd7
 		}
 
 		@include media-breakpoint-down(md) {

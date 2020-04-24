@@ -11,8 +11,31 @@ block variables
 block title
 	- let  title= 'УралМаф, малые архитектурные формы из мытого бетона с доставкой по России и СНГ'
 	title= title
+block php
+	.
+		<?php 
+			$title = "МАФы&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
+			if(isset($_GET['utm_campaign'])){ 
+			if($_GET['utm_campaign'] == 'beton'){ 
+			$title = "Вазоны&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
+			} 
+			else if($_GET['utm_campaign'] == 'parkovka'){ 
+			$title = "Органичители парковки </br> <span>из&nbsp;мытого бетона и&nbsp;крошки камней</span>"; 
+			} 
+			else if($_GET['utm_campaign'] == 'skam'){ 
+			$title = "Скамейки&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
+			}
+			else if($_GET['utm_campaign'] == 'urn'){ 
+			$title = "Урны&nbsp;из&nbsp;мытого бетона <span>и&nbsp;крошки натуральных камней</span>"; 
+			}
+			else if($_GET['utm_campaign'] == 'arch'){ 
+			$title = "Архитектурный бетон <span>из&nbsp;крошки натуральных камней</span>"; 
+			}
+			} 
+			?>
 block pagecontent 
 	//- +mob-mnu()
+	
 	+header()
 		+pic('header-bg.jpg', 'bg', 'lazy')(class="picture-bg")
 		+topLine()

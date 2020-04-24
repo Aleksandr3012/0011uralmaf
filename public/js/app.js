@@ -3,18 +3,6 @@
 // .footer scripts goes here
 var header = new Vue({
 	el: '#header',
-<<<<<<< HEAD
-=======
-	data: {
-		imgSRc: 'img/',
-		a: a
-	},
-	created: function created() {},
-	computed: {}
-});
-var headerBlockVue = new Vue({
-	el: '#headerBlock',
->>>>>>> 11255e48928af2c0f07ab99834d4fc6b445fdcd7
 	data: {
 		imgSRc: 'img/',
 		a: a
@@ -30,8 +18,8 @@ var headerBlockVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sCatalogVue = new Vue({
-	el: '#sCatalog',
+var sAdvantagesVue = new Vue({
+	el: '#sAdvantages',
 	data: {
 		imgSRc: 'img/'
 	},
@@ -39,8 +27,8 @@ var sCatalogVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sAdvantagesVue = new Vue({
-	el: '#sAdvantages',
+var sCatalogVue = new Vue({
+	el: '#sCatalog',
 	data: {
 		imgSRc: 'img/'
 	},
@@ -56,6 +44,14 @@ var sContactVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
+var sContentVue = new Vue({
+	el: '#sContent',
+	data: {
+		imgSRc: 'img/'
+	},
+	created: function created() {},
+	computed: {}
+});
 var sDeliveryVue = new Vue({
 	el: '#sDelivery',
 	data: {
@@ -65,15 +61,6 @@ var sDeliveryVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sContentVue = new Vue({
-	el: '#sContent',
-	data: {
-		imgSRc: 'img/'
-	},
-	created: function created() {},
-	computed: {}
-});
-<<<<<<< HEAD
 var sFormVue = new Vue({
 	el: '#sForm',
 	data: {
@@ -82,8 +69,6 @@ var sFormVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-=======
->>>>>>> 11255e48928af2c0f07ab99834d4fc6b445fdcd7
 var sThanksVue = new Vue({
 	el: '#sThanks',
 	data: {

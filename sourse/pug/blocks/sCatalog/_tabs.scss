@@ -20,29 +20,33 @@
 
 		@media screen and (max-width: 474px) {
 			margin-left: 0;
+
 			&:nth-child(2n) {
 				margin-left: rem(14);
 			}
 		}
 
 		width: rem(138px);
+
 		@include media-breakpoint-down(sm) {
 			margin-left: rem(14);
 		}
+
 		@include media-breakpoint-only(lg) {
 			width: rem(180px);
 			// margin-left: rem(14px);
 		}
-		@include media-breakpoint-only(lg) {
 
-		}
+		@include media-breakpoint-only(lg) {}
 
 		min-height: rem(47px);
+
 		// padding-left: rem(3);
 		// padding-right: rem(3);
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(14);
 		}
+
 		margin-bottom: rem(15);
 		text-align: center;
 		display: flex;
@@ -146,11 +150,13 @@
 		// &::before {
 		// 	height: rem(29);
 		// }
-		
+
 		margin-top: rem(25);
-		@include media-breakpoint-up(lg){
+
+		@include media-breakpoint-up(lg) {
 			margin-top: rem(63);
 		}
+
 		.bg {
 			max-height: rem(80);
 		}
@@ -194,13 +200,22 @@
 		}
 
 		&.l {
-			left: 76%;
+			left: 0%;
+
 			// transform: rotate(180deg);
+			svg {
+
+				transform: rotate(0);
+			}
 		}
 
 		&.r {
-			// transform: rotate(180deg);
-			right: 75%;
+			right: 0%;
+
+			svg {
+
+				transform: rotateY(180deg);
+			}
 		}
 	}
 
@@ -273,12 +288,15 @@
 		@include media-breakpoint-down(lg) {
 			margin-left: rem(0);
 		}
-		@include media-breakpoint-down(md){
+
+		@include media-breakpoint-down(md) {
 			flex: 0 0 50%;
 			max-width: 50%;
+
 			&:nth-child(2n+1) {
 				border-radius: 6px 0 0 6px;
 			}
+
 			&:nth-child(2n) {
 				border-radius: 0 6px 6px 0;
 			}

@@ -146,7 +146,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/01.png);"></div>');
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/011.png);"></div>');
 	// /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
@@ -233,8 +233,8 @@ function eventHandler() {
 		infinite: true,
 		arrows: true,
 		mobileFirst: true,
-		prevArrow: arrl2,
-		nextArrow: arrr2,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
 		// autoplay: true,
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive'
@@ -302,6 +302,10 @@ function eventHandler() {
 			"method": "post"
 		});
 	});
+	setTimeout(function () {
+		$(".sForm__founder img").attr('src', $(".sForm__founder img").data('src'));
+		$(".sForm__founder source").attr('srcset', $(".sForm__founder source").data('srcset'));
+	}, 2000);
 }
 
 ;

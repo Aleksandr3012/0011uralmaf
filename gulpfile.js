@@ -5,6 +5,7 @@
 global.$ = {
 	gulp: require('gulp'),
 	del: require('del'),
+
 	babel: require('gulp-babel'),
 	cleanCSS: require('gulp-clean-css'),
 	gulpif: require('gulp-if'),
