@@ -782,11 +782,10 @@
 					<div class="h4">Расскажите о&nbsp;задаче&nbsp;&mdash; рассчитаем стоимость&nbsp;изготовления изделий&nbsp;и&nbsp;подготовим коммерческое&nbsp;предложение</div>
 					<div class="row">
 						<div class="sForm__col col-lg-6">
-							<div class="sForm__imgWrap d-none d-lg-block">
-								<!-- picture-->
-								<picture class="sForm__founder"> <img src="img/@2x/founder.png" alt=""/>
-								</picture>
-								<!-- /picture-->
+							<div class="sForm__imgWrap d-none d-lg-block"><picture class="lazy sForm__founder"> 
+<source srcset="#" data-srcset="img/@2x/webp/founder.webp" type="image/webp">
+<img src="#" data-src="img/@2x/founder.png" alt="">
+</picture>
 								<div class="sForm__label">
 									<div class="sForm__name">Михаил Геннадьевич
 									</div>
@@ -794,14 +793,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="sForm__founderSm d-lg-none"><img class="sForm__founderImg lazy" src="#" data-src="img/@2x/founder-sm.png" alt="" role="presentation"/>
+							<picture class="sForm__founderSm d-lg-none lazy">
+								<source media="(min-width: 576px)" srcset="#" data-srcset="img/@2x/webp/founder-sm.webp" type="image/webp"/><img class="sForm__founderImg" src="#" data-src="img/@2x/founder-sm.png" alt="" role="presentation"/>
 								<div class="sForm__nameWrap">
 									<div class="sForm__nameSm">Михаил Геннадьевич
 									</div>
 									<div class="sForm__positionSm">Сооснователь компании ООО&nbsp;«УралМаф»
 									</div>
 								</div>
-							</div>
+							</picture>
 						</div>
 						<div class="col">
 							<div class="sForm__head-text"> 

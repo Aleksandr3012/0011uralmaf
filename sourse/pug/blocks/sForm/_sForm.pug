@@ -14,13 +14,18 @@ mixin sForm(h2,h4)
 			.row
 				+e.col.col-lg-6
 					+e.imgWrap.d-none.d-lg-block
-						+pic('founder.png', '', '', '')(class="sForm__founder")
+						<picture class="lazy sForm__founder"> 
+							<source srcset="#" data-srcset="img/@2x/webp/founder.webp" type="image/webp">
+							<img src="#" data-src="img/@2x/founder.png" alt="">
+						</picture>
+						//- +pic('founder.png', '', 'lazy', '')(class="sForm__founder")
 						//- +e.founder.lazy(src="#" data-src="img/@2x/founder.png", alt="")
 						+e.label
 							+e.name Михаил Геннадьевич
 							+e.position Сооснователь компании ООО «УралМаф»
-					+e.founderSm.d-lg-none
-						+e.founderImg.lazy(src="#" data-src="img/@2x/founder-sm.png", alt="")
+					+e.founderSm.d-lg-none.lazy.PICTURE
+						source(media="(min-width: 576px)", srcset="#" data-srcset="img/@2x/webp/founder-sm.webp" type=`image/webp` )
+						+e.founderImg(src="#" data-src="img/@2x/founder-sm.png", alt="")
 						+e.nameWrap
 							+e.nameSm Михаил Геннадьевич
 							+e.positionSm Сооснователь компании ООО&nbsp;«УралМаф»
