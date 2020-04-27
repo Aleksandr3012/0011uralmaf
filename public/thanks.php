@@ -64,6 +64,11 @@
 				if (!empty($_POST['viber'])) {
 						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Viber:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['viber'] . '</b></td></tr>';
 				}
+				
+				if (!empty($_POST['telegram'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> telegram:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['telegram'] . '</b></td></tr>';
+				}
+	
 				if (!empty($_POST['time'])) {
 						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для звонка:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td></tr>';
 				}
@@ -295,7 +300,7 @@
 						</div>
 					</div>
 				</div>
-			</footer>
+			</footer><!— Yandex.Metrika counter —> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(62343352, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62343352" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!— /Yandex.Metrika counter —>
 		</div>
 		<div class="d-none">
 			<div class="form-wrap modal-win modal-form" id="modal-call">
@@ -383,7 +388,7 @@
 							</div>
 							<div class="tabs__content">
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__title">Введите Telegram</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="Telegram"/>
+									<label><span class="form-wrap__title">Введите Telegram</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="telegram"/>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
@@ -532,7 +537,7 @@
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="tel" required="required"/>
 									</div>
 									<!-- +e.input-wrap-->
-									<button class="form-wrap__btn btn" type="button"> <span class="bg">обсудить заказ</span>
+									<button class="form-wrap__btn btn" type="submit"><span class="bg">обсудить заказ</span>
 									</button>
 								</div>
 							</form>

@@ -196,6 +196,8 @@
 							</div>
 							<div class="tabs__btn">Скамейки
 							</div>
+							<div class="tabs__btn">Плитка фасадная
+							</div>
 						</div>
 						<div class="tabs__wrap">
 							<div class="tabs__content vazons active">
@@ -210,8 +212,8 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div><a class="itemProd__imgWrap" href="img/@2x/afina-x.jpg" data-fancybox="gal-afina"> <img src="#" data-lazy="img/@2x/afina.jpg" alt="Афина"/></a>
-												<div class="h4">«Афина»<span>вазон бетонный </span>
+												</div><a class="itemProd__imgWrap" href="img/@2x/afina-x.jpg" data-fancybox="gal-afina"> <img src="#" data-lazy="img/@2x/afina.jpg" alt="Флораль"/></a>
+												<div class="h4">«Флораль»<span>вазон бетонный </span>
 												</div>
 												<table>
 													<tr>
@@ -243,8 +245,8 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div><a class="itemProd__imgWrap" href="img/@2x/baleno-x.jpg" data-fancybox="gal-baleno"> <img src="#" data-lazy="img/@2x/baleno.jpg" alt="Балено"/></a>
-												<div class="h4">«Балено»<span>вазон бетонный </span>
+												</div><a class="itemProd__imgWrap" href="img/@2x/baleno-x.jpg" data-fancybox="gal-baleno"> <img src="#" data-lazy="img/@2x/baleno.jpg" alt="миллениум"/></a>
+												<div class="h4">«Миллениум»<span>вазон бетонный </span>
 												</div>
 												<table>
 													<tr>
@@ -276,8 +278,8 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div><a class="itemProd__imgWrap" href="img/@2x/venza-x.jpg" data-fancybox="gal-venza"> <img src="#" data-lazy="img/@2x/venza.jpg" alt="Венза"/></a>
-												<div class="h4">«Венза»<span>вазон бетонный </span>
+												</div><a class="itemProd__imgWrap" href="img/@2x/venza-x.jpg" data-fancybox="gal-venza"> <img src="#" data-lazy="img/@2x/venza.jpg" alt="Богемия"/></a>
+												<div class="h4">«Богемия»<span>вазон бетонный </span>
 												</div>
 												<table>
 													<tr>
@@ -309,8 +311,8 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div><a class="itemProd__imgWrap" href="img/@2x/shar-x.jpg" data-fancybox="gal-shar"> <img src="#" data-lazy="img/@2x/shar.jpg" alt="shar"/></a>
-												<div class="h4">«Шар»<span>вазон бетонный </span>
+												</div><a class="itemProd__imgWrap" href="img/@2x/shar-x.jpg" data-fancybox="gal-shar"> <img src="#" data-lazy="img/@2x/shar.jpg" alt="кассандра"/></a>
+												<div class="h4">«Кассандра»<span>вазон бетонный </span>
 												</div>
 												<table>
 													<tr>
@@ -506,8 +508,8 @@
 										<div class="slide">
 											<div class="itemProd">
 												<div class="itemProd__availability">В наличии
-												</div><a class="itemProd__imgWrap" href="img/@2x/kirat-x.jpg" data-fancybox="gal-kirat"> <img src="#" data-lazy="img/@2x/kirat.jpg" alt="kirat"/></a>
-												<div class="h4">«Кират» (комплект)<span>Скамейка </span>
+												</div><a class="itemProd__imgWrap" href="img/@2x/kirat-x.jpg" data-fancybox="gal-kirat"> <img src="#" data-lazy="img/@2x/kirat.jpg" alt="sonata"/></a>
+												<div class="h4">«Соната» (комплект)<span>Скамейка </span>
 												</div>
 												<table>
 													<tr>
@@ -545,6 +547,44 @@
 								</div>
 								<div class="h6">*Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.</div>
 							</div>
+							<div class="tabs__content"> 
+								<div class="slider-wrap">
+									<div class="slider--js">
+										<div class="slide">
+											<div class="itemProd">
+												<div class="itemProd__availability">В наличии
+												</div><a class="itemProd__imgWrap" href="img/@2x/plitka-x.jpg" data-fancybox="gal-plitka"> <img src="#" data-lazy="img/@2x/plitka.jpg" alt="Плитка фасадная"/></a>
+												<div class="h4">«Плитка»<span>Плитка фасадная</span>
+												</div>
+												<table>
+													<tr></tr>
+													<tr>
+														<td>Длина:  </td>
+														<td>400 мм</td>
+													</tr>
+													<tr>
+														<td>Ширина:  </td>
+														<td>200 мм </td>
+													</tr>
+												</table>
+												<div class="itemProd__materials">
+													<div class="itemProd__materialsWrap"><a href="img/@2x/material-1.jpg" data-fancybox="materials-1"><img class="res-i" src="#" data-lazy="img/@0.5x/material-1.jpg" alt="фактура"/></a>
+													</div>
+													<div class="itemProd__materialsWrap"><a href="img/@2x/material-2.jpg" data-fancybox="materials-1"><img class="res-i" src="#" data-lazy="img/@0.5x/material-2.jpg" alt="фактура"/></a>
+													</div>
+													<div class="itemProd__materialsWrap"><a href="img/@2x/material-3.jpg" data-fancybox="materials-1"><img class="res-i" src="#" data-lazy="img/@0.5x/material-3.jpg" alt="фактура"/></a>
+													</div>
+													<div class="itemProd__materialsWrap"><a href="img/@2x/material-4.jpg" data-fancybox="materials-1"><img class="res-i" src="#" data-lazy="img/@0.5x/material-4.jpg" alt="фактура"/></a>
+													</div>
+												</div>
+												<div class="h5 text-center">1400 руб.*</div><a class="itemProd__btn btn link-modal" href="#modalOrder"> <span class="bg">Заказать</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="control-wrap"></div>
+								</div>
+								<div class="h6">*Стоимость указана при покупке со&nbsp;склада производителя в&nbsp;Магнитогорске.<br> Стоимость не&nbsp;включает дополнительную упаковку, доставку и&nbsp;погрузо-разгрузочные работы.</div>
+							</div>
 						</div>
 						<div class="tabs__caption2 d-md-none">
 							<div class="tabs__btn active">Вазоны бетонные цветочные
@@ -554,6 +594,8 @@
 							<div class="tabs__btn">Ограничитель парковки
 							</div>
 							<div class="tabs__btn">Скамейки
+							</div>
+							<div class="tabs__btn">Плитка фасадная
 							</div>
 						</div>
 					</div>
@@ -844,7 +886,7 @@
 							</div>
 							<div class="tabs__content">
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__title">Введите Telegram</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="Telegram"/>
+									<label><span class="form-wrap__title">Введите Telegram</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="telegram"/>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
@@ -993,7 +1035,7 @@
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="tel" required="required"/>
 									</div>
 									<!-- +e.input-wrap-->
-									<button class="form-wrap__btn btn" type="button"> <span class="bg">обсудить заказ</span>
+									<button class="form-wrap__btn btn" type="submit"><span class="bg">обсудить заказ</span>
 									</button>
 								</div>
 							</form>
