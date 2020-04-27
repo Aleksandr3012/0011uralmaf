@@ -36,6 +36,14 @@ var sCatalogVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
+var sContactVue = new Vue({
+	el: '#sContact',
+	data: {
+		imgSRc: 'img/'
+	},
+	created: function created() {},
+	computed: {}
+});
 var sContentVue = new Vue({
 	el: '#sContent',
 	data: {
@@ -72,14 +80,6 @@ var sThanksVue = new Vue({
 });
 var topLineVue = new Vue({
 	el: '#topLine',
-	data: {
-		imgSRc: 'img/'
-	},
-	created: function created() {},
-	computed: {}
-});
-var sContactVue = new Vue({
-	el: '#sContact',
 	data: {
 		imgSRc: 'img/'
 	},
