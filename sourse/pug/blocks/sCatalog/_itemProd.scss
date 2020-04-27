@@ -103,30 +103,32 @@
 	&__imgWrap {
 		position: relative;
 		width: 100%;
-		height: auto;
-		min-height: rem(250);
+		display: block;
+		// min-height: rem(250);
 		margin-bottom: rem(24);
+		display: block;
 
 		@include media-breakpoint-up(xl) {
 			margin-bottom: rem(13);
-			min-height: rem(309);
+			// min-height: rem(309);
 		}
 
 		img {
-			max-height: rem(260);
+			// max-height: rem(260);
 
-			@include media-breakpoint-up(xl) {
+			// @include media-breakpoint-up(xl) {
 
-				max-height: rem(309);
-			}
+			// 	max-height: rem(309);
+			// }
 
-			@include media-breakpoint-up(sm) {
-				// max-height: rem(249);
-			}
+			// @include media-breakpoint-up(sm) {
+			// 	// max-height: rem(249);
+			// }
 
-			max-width: 100%;
-			height: auto;
-			@include a-cent;
+			// max-width: 100%;
+			// height: auto;
+			// @include a-cent;
+			@extend .res-i;
 		}
 	}
 
