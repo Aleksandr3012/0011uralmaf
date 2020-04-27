@@ -18,15 +18,6 @@ var headerBlockVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sCatalogVue = new Vue({
-	el: '#sCatalog',
-	data: {
-		imgSRc: 'img/'
-	},
-	methods: {},
-	created: function created() {},
-	computed: {}
-});
 var sAdvantagesVue = new Vue({
 	el: '#sAdvantages',
 	data: {
@@ -36,11 +27,12 @@ var sAdvantagesVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sContactVue = new Vue({
-	el: '#sContact',
+var sCatalogVue = new Vue({
+	el: '#sCatalog',
 	data: {
 		imgSRc: 'img/'
 	},
+	methods: {},
 	created: function created() {},
 	computed: {}
 });
@@ -80,6 +72,14 @@ var sThanksVue = new Vue({
 });
 var topLineVue = new Vue({
 	el: '#topLine',
+	data: {
+		imgSRc: 'img/'
+	},
+	created: function created() {},
+	computed: {}
+});
+var sContactVue = new Vue({
+	el: '#sContact',
 	data: {
 		imgSRc: 'img/'
 	},
