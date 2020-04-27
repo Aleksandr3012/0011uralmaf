@@ -64,6 +64,11 @@
 				if (!empty($_POST['viber'])) {
 						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Viber:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['viber'] . '</b></td></tr>';
 				}
+				
+				if (!empty($_POST['telegram'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> telegram:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['telegram'] . '</b></td></tr>';
+				}
+	
 				if (!empty($_POST['time'])) {
 						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для звонка:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td></tr>';
 				}
@@ -383,7 +388,7 @@
 							</div>
 							<div class="tabs__content">
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__title">Введите Telegram</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="Telegram"/>
+									<label><span class="form-wrap__title">Введите Telegram</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="telegram"/>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
@@ -532,7 +537,7 @@
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="tel" required="required"/>
 									</div>
 									<!-- +e.input-wrap-->
-									<button class="form-wrap__btn btn" type="button"> <span class="bg">обсудить заказ</span>
+									<button class="form-wrap__btn btn" type="submit"><span class="bg">обсудить заказ</span>
 									</button>
 								</div>
 							</form>

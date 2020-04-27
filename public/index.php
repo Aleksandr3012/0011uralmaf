@@ -886,7 +886,7 @@
 							</div>
 							<div class="tabs__content">
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__title">Введите Telegram</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="Telegram"/>
+									<label><span class="form-wrap__title">Введите Telegram</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="telegram"/>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
@@ -1035,7 +1035,7 @@
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 444-44-44" name="tel" required="required"/>
 									</div>
 									<!-- +e.input-wrap-->
-									<button class="form-wrap__btn btn" type="button"> <span class="bg">обсудить заказ</span>
+									<button class="form-wrap__btn btn" type="submit"><span class="bg">обсудить заказ</span>
 									</button>
 								</div>
 							</form>
