@@ -57,6 +57,10 @@
 						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td></tr>';
 				}
 				
+				if (!empty($_POST['mail'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['mail'] . '</b></td></tr>';
+				}
+				
 				if (!empty($_POST['whatsapp'])) {
 						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Whatsapp:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['whatsapp'] . '</b></td></tr>';
 				}
@@ -367,7 +371,7 @@
 						<div class="tabs__wrap">
 							<div class="tabs__content active">
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__title">Введите Email</span><input class="form-wrap__input form-control" type="email" placeholder="Email" name="mail" required="required"/>
+									<label><span class="form-wrap__title">Введите Email</span><input class="form-wrap__input form-control" type="email" placeholder="Email" name="email" required="required"/>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->

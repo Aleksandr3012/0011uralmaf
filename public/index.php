@@ -865,7 +865,7 @@
 						<div class="tabs__wrap">
 							<div class="tabs__content active">
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__title">Введите Email</span><input class="form-wrap__input form-control" type="email" placeholder="Email" name="mail" required="required"/>
+									<label><span class="form-wrap__title">Введите Email</span><input class="form-wrap__input form-control" type="email" placeholder="Email" name="email" required="required"/>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
